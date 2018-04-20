@@ -40,12 +40,12 @@
 		607FACE51AFB9204008FA782 /* WZRootNavigationController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZRootNavigationController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7E040FEC4A78631791C126B4 /* WZRootNavigationController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = WZRootNavigationController.podspec; path = ../WZRootNavigationController.podspec; sourceTree = "<group>"; };
+		7E040FEC4A78631791C126B4 /* WZRootNavigationController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WZRootNavigationController.podspec; path = ../WZRootNavigationController.podspec; sourceTree = "<group>"; };
 		86E5DFEF9F966D8F4EF4C586 /* Pods-WZRootNavigationController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Tests/Pods-WZRootNavigationController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		91B78680665E25256396635C /* Pods-WZRootNavigationController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example/Pods-WZRootNavigationController_Example.release.xcconfig"; sourceTree = "<group>"; };
-		BBD62FEC7D413D8B424BE4BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BBD62FEC7D413D8B424BE4BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CE148C338BA4082DEC55D6AC /* Pods-WZRootNavigationController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Tests/Pods-WZRootNavigationController_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E03311C9EE743E0C1056AAF3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E03311C9EE743E0C1056AAF3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FAC88D9DC51CA7E0E7DFD640 /* Pods-WZRootNavigationController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example/Pods-WZRootNavigationController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -495,6 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WZRootNavigationController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -510,6 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WZRootNavigationController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
