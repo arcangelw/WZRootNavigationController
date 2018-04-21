@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WZRootNavigationController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

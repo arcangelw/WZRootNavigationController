@@ -7,40 +7,47 @@
 
 import UIKit
 
+internal func WZSafeUnwrapViewController(_ controller:UIViewController) ->UIViewController {
+    guard let _controller = controller as? WZContainerController else { return controller}
+    return _controller.contentViewController
+}
+
+internal func WZSafeWrapViewController(_ controller:UIViewController ,withPlaceholderController yesOrNo:Bool = false ,backBarButtonItem backItem:UIBarButtonItem? = nil ,backTitle:String? = nil) ->UIViewController{
+    if controller is WZContainerController { return controller }
+    return WZContainerController(controller: controller, withPlaceholderController: yesOrNo, backBarButtonItem: backItem, backTitle: backTitle)
+}
+
 public final class WZContainerController: UIViewController {
 
     private(set) var interactiveTransition:UIPercentDrivenInteractiveTransition?
     
-    public let contentViewController:WZExtensionsProvider
+    public fileprivate(set) var contentViewController:UIViewController
     
     public let containerNavigationController:WZContainerNavigationController?
     
-//    private let gestureRecognizerDelegate:UIGestureRecognizerDelegate?
+    private var popRecognizerDelegate:UIGestureRecognizerDelegate?
     
-    init(controller:WZExtensionsProvider ,withPlaceholderController yesOrNo:Bool = false ,backBarButtonItem backItem:UIBarButtonItem? = nil ,backTitle:String? = nil) {
+    init(controller:UIViewController ,withPlaceholderController yesOrNo:Bool = false ,backBarButtonItem backItem:UIBarButtonItem? = nil ,backTitle:String? = nil) {
         self.contentViewController = controller
         self.containerNavigationController = WZContainerNavigationController(navigationBarClass: controller.wz_navigationBarClass, toolbarClass: nil)
-//        self.gestureRecognizerDelegate = controller.gestureRecognizerDelegateClass.init() as? UIGestureRecognizerDelegate
         super.init(nibName: nil, bundle: nil)
         
         if yesOrNo {
             let vc = UIViewController()
             vc.title = backTitle
             vc.navigationItem.backBarButtonItem = backItem
-            containerNavigationController!.viewControllers = [vc,controller as! UIViewController]
+            containerNavigationController!.viewControllers = [vc,controller]
         }else{
-            containerNavigationController!.viewControllers = [controller as! UIViewController]
+            containerNavigationController!.viewControllers = [controller]
         }
         addChildViewController(containerNavigationController!)
         containerNavigationController!.didMove(toParentViewController: self)
     }
     
-    init(contentController controller:WZExtensionsProvider) {
+    init(contentController controller:UIViewController) {
         self.contentViewController = controller
         self.containerNavigationController = nil
-//        self.gestureRecognizerDelegate = controller.gestureRecognizerDelegateClass.init() as? UIGestureRecognizerDelegate
         super.init(nibName: nil, bundle: nil)
-        let contentViewController = self.contentViewController as! UIViewController
         addChildViewController(contentViewController)
         contentViewController.didMove(toParentViewController: self)
     }
@@ -51,83 +58,114 @@ public final class WZContainerController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        
         if let containerNavigationController = self.containerNavigationController {
             containerNavigationController.view.autoresizingMask = [.flexibleHeight,.flexibleWidth]
             containerNavigationController.view.frame = view.bounds
             view.addSubview(containerNavigationController.view)
         }else{
-            let contentViewController = self.contentViewController as! UIViewController
             contentViewController.view.autoresizingMask = [.flexibleHeight,.flexibleWidth]
             contentViewController.view.frame = view.bounds
             view.addSubview(contentViewController.view)
         }
         
+//        let internalTargets = self.navigationController?.interactivePopGestureRecognizer?.value(forKey: "targets") as? Array<AnyObject>
+//        let internalTarget = internalTargets?.first?.value(forKey: "target")
+//        let internalAction = NSSelectorFromString("handleNavigationTransition:")
         
+        let popRecognizer = UIPanGestureRecognizer(target: self, action:#selector(handlePopRecognizer(_:)))
+        view.addGestureRecognizer(popRecognizer)
+        popRecognizerDelegate = contentViewController.wz_gestureRecognizerDelegateClass.init(containerController: self, contentViewController: contentViewController)
+        popRecognizer.delegate = popRecognizerDelegate
+
+        if self.navigationController?.viewControllers.first == self {
+            contentViewController.wz_interactivePopDisabled = true
+        }
     }
 }
 
+extension WZContainerController {
+    @objc func handlePopRecognizer(_ recognizer:UIPanGestureRecognizer){
+        var progress = recognizer.translation(in: self.view).x / self.view.frame.width
+        progress = min(1.0, max(0.0, progress))
+        
+        if .began == recognizer.state {
+            self.interactiveTransition = UIPercentDrivenInteractiveTransition()
+            self.navigationController?.popViewController(animated: true)
+        }
+        else if .changed == recognizer.state , let interactiveTransition = self.interactiveTransition {
+            interactiveTransition.update(progress)
+        }
+        else if (( .ended == recognizer.state ) || (.cancelled == recognizer.state)), let interactiveTransition = self.interactiveTransition {
+            
+            if progress > 0.2 {
+                interactiveTransition.finish()
+            }else{
+                interactiveTransition.cancel()
+            }
+            self.interactiveTransition = nil
+        }
+    }
+}
 
 extension WZContainerController {
-    var _contentViewController:UIViewController{
-        return contentViewController as! UIViewController
-    }
-    
     public override func becomeFirstResponder() -> Bool {
-        return _contentViewController.becomeFirstResponder()
+        return contentViewController.becomeFirstResponder()
     }
     
     public override var canBecomeFirstResponder: Bool {
-        return _contentViewController.canBecomeFirstResponder
+        return contentViewController.canBecomeFirstResponder
     }
     
     public override var preferredStatusBarStyle: UIStatusBarStyle {
-        return _contentViewController.preferredStatusBarStyle
+        return contentViewController.preferredStatusBarStyle
     }
     
     public override var prefersStatusBarHidden: Bool {
-        return _contentViewController.prefersStatusBarHidden
+        return contentViewController.prefersStatusBarHidden
     }
     
     public override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
-        return _contentViewController.preferredStatusBarUpdateAnimation
+        return contentViewController.preferredStatusBarUpdateAnimation
     }
     
     public override var shouldAutorotate: Bool {
-        return _contentViewController.shouldAutorotate
+        return contentViewController.shouldAutorotate
     }
     
     public override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return _contentViewController.supportedInterfaceOrientations
+        return contentViewController.supportedInterfaceOrientations
     }
 
     public override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-        return _contentViewController.preferredInterfaceOrientationForPresentation
+        return contentViewController.preferredInterfaceOrientationForPresentation
     }
     
     public override var hidesBottomBarWhenPushed: Bool {
         set{
-            _contentViewController.hidesBottomBarWhenPushed = newValue
+            contentViewController.hidesBottomBarWhenPushed = newValue
         }
         get{
-            return _contentViewController.hidesBottomBarWhenPushed
+            return contentViewController.hidesBottomBarWhenPushed
         }
     }
    
     public override var title: String? {
         set{
-            _contentViewController.title = newValue
+            contentViewController.title = newValue
         }
         get{
-            return _contentViewController.title
+            return contentViewController.title
         }
     }
     
     public override var tabBarItem: UITabBarItem! {
         set{
-            _contentViewController.tabBarItem = newValue
+            contentViewController.tabBarItem = newValue
         }
         get{
-            return _contentViewController.tabBarItem
+            return contentViewController.tabBarItem
         }
     }
 }
@@ -136,7 +174,7 @@ extension WZContainerController {
 extension WZContainerController{
     
     public override func allowedChildViewControllersForUnwinding(from source: UIStoryboardUnwindSegueSource) -> [UIViewController] {
-        return _contentViewController.allowedChildViewControllersForUnwinding(from:source)
+        return contentViewController.allowedChildViewControllersForUnwinding(from:source)
     }
 }
 
@@ -145,10 +183,10 @@ extension WZContainerController{
 extension WZContainerController{
     
     public override func prefersHomeIndicatorAutoHidden() -> Bool {
-        return _contentViewController.prefersHomeIndicatorAutoHidden()
+        return contentViewController.prefersHomeIndicatorAutoHidden()
     }
     
     public override func childViewControllerForHomeIndicatorAutoHidden() -> UIViewController? {
-        return _contentViewController.childViewControllerForHomeIndicatorAutoHidden()
+        return contentViewController.childViewControllerForHomeIndicatorAutoHidden()
     }
 }
