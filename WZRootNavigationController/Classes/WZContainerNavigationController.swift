@@ -14,22 +14,33 @@ public final class WZContainerNavigationController: UINavigationController {
         pushViewController(rootViewController, animated: false)
     }
     
+    #if DEBUG
+    deinit {
+        print(self.classForCoder, #line , #function, ":", self.topViewController?.classForCoder ?? "")
+    }
+    #endif
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         interactivePopGestureRecognizer?.delegate = nil
         interactivePopGestureRecognizer?.isEnabled = false
         if let navigationController = wz_navigationController , navigationController.isTransferNavigationBarAttributes == true {
+            navigationBar.backgroundColor = navigationController.navigationBar.backgroundColor
+            navigationBar.barStyle = navigationController.navigationBar.barStyle
             navigationBar.isTranslucent = navigationController.navigationBar.isTranslucent
             navigationBar.tintColor = navigationController.navigationBar.tintColor
             navigationBar.barTintColor = navigationController.navigationBar.barTintColor
-            navigationBar.barStyle = navigationController.navigationBar.barStyle
-            navigationBar.backgroundColor = navigationController.navigationBar.backgroundColor
-            navigationBar.titleTextAttributes = navigationController.navigationBar.titleTextAttributes
             navigationBar.shadowImage = navigationController.navigationBar.shadowImage
+            navigationBar.titleTextAttributes = navigationController.navigationBar.titleTextAttributes
             navigationBar.backIndicatorImage = navigationController.navigationBar.backIndicatorImage
             navigationBar.backIndicatorTransitionMaskImage = navigationController.navigationBar.backIndicatorTransitionMaskImage
-        navigationBar.setTitleVerticalPositionAdjustment(navigationController.navigationBar.titleVerticalPositionAdjustment(for: .default), for: .default)
+            if #available(iOS 11.0, *) {
+                navigationBar.prefersLargeTitles = navigationController.navigationBar.prefersLargeTitles
+                navigationBar.largeTitleTextAttributes = navigationController.navigationBar.largeTitleTextAttributes
+            }
         navigationBar.setBackgroundImage(navigationController.navigationBar.backgroundImage(for: .default), for: .default)
+        navigationBar.setTitleVerticalPositionAdjustment(navigationController.navigationBar.titleVerticalPositionAdjustment(for: .default), for: .default)
+        
             
         }
         view.layoutIfNeeded()
@@ -62,21 +73,6 @@ extension WZContainerNavigationController {
         }
     }
     
-    public override func forUnwindSegueAction(_ action: Selector, from fromViewController: UIViewController, withSender sender: Any?) -> UIViewController? {
-        if let navigationController = self.navigationController  {
-            return navigationController.forUnwindSegueAction(action, from: fromViewController, withSender: sender)
-        }
-        return super.forUnwindSegueAction(action, from: fromViewController, withSender: sender)
-    }
-    
-    @available(iOS 9.0, *)
-    public override func allowedChildViewControllersForUnwinding(from source: UIStoryboardUnwindSegueSource) -> [UIViewController] {
-        if let navigationController = self.navigationController {
-            return navigationController.allowedChildViewControllersForUnwinding(from:source)
-        }
-        return super.allowedChildViewControllersForUnwinding(from: source)
-    }
-    
     public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if let navigationController = self.navigationController {
             navigationController.pushViewController(viewController, animated: animated)
@@ -91,24 +87,15 @@ extension WZContainerNavigationController {
     }
     
     public override func popViewController(animated: Bool) -> UIViewController? {
-        if let navigationController = self.navigationController {
-            return navigationController.popViewController(animated:animated)
-        }
-        return super.popViewController(animated: animated)
+        return self.navigationController?.popViewController(animated: animated) ?? super.popViewController(animated: animated)
     }
     
     public override func popToRootViewController(animated: Bool) -> [UIViewController]? {
-        if let navigationController = self.navigationController {
-            return navigationController.popToRootViewController(animated:animated)
-        }
-        return super.popToRootViewController(animated: animated)
+        return self.navigationController?.popToRootViewController(animated: animated) ?? super.popToRootViewController(animated: animated)
     }
     
     public override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
-        if let navigationController = self.navigationController {
-            return navigationController.popToViewController(viewController ,animated:animated)
-        }
-        return super.popToViewController(viewController ,animated:animated)
+        return self.navigationController?.popToViewController(viewController, animated: animated) ?? super.popToViewController(viewController ,animated:animated)
     }
     
     public override func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
@@ -124,18 +111,17 @@ extension WZContainerNavigationController {
             if let navigationController = self.navigationController {
                 navigationController.delegate = newValue
             }else{
-//                super.delegate = newValue
+                super.delegate = newValue
             }
         }
         get{
-            return self.navigationController?.delegate// ?? super.delegate
+            return self.navigationController?.delegate ?? super.delegate
         }
     }
     
     public override func setNavigationBarHidden(_ hidden: Bool, animated: Bool) {
         super.setNavigationBarHidden(hidden, animated: animated)
         if let visibleViewController = self.visibleViewController ,visibleViewController.wz_interactivePopDisabled == false {
-            var visibleViewController = visibleViewController
             visibleViewController.wz_interactivePopDisabled = hidden
         }
     }
@@ -159,9 +145,28 @@ extension WZContainerNavigationController {
     
     @available(iOS 11.0, *)
     public override func childViewControllerForHomeIndicatorAutoHidden() -> UIViewController? {
-        return self.topViewController ?? super.childViewControllerForHomeIndicatorAutoHidden()
+        return self.topViewController
     }
     
+}
+
+// MARK: unwind
+extension WZContainerNavigationController{
+    
+    public override func forUnwindSegueAction(_ action: Selector, from fromViewController: UIViewController, withSender sender: Any?) -> UIViewController? {
+        if let navigationController = self.navigationController  {
+            return navigationController.forUnwindSegueAction(action, from: fromViewController, withSender: sender)
+        }
+        return super.forUnwindSegueAction(action, from: fromViewController, withSender: sender)
+    }
+    
+    @available(iOS 9.0, *)
+    public override func allowedChildViewControllersForUnwinding(from source: UIStoryboardUnwindSegueSource) -> [UIViewController] {
+        if let navigationController = self.navigationController {
+            return navigationController.allowedChildViewControllersForUnwinding(from:source)
+        }
+        return super.allowedChildViewControllersForUnwinding(from: source)
+    }
 }
 
 

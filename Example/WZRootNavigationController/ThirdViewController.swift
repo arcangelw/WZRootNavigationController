@@ -1,15 +1,14 @@
 //
-//  SecondViewController.swift
+//  ThirdViewController.swift
 //  WZRootNavigationController_Example
 //
-//  Created by wu.zhe on 2018/4/21.
+//  Created by wu.zhe on 2018/4/22.
 //  Copyright © 2018年 CocoaPods. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
-
+class ThirdViewController: UIViewController {
     
     deinit {
         print(self.classForCoder, #line , #function)
@@ -17,9 +16,8 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Second"
+        self.title = "third"
         // Do any additional setup after loading the view.
-        self.navigationController?.navigationBar.barTintColor = .white
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,10 +25,7 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func popToSecond(_ segue:UIStoryboardSegue){
-        print(self.classForCoder , #function ,":",segue.identifier ?? "")
-    }
-    
+
     /*
     // MARK: - Navigation
 

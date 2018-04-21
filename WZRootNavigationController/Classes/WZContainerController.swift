@@ -34,6 +34,7 @@ public final class WZContainerController: UIViewController {
         
         if yesOrNo {
             let vc = UIViewController()
+            vc.view.backgroundColor = .white
             vc.title = backTitle
             vc.navigationItem.backBarButtonItem = backItem
             containerNavigationController!.viewControllers = [vc,controller]
@@ -56,10 +57,15 @@ public final class WZContainerController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    #if DEBUG
+    deinit {
+        print(self.classForCoder, #line , #function, ":", self.contentViewController.classForCoder)
+    }
+    #endif
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
         if let containerNavigationController = self.containerNavigationController {
             containerNavigationController.view.autoresizingMask = [.flexibleHeight,.flexibleWidth]
             containerNavigationController.view.frame = view.bounds
@@ -110,12 +116,13 @@ extension WZContainerController {
 }
 
 extension WZContainerController {
-    public override func becomeFirstResponder() -> Bool {
-        return contentViewController.becomeFirstResponder()
-    }
     
     public override var canBecomeFirstResponder: Bool {
         return contentViewController.canBecomeFirstResponder
+    }
+    
+    public override func becomeFirstResponder() -> Bool {
+        return contentViewController.becomeFirstResponder()
     }
     
     public override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -168,25 +175,23 @@ extension WZContainerController {
             return contentViewController.tabBarItem
         }
     }
-}
-
-@available(iOS 9.0, *)
-extension WZContainerController{
     
-    public override func allowedChildViewControllersForUnwinding(from source: UIStoryboardUnwindSegueSource) -> [UIViewController] {
-        return contentViewController.allowedChildViewControllersForUnwinding(from:source)
-    }
-}
-
-
-@available(iOS 11.0, *)
-extension WZContainerController{
-    
+    @available(iOS 11.0, *)
     public override func prefersHomeIndicatorAutoHidden() -> Bool {
         return contentViewController.prefersHomeIndicatorAutoHidden()
     }
     
+    @available(iOS 11.0, *)
     public override func childViewControllerForHomeIndicatorAutoHidden() -> UIViewController? {
-        return contentViewController.childViewControllerForHomeIndicatorAutoHidden()
+        return contentViewController
+    }
+
+}
+
+// MARK: unwind
+extension WZContainerController{
+    
+    public override func forUnwindSegueAction(_ action: Selector, from fromViewController: UIViewController, withSender sender: Any?) -> UIViewController? {
+        return contentViewController.forUnwindSegueAction(action ,from: fromViewController, withSender:sender)
     }
 }

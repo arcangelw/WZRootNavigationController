@@ -152,7 +152,7 @@ extension WZRootNavigationController {
     public override func setNavigationBarHidden(_ hidden: Bool, animated: Bool) { }
     
     public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        if self.viewControllers.count > 1 {
+        if self.viewControllers.count > 0 {
             let currentLast = WZSafeUnwrapViewController(self.viewControllers.last!)
             super.pushViewController(WZSafeWrapViewController(viewController, withPlaceholderController: self.isUseSystemBackBarButtonItem, backBarButtonItem: currentLast.navigationItem.backBarButtonItem, backTitle:currentLast.navigationItem.title ?? currentLast.title), animated: animated)
             
@@ -223,10 +223,13 @@ extension WZRootNavigationController {
 
 extension WZRootNavigationController: UINavigationControllerDelegate {
     
+    @objc func wz_onBack(){
+       let _ = popViewController(animated: true)
+    }
     
     public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         let isRoot = viewController == navigationController.viewControllers.first
-        var controller = WZSafeUnwrapViewController(viewController)
+        let controller = WZSafeUnwrapViewController(viewController)
         if isRoot == false {
             let hasSetLeftItem = controller.navigationItem.leftBarButtonItem != nil
             if hasSetLeftItem && !controller.wz_interactivePopDisabled {
@@ -235,7 +238,11 @@ extension WZRootNavigationController: UINavigationControllerDelegate {
                 controller.wz_interactivePopDisabled = false
             }
             if !self.isUseSystemBackBarButtonItem && !hasSetLeftItem {
-                
+                if let item = controller.wz_customBackItem(withTarget: self, action: #selector(wz_onBack)) {
+                    controller.navigationItem.leftBarButtonItem = item
+                }else{
+                    controller.navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Back", comment:""), style: .plain, target: self, action: #selector(wz_onBack))
+                }
             }
         }
         self.wz_delegate?.navigationController?(navigationController, willShow: controller, animated: animated)

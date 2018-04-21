@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,11 +23,87 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nOe-UR-G6P"/>
+                    <navigationItem key="navigationItem" id="nOe-UR-G6P">
+                        <barButtonItem key="rightBarButtonItem" title="push" style="plain" id="PvR-ll-aDg">
+                            <color key="tintColor" red="0.17629175410810394" green="1" blue="0.24510778666562905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="AXi-GX-4Xb" kind="show" id="SAu-8B-M35"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1412" y="34"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="EJ8-6J-nJw">
+            <objects>
+                <viewController id="AXi-GX-4Xb" customClass="SecondViewController" customModule="WZRootNavigationController_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pdC-My-x1c"/>
+                        <viewControllerLayoutGuide type="bottom" id="JuC-bf-419"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ra1-Vr-Hu5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="sBF-Tb-78U">
+                        <rightBarButtonItems>
+                            <barButtonItem title="push" style="done" id="xcW-9j-uKh">
+                                <color key="tintColor" red="0.1762917541" green="1" blue="0.2451077867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="fa1-Hs-BhH" kind="show" id="Feh-MQ-TV1"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="toFirst" style="done" id="k2B-lo-hET">
+                                <connections>
+                                    <segue destination="JgH-UO-vXh" kind="unwind" identifier="second" unwindAction="popToRoot:" id="UTP-ju-YZi"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4vS-6k-1Ib" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="JgH-UO-vXh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2410" y="-32"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="Odb-3X-9i3">
+            <objects>
+                <viewController id="fa1-Hs-BhH" customClass="ThirdViewController" customModule="WZRootNavigationController_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WLi-B1-59v"/>
+                        <viewControllerLayoutGuide type="bottom" id="6hk-Aq-vhu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cjT-Kk-BzQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AzY-Cz-3oK">
+                        <rightBarButtonItems>
+                            <barButtonItem title="toSecond" id="h7M-FR-HCN">
+                                <connections>
+                                    <segue destination="Ndr-w8-iq2" kind="unwind" identifier="third" unwindAction="popToSecond:" id="LfQ-8w-cmM"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="toFirst" style="plain" id="dDT-T0-AAS">
+                                <connections>
+                                    <segue destination="Ndr-w8-iq2" kind="unwind" identifier="third" unwindAction="popToRoot:" id="TfW-4U-Ehi"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Xm-Gi-oYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ndr-w8-iq2" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3172" y="-70"/>
         </scene>
         <!--Root Navigation Controller-->
         <scene sceneID="lsA-JW-pyo">
@@ -35,7 +112,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="skm-IJ-YZs">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.39392529799999998" blue="0.16441457030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </textAttributes>
                     </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isUseSystemBackBarButtonItem" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="dvs-on-OoD"/>
                     </connections>

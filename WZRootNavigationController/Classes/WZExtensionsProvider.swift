@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol WZExtensionsProvider where Self : UIViewController{
+public protocol WZExtensionsProvider : NSObjectProtocol {
     
     ///* 自定义导航栏
     var wz_navigationBarClass:UINavigationBar.Type? { get }
@@ -35,6 +35,8 @@ public protocol WZExtensionsProvider where Self : UIViewController{
     ///* 是否隐藏导航栏 默认 false
     var wz_prefersNavigationBarHidden:Bool { get set }
     
+    ///* 自定义 leftBarButtonItem
+    func wz_customBackItem(withTarget target:Any? ,action aSelector: Selector) -> UIBarButtonItem?
 }
 
 private struct WZAssociatedKeys{
@@ -42,7 +44,7 @@ private struct WZAssociatedKeys{
     static var interactivePopDisabled: UInt8 = 0
 }
 
-extension WZExtensionsProvider {
+extension WZExtensionsProvider where Self : UIViewController {
     
     public var wz_navigationBarClass: UINavigationBar.Type? {
         return nil
@@ -94,6 +96,10 @@ extension WZExtensionsProvider {
         set{
             objc_setAssociatedObject(self, &WZAssociatedKeys.prefersNavigationBarHiddenKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
+    }
+    
+    public func wz_customBackItem(withTarget target: Any?, action aSelector: Selector) -> UIBarButtonItem?{
+        return nil
     }
 }
 

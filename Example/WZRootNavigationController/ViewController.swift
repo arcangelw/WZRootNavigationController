@@ -21,9 +21,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let vc = SecondViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
+
+   @IBAction func popToRoot(_ segue:UIStoryboardSegue){
+    print(self.classForCoder , #function ,":",segue.identifier ?? "")
+   }
+
 }
 
