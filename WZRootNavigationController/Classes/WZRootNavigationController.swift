@@ -135,20 +135,6 @@ extension WZRootNavigationController {
 
 extension WZRootNavigationController {
     
-    public override func forUnwindSegueAction(_ action: Selector, from fromViewController: UIViewController, withSender sender: Any?) -> UIViewController? {
-        if let controller = super.forUnwindSegueAction(action, from: fromViewController, withSender: sender){
-            return controller
-        }
-        guard let indx = self.viewControllers.index(of: fromViewController) ,indx > 0 else { return nil }
-        func uwind(idx:Int) -> UIViewController? {
-            guard let controller = self.viewControllers[idx].forUnwindSegueAction(action, from: fromViewController, withSender: sender) else {
-                return idx == 0 ? nil : uwind(idx: idx - 1)
-            }
-            return controller
-        }
-        return uwind(idx: indx - 1)
-    }
-    
     public override func setNavigationBarHidden(_ hidden: Bool, animated: Bool) { }
     
     public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
@@ -219,8 +205,26 @@ extension WZRootNavigationController {
     }
 }
 
+// MARK: unwind
+extension WZRootNavigationController {
+    
+    public override func forUnwindSegueAction(_ action: Selector, from fromViewController: UIViewController, withSender sender: Any?) -> UIViewController? {
+        if let controller = super.forUnwindSegueAction(action, from: fromViewController, withSender: sender){
+            return controller
+        }
+        guard let from = fromViewController as? WZContainerController ?? self.viewControllers.first(where: {WZSafeUnwrapViewController($0) == fromViewController}) else { return nil}
+        guard let fromIdx = self.viewControllers.index(of: from) ,fromIdx > 0 else { return nil }
+        func uwind(idx:Int) -> UIViewController? {
+            guard let controller = self.viewControllers[idx].forUnwindSegueAction(action, from: fromViewController, withSender: sender) else {
+                return idx == 0 ? nil : uwind(idx: idx - 1)
+            }
+            return controller
+        }
+        return uwind(idx: fromIdx - 1)
+    }
+}
 
-
+// MARK: UINavigationControllerDelegate
 extension WZRootNavigationController: UINavigationControllerDelegate {
     
     @objc func wz_onBack(){
