@@ -8,12 +8,12 @@
 import UIKit
 
 @IBDesignable
-public class WZRootNavigationController: UINavigationController {
+open class WZRootNavigationController: UINavigationController {
     
-    ///* 是否使用系统返回按钮 默认 false 不使用
+    /// 是否使用系统返回按钮 默认 false 不使用
     @IBInspectable open var isUseSystemBackBarButtonItem:Bool = false
     
-    ///* 是否转移导航栏属性 默认 ture 使用
+    /// 是否转移导航栏属性 默认 ture 使用
     @IBInspectable open var isTransferNavigationBarAttributes:Bool = true
     
     private weak var wz_delegate:UINavigationControllerDelegate?
@@ -35,7 +35,7 @@ public class WZRootNavigationController: UINavigationController {
         commonInit()
     }
     
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         self.viewControllers = super.viewControllers
     }
@@ -47,7 +47,7 @@ public class WZRootNavigationController: UINavigationController {
     
     open func commonInit(){}
     
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 //        interactivePopGestureRecognizer?.delegate = nil
         interactivePopGestureRecognizer?.isEnabled = false
@@ -135,9 +135,9 @@ extension WZRootNavigationController {
 
 extension WZRootNavigationController {
     
-    public override func setNavigationBarHidden(_ hidden: Bool, animated: Bool) { }
+    open override func setNavigationBarHidden(_ hidden: Bool, animated: Bool) { }
     
-    public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    open override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if self.viewControllers.count > 0 {
             let currentLast = WZSafeUnwrapViewController(self.viewControllers.last!)
             super.pushViewController(WZSafeWrapViewController(viewController, withPlaceholderController: self.isUseSystemBackBarButtonItem, backBarButtonItem: currentLast.navigationItem.backBarButtonItem, backTitle:currentLast.navigationItem.title ?? currentLast.title), animated: animated)
@@ -147,21 +147,21 @@ extension WZRootNavigationController {
         }
     }
     
-    public override func popViewController(animated: Bool) -> UIViewController? {
+    open override func popViewController(animated: Bool) -> UIViewController? {
         guard let controller = super.popViewController(animated: animated) else { return nil }
         return WZSafeUnwrapViewController(controller)
     }
     
-    public override func popToRootViewController(animated: Bool) -> [UIViewController]? {
+    open override func popToRootViewController(animated: Bool) -> [UIViewController]? {
         return super.popToRootViewController(animated: animated)?.map({WZSafeUnwrapViewController($0)})
     }
     
-    public override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
+    open override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
         guard let controllerToPop = super.viewControllers.first(where: {WZSafeUnwrapViewController($0) == viewController }) else { return nil }
         return super.popToViewController(controllerToPop, animated: animated)?.map({WZSafeUnwrapViewController($0)})
     }
     
-    public override func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
+    open override func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
         super.setViewControllers(viewControllers.reduce([UIViewController](), {[weak self] in
             guard let `self` = self else { return [] }
             if self.isUseSystemBackBarButtonItem && $0.count > 0 {
@@ -172,7 +172,7 @@ extension WZRootNavigationController {
         }), animated: animated)
     }
     
-    public override var delegate: UINavigationControllerDelegate?{
+    open override var delegate: UINavigationControllerDelegate?{
         set{
             self.wz_delegate = newValue
         }
@@ -181,26 +181,26 @@ extension WZRootNavigationController {
         }
     }
     
-    public override var shouldAutorotate: Bool {
+    open override var shouldAutorotate: Bool {
         return self.topViewController?.shouldAutorotate ?? super.shouldAutorotate
     }
     
-    public override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return self.topViewController?.supportedInterfaceOrientations ?? super.supportedInterfaceOrientations
     }
     
-    public override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+    open override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         return self.topViewController?.preferredInterfaceOrientationForPresentation ?? super.preferredInterfaceOrientationForPresentation
     }
     
-    public override func responds(to aSelector: Selector!) -> Bool {
+    open override func responds(to aSelector: Selector!) -> Bool {
         if super.responds(to: aSelector) {
             return true
         }
         return self.wz_delegate?.responds(to: aSelector) ?? false
     }
     
-    public override func forwardingTarget(for aSelector: Selector!) -> Any? {
+    open override func forwardingTarget(for aSelector: Selector!) -> Any? {
         return self.wz_delegate
     }
 }
@@ -208,7 +208,7 @@ extension WZRootNavigationController {
 // MARK: unwind
 extension WZRootNavigationController {
     
-    public override func forUnwindSegueAction(_ action: Selector, from fromViewController: UIViewController, withSender sender: Any?) -> UIViewController? {
+    open override func forUnwindSegueAction(_ action: Selector, from fromViewController: UIViewController, withSender sender: Any?) -> UIViewController? {
         if let controller = super.forUnwindSegueAction(action, from: fromViewController, withSender: sender){
             return controller
         }
@@ -234,15 +234,11 @@ extension WZRootNavigationController: UINavigationControllerDelegate {
     public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         let isRoot = viewController == navigationController.viewControllers.first
         let controller = WZSafeUnwrapViewController(viewController)
+        controller.navigationController?.setNavigationBarHidden(controller.wz_prefersNavigationBarHidden, animated: false)
         if isRoot == false {
             let hasSetLeftItem = controller.navigationItem.leftBarButtonItem != nil
-            if hasSetLeftItem && !controller.wz_interactivePopDisabled {
-                controller.wz_interactivePopDisabled = true
-            }else if !controller.wz_interactivePopDisabled {
-                controller.wz_interactivePopDisabled = false
-            }
             if !self.isUseSystemBackBarButtonItem && !hasSetLeftItem {
-                if let item = controller.wz_customBackItem(withTarget: self, action: #selector(wz_onBack)) {
+                if  let item = controller.wz_customBackItem(withTarget: self, action: #selector(wz_onBack)) {
                     controller.navigationItem.leftBarButtonItem = item
                 }else{
                     controller.navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Back", comment:""), style: .plain, target: self, action: #selector(wz_onBack))
@@ -255,12 +251,11 @@ extension WZRootNavigationController: UINavigationControllerDelegate {
     public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         let controller = WZSafeUnwrapViewController(viewController)
         WZRootNavigationController.attemptRotationToDeviceOrientation()
-        
+        self.wz_delegate?.navigationController?(navigationController, didShow: controller, animated: animated)
         if let animationCompletion = self.animationCompletion {
             animationCompletion(true)
             self.animationCompletion = nil
         }
-        self.wz_delegate?.navigationController?(navigationController, didShow: controller, animated: animated)
     }
     
     public func navigationControllerSupportedInterfaceOrientations(_ navigationController: UINavigationController) -> UIInterfaceOrientationMask {
@@ -272,7 +267,7 @@ extension WZRootNavigationController: UINavigationControllerDelegate {
     }
     
     public func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return self.wz_delegate?.navigationController?(navigationController, interactionControllerFor:animationController) ?? (animationController as? WZViewControllerAnimatedTransition)?.fromViewController.interactiveTransition
+        return self.wz_delegate?.navigationController?(navigationController, interactionControllerFor:animationController) ?? (animationController as? WZAnimatedTransitionPlugin)?.fromViewController.interactiveTransition
     }
     
     public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -280,7 +275,7 @@ extension WZRootNavigationController: UINavigationControllerDelegate {
             return transition
         }
         guard let from = fromVC as? WZContainerController ,let to = toVC as? WZContainerController else { return nil }
-        return WZSafeUnwrapViewController(from).wz_animatedTransitionClass.init(operation: operation, from: from, to: to)
+        return WZSafeUnwrapViewController(from).wz_animatedTransitionPluginClass.init(operation: operation, from: from, to: to)
     }
 
 }

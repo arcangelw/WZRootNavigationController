@@ -119,13 +119,6 @@ extension WZContainerNavigationController {
         }
     }
     
-    public override func setNavigationBarHidden(_ hidden: Bool, animated: Bool) {
-        super.setNavigationBarHidden(hidden, animated: animated)
-        if let visibleViewController = self.visibleViewController ,visibleViewController.wz_interactivePopDisabled == false {
-            visibleViewController.wz_interactivePopDisabled = hidden
-        }
-    }
-    
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         return self.topViewController?.preferredStatusBarStyle ?? super.preferredStatusBarStyle
     }

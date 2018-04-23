@@ -7,19 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33D87DA8208B00970057F3B2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D87DA7208B00970057F3B2 /* SecondViewController.swift */; };
-		33D87DAA208BB3FF0057F3B2 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D87DA9208BB3FF0057F3B2 /* ThirdViewController.swift */; };
+		0792A3832F45BEB09A979CFE /* Pods_WZRootNavigationController_Example_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F37DFB5E670F4925A49AC5 /* Pods_WZRootNavigationController_Example_SwiftTests.framework */; };
+		0B17801F01BB2DBDEB933B8E /* Pods_WZRootNavigationController_Example_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3DE481CA05DB4574071390A /* Pods_WZRootNavigationController_Example_Swift.framework */; };
+		33AD4494208DA9CC0053F036 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AD4493208DA9CC0053F036 /* AppDelegate.m */; };
+		33AD4497208DA9CC0053F036 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AD4496208DA9CC0053F036 /* ViewController.m */; };
+		33AD449A208DA9CC0053F036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AD4498208DA9CC0053F036 /* Main.storyboard */; };
+		33AD449C208DA9CD0053F036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33AD449B208DA9CD0053F036 /* Assets.xcassets */; };
+		33AD44A2208DA9CD0053F036 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AD44A1208DA9CD0053F036 /* main.m */; };
+		33AD44AC208DA9CD0053F036 /* WZRootNavigationController_Example_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AD44AB208DA9CD0053F036 /* WZRootNavigationController_Example_ObjCTests.m */; };
+		33AD44C5208DAF1D0053F036 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33AD44C4208DAF1D0053F036 /* LaunchScreen.xib */; };
+		33C65FE2208DCE5E009B7A64 /* WZRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C65FE1208DCE5E009B7A64 /* WZRootViewController.swift */; };
+		33C65FE3208DCE5E009B7A64 /* WZRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C65FE1208DCE5E009B7A64 /* WZRootViewController.swift */; };
+		33C65FE5208DCE8D009B7A64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C65FE4208DCE8D009B7A64 /* Main.storyboard */; };
+		33C65FE6208DCE8D009B7A64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C65FE4208DCE8D009B7A64 /* Main.storyboard */; };
+		33C65FE8208DCEB3009B7A64 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C65FE7208DCEB3009B7A64 /* LaunchScreen.xib */; };
+		33C65FE9208DCEB3009B7A64 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C65FE7208DCEB3009B7A64 /* LaunchScreen.xib */; };
+		33C65FEB208DD4BB009B7A64 /* WZInteractivePopDisabledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C65FEA208DD4BB009B7A64 /* WZInteractivePopDisabledViewController.swift */; };
+		33D52A19208DE68100EAF582 /* WZNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A18208DE68100EAF582 /* WZNormalViewController.swift */; };
+		33D52A1A208DE68100EAF582 /* WZNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A18208DE68100EAF582 /* WZNormalViewController.swift */; };
+		33D52A1C208DE95A00EAF582 /* WZUIWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A1B208DE95A00EAF582 /* WZUIWebViewController.swift */; };
+		33D52A1D208DE95A00EAF582 /* WZUIWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A1B208DE95A00EAF582 /* WZUIWebViewController.swift */; };
+		33D52A1F208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A1E208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift */; };
+		33D52A20208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A1E208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift */; };
+		33D52A22208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A21208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift */; };
+		33D52A23208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A21208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift */; };
+		33D52A25208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A24208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift */; };
+		33D52A26208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A24208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift */; };
+		33D52A29208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */; };
+		33D52A2A208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */; };
+		404CD3B42426ADC0E58522C6 /* Pods_WZRootNavigationController_Example_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E0688526A3E3E930CF7D9D /* Pods_WZRootNavigationController_Example_ObjC.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
-		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
-		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACDD1AFB9204008FA782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Assets.xcassets */; };
+		607FACEC1AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.swift */; };
 		9E898307A86A007C2936FBD2 /* Pods_WZRootNavigationController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374269E8DC2AD6F47B3E0CBC /* Pods_WZRootNavigationController_Tests.framework */; };
+		CD90A73E6FBA0B809270C7EC /* Pods_WZRootNavigationController_Example_ObjCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB157FFD34A5EB632ACFE16 /* Pods_WZRootNavigationController_Example_ObjCTests.framework */; };
 		F97F4C0965870C4A0B55289B /* Pods_WZRootNavigationController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D1074211CFB94A976B9E2C /* Pods_WZRootNavigationController_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		33AD44A8208DA9CD0053F036 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33AD448F208DA9CB0053F036;
+			remoteInfo = WZRootNavigationController_Example_ObjC;
+		};
 		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
@@ -30,35 +62,78 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02F74F75C7D6E695136CEE2E /* Pods-WZRootNavigationController_Example_ObjCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_ObjCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjCTests/Pods-WZRootNavigationController_Example_ObjCTests.release.xcconfig"; sourceTree = "<group>"; };
+		04F37DFB5E670F4925A49AC5 /* Pods_WZRootNavigationController_Example_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Example_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D1074211CFB94A976B9E2C /* Pods_WZRootNavigationController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		33D87DA7208B00970057F3B2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		33D87DA9208BB3FF0057F3B2 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		33AD4490208DA9CB0053F036 /* WZRootNavigationController_Example_ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZRootNavigationController_Example_ObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33AD4492208DA9CC0053F036 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		33AD4493208DA9CC0053F036 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		33AD4495208DA9CC0053F036 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		33AD4496208DA9CC0053F036 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		33AD4499208DA9CC0053F036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33AD449B208DA9CD0053F036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33AD44A0208DA9CD0053F036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33AD44A1208DA9CD0053F036 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33AD44A7208DA9CD0053F036 /* WZRootNavigationController_Example_ObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZRootNavigationController_Example_ObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33AD44AB208DA9CD0053F036 /* WZRootNavigationController_Example_ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZRootNavigationController_Example_ObjCTests.m; sourceTree = "<group>"; };
+		33AD44AD208DA9CD0053F036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33AD44C4208DAF1D0053F036 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		33C65FE1208DCE5E009B7A64 /* WZRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZRootViewController.swift; sourceTree = "<group>"; };
+		33C65FE4208DCE8D009B7A64 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		33C65FE7208DCEB3009B7A64 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		33C65FEA208DD4BB009B7A64 /* WZInteractivePopDisabledViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZInteractivePopDisabledViewController.swift; sourceTree = "<group>"; };
+		33D52A18208DE68100EAF582 /* WZNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZNormalViewController.swift; sourceTree = "<group>"; };
+		33D52A1B208DE95A00EAF582 /* WZUIWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZUIWebViewController.swift; sourceTree = "<group>"; };
+		33D52A1E208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZNavigationBarHiddenViewController.swift; sourceTree = "<group>"; };
+		33D52A21208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZStatusBarHiddenViewController.swift; sourceTree = "<group>"; };
+		33D52A24208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomNavigationBarTableViewController.swift; sourceTree = "<group>"; };
+		33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomNavigationBar.swift; sourceTree = "<group>"; };
 		374269E8DC2AD6F47B3E0CBC /* Pods_WZRootNavigationController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACD01AFB9204008FA782 /* WZRootNavigationController_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZRootNavigationController_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44C5ED792068B863552665E6 /* Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_SwiftTests/Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4AB306DD75D2FDF57BAC3F92 /* Pods-WZRootNavigationController_Example_ObjCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_ObjCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjCTests/Pods-WZRootNavigationController_Example_ObjCTests.debug.xcconfig"; sourceTree = "<group>"; };
+		56A7DBC6E7BA5DD507A5948E /* Pods-WZRootNavigationController_Example_SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_SwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_SwiftTests/Pods-WZRootNavigationController_Example_SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		607FACD01AFB9204008FA782 /* WZRootNavigationController_Example_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZRootNavigationController_Example_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* WZRootNavigationController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZRootNavigationController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACDC1AFB9204008FA782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		607FACE51AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZRootNavigationController_Example_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZRootNavigationController_Example_SwiftTests.swift; sourceTree = "<group>"; };
+		6BB157FFD34A5EB632ACFE16 /* Pods_WZRootNavigationController_Example_ObjCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Example_ObjCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EB32E7D49CC347BC3726BF3 /* Pods-WZRootNavigationController_Example_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_Swift/Pods-WZRootNavigationController_Example_Swift.release.xcconfig"; sourceTree = "<group>"; };
+		6F9B4F4A881B337CDE3DED75 /* Pods-WZRootNavigationController_Example_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_Swift/Pods-WZRootNavigationController_Example_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		75E0688526A3E3E930CF7D9D /* Pods_WZRootNavigationController_Example_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Example_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E040FEC4A78631791C126B4 /* WZRootNavigationController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WZRootNavigationController.podspec; path = ../WZRootNavigationController.podspec; sourceTree = "<group>"; };
-		86E5DFEF9F966D8F4EF4C586 /* Pods-WZRootNavigationController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Tests/Pods-WZRootNavigationController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		91B78680665E25256396635C /* Pods-WZRootNavigationController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example/Pods-WZRootNavigationController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		9FC18A8368C90EC2B97BCD89 /* Pods-WZRootNavigationController_Example_ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_ObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjC/Pods-WZRootNavigationController_Example_ObjC.release.xcconfig"; sourceTree = "<group>"; };
+		B3DE481CA05DB4574071390A /* Pods_WZRootNavigationController_Example_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Example_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD62FEC7D413D8B424BE4BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		CE148C338BA4082DEC55D6AC /* Pods-WZRootNavigationController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Tests/Pods-WZRootNavigationController_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C6C2D2C50A8C1889AFD1204E /* Pods-WZRootNavigationController_Example_ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_ObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjC/Pods-WZRootNavigationController_Example_ObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		E03311C9EE743E0C1056AAF3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		FAC88D9DC51CA7E0E7DFD640 /* Pods-WZRootNavigationController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example/Pods-WZRootNavigationController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		33AD448D208DA9CB0053F036 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				404CD3B42426ADC0E58522C6 /* Pods_WZRootNavigationController_Example_ObjC.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33AD44A4208DA9CD0053F036 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD90A73E6FBA0B809270C7EC /* Pods_WZRootNavigationController_Example_ObjCTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F97F4C0965870C4A0B55289B /* Pods_WZRootNavigationController_Example.framework in Frameworks */,
+				0B17801F01BB2DBDEB933B8E /* Pods_WZRootNavigationController_Example_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,19 +142,71 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E898307A86A007C2936FBD2 /* Pods_WZRootNavigationController_Tests.framework in Frameworks */,
+				0792A3832F45BEB09A979CFE /* Pods_WZRootNavigationController_Example_SwiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33AD4491208DA9CC0053F036 /* WZRootNavigationController_Example_ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				33AD449B208DA9CD0053F036 /* Assets.xcassets */,
+				33AD4498208DA9CC0053F036 /* Main.storyboard */,
+				33AD44C4208DAF1D0053F036 /* LaunchScreen.xib */,
+				33AD4492208DA9CC0053F036 /* AppDelegate.h */,
+				33AD4493208DA9CC0053F036 /* AppDelegate.m */,
+				33AD4496208DA9CC0053F036 /* ViewController.m */,
+				33AD4495208DA9CC0053F036 /* ViewController.h */,
+				33AD44A0208DA9CD0053F036 /* Info.plist */,
+				33AD44A1208DA9CD0053F036 /* main.m */,
+			);
+			path = WZRootNavigationController_Example_ObjC;
+			sourceTree = "<group>";
+		};
+		33AD44AA208DA9CD0053F036 /* WZRootNavigationController_Example_ObjCTests */ = {
+			isa = PBXGroup;
+			children = (
+				33AD44AB208DA9CD0053F036 /* WZRootNavigationController_Example_ObjCTests.m */,
+				33AD44AD208DA9CD0053F036 /* Info.plist */,
+			);
+			path = WZRootNavigationController_Example_ObjCTests;
+			sourceTree = "<group>";
+		};
+		33C65FE0208DCE28009B7A64 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				33C65FE1208DCE5E009B7A64 /* WZRootViewController.swift */,
+				33D52A18208DE68100EAF582 /* WZNormalViewController.swift */,
+				33C65FEA208DD4BB009B7A64 /* WZInteractivePopDisabledViewController.swift */,
+				33D52A1B208DE95A00EAF582 /* WZUIWebViewController.swift */,
+				33D52A1E208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift */,
+				33D52A21208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift */,
+				33D52A24208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		33D52A27208DF07000EAF582 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		48C80213EC5301E915345F94 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FAC88D9DC51CA7E0E7DFD640 /* Pods-WZRootNavigationController_Example.debug.xcconfig */,
-				91B78680665E25256396635C /* Pods-WZRootNavigationController_Example.release.xcconfig */,
-				86E5DFEF9F966D8F4EF4C586 /* Pods-WZRootNavigationController_Tests.debug.xcconfig */,
-				CE148C338BA4082DEC55D6AC /* Pods-WZRootNavigationController_Tests.release.xcconfig */,
+				6F9B4F4A881B337CDE3DED75 /* Pods-WZRootNavigationController_Example_Swift.debug.xcconfig */,
+				6EB32E7D49CC347BC3726BF3 /* Pods-WZRootNavigationController_Example_Swift.release.xcconfig */,
+				C6C2D2C50A8C1889AFD1204E /* Pods-WZRootNavigationController_Example_ObjC.debug.xcconfig */,
+				9FC18A8368C90EC2B97BCD89 /* Pods-WZRootNavigationController_Example_ObjC.release.xcconfig */,
+				4AB306DD75D2FDF57BAC3F92 /* Pods-WZRootNavigationController_Example_ObjCTests.debug.xcconfig */,
+				02F74F75C7D6E695136CEE2E /* Pods-WZRootNavigationController_Example_ObjCTests.release.xcconfig */,
+				44C5ED792068B863552665E6 /* Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig */,
+				56A7DBC6E7BA5DD507A5948E /* Pods-WZRootNavigationController_Example_SwiftTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -88,8 +215,10 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for WZRootNavigationController */,
-				607FACE81AFB9204008FA782 /* Tests */,
+				607FACD21AFB9204008FA782 /* WZRootNavigationController_Example_Swift */,
+				607FACE81AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests */,
+				33AD4491208DA9CC0053F036 /* WZRootNavigationController_Example_ObjC */,
+				33AD44AA208DA9CD0053F036 /* WZRootNavigationController_Example_ObjCTests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				48C80213EC5301E915345F94 /* Pods */,
 				DAEC312F6954347F349F2B00 /* Frameworks */,
@@ -99,25 +228,26 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* WZRootNavigationController_Example.app */,
-				607FACE51AFB9204008FA782 /* WZRootNavigationController_Tests.xctest */,
+				607FACD01AFB9204008FA782 /* WZRootNavigationController_Example_Swift.app */,
+				607FACE51AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.xctest */,
+				33AD4490208DA9CB0053F036 /* WZRootNavigationController_Example_ObjC.app */,
+				33AD44A7208DA9CD0053F036 /* WZRootNavigationController_Example_ObjCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Example for WZRootNavigationController */ = {
+		607FACD21AFB9204008FA782 /* WZRootNavigationController_Example_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				607FACDC1AFB9204008FA782 /* Assets.xcassets */,
+				33C65FE4208DCE8D009B7A64 /* Main.storyboard */,
+				33C65FE7208DCEB3009B7A64 /* LaunchScreen.xib */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				33D87DA7208B00970057F3B2 /* SecondViewController.swift */,
-				33D87DA9208BB3FF0057F3B2 /* ThirdViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				33D52A27208DF07000EAF582 /* Views */,
+				33C65FE0208DCE28009B7A64 /* ViewControllers */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Example for WZRootNavigationController";
+			name = WZRootNavigationController_Example_Swift;
 			path = WZRootNavigationController;
 			sourceTree = "<group>";
 		};
@@ -129,13 +259,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		607FACE81AFB9204008FA782 /* Tests */ = {
+		607FACE81AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACEB1AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
-			path = Tests;
+			path = WZRootNavigationController_Example_SwiftTests;
 			sourceTree = "<group>";
 		};
 		607FACE91AFB9204008FA782 /* Supporting Files */ = {
@@ -161,6 +291,10 @@
 			children = (
 				32D1074211CFB94A976B9E2C /* Pods_WZRootNavigationController_Example.framework */,
 				374269E8DC2AD6F47B3E0CBC /* Pods_WZRootNavigationController_Tests.framework */,
+				B3DE481CA05DB4574071390A /* Pods_WZRootNavigationController_Example_Swift.framework */,
+				75E0688526A3E3E930CF7D9D /* Pods_WZRootNavigationController_Example_ObjC.framework */,
+				6BB157FFD34A5EB632ACFE16 /* Pods_WZRootNavigationController_Example_ObjCTests.framework */,
+				04F37DFB5E670F4925A49AC5 /* Pods_WZRootNavigationController_Example_SwiftTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -168,9 +302,48 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* WZRootNavigationController_Example */ = {
+		33AD448F208DA9CB0053F036 /* WZRootNavigationController_Example_ObjC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example" */;
+			buildConfigurationList = 33AD44BF208DA9CD0053F036 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_ObjC" */;
+			buildPhases = (
+				C1E6EFA0E31C45F827BAA279 /* [CP] Check Pods Manifest.lock */,
+				33AD448C208DA9CB0053F036 /* Sources */,
+				33AD448D208DA9CB0053F036 /* Frameworks */,
+				33AD448E208DA9CB0053F036 /* Resources */,
+				2D6E9C06DFD2DEFF661301CD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WZRootNavigationController_Example_ObjC;
+			productName = WZRootNavigationController_Example_ObjC;
+			productReference = 33AD4490208DA9CB0053F036 /* WZRootNavigationController_Example_ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33AD44A6208DA9CD0053F036 /* WZRootNavigationController_Example_ObjCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33AD44C0208DA9CD0053F036 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_ObjCTests" */;
+			buildPhases = (
+				BB5D12BD63646C1EE6C36D4D /* [CP] Check Pods Manifest.lock */,
+				33AD44A3208DA9CD0053F036 /* Sources */,
+				33AD44A4208DA9CD0053F036 /* Frameworks */,
+				33AD44A5208DA9CD0053F036 /* Resources */,
+				6F5C28F1E83D395E27243BB3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33AD44A9208DA9CD0053F036 /* PBXTargetDependency */,
+			);
+			name = WZRootNavigationController_Example_ObjCTests;
+			productName = WZRootNavigationController_Example_ObjCTests;
+			productReference = 33AD44A7208DA9CD0053F036 /* WZRootNavigationController_Example_ObjCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		607FACCF1AFB9204008FA782 /* WZRootNavigationController_Example_Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_Swift" */;
 			buildPhases = (
 				E8A63CCE5DCE9702AC5CC05D /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
@@ -182,14 +355,14 @@
 			);
 			dependencies = (
 			);
-			name = WZRootNavigationController_Example;
+			name = WZRootNavigationController_Example_Swift;
 			productName = WZRootNavigationController;
-			productReference = 607FACD01AFB9204008FA782 /* WZRootNavigationController_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* WZRootNavigationController_Example_Swift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		607FACE41AFB9204008FA782 /* WZRootNavigationController_Tests */ = {
+		607FACE41AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Tests" */;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_SwiftTests" */;
 			buildPhases = (
 				03140CADDC9222BCDD8E2AA9 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
@@ -202,9 +375,9 @@
 			dependencies = (
 				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
 			);
-			name = WZRootNavigationController_Tests;
+			name = WZRootNavigationController_Example_SwiftTests;
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* WZRootNavigationController_Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -217,6 +390,15 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
+					33AD448F208DA9CB0053F036 = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+					};
+					33AD44A6208DA9CD0053F036 = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 33AD448F208DA9CB0053F036;
+					};
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
@@ -241,20 +423,39 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* WZRootNavigationController_Example */,
-				607FACE41AFB9204008FA782 /* WZRootNavigationController_Tests */,
+				607FACCF1AFB9204008FA782 /* WZRootNavigationController_Example_Swift */,
+				607FACE41AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests */,
+				33AD448F208DA9CB0053F036 /* WZRootNavigationController_Example_ObjC */,
+				33AD44A6208DA9CD0053F036 /* WZRootNavigationController_Example_ObjCTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		33AD448E208DA9CB0053F036 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33AD449C208DA9CD0053F036 /* Assets.xcassets in Resources */,
+				33AD44C5208DAF1D0053F036 /* LaunchScreen.xib in Resources */,
+				33AD449A208DA9CC0053F036 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33AD44A5208DA9CD0053F036 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCE1AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
-				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				607FACDD1AFB9204008FA782 /* Assets.xcassets in Resources */,
+				33C65FE8208DCEB3009B7A64 /* LaunchScreen.xib in Resources */,
+				33C65FE5208DCE8D009B7A64 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +463,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C65FE9208DCEB3009B7A64 /* LaunchScreen.xib in Resources */,
+				33C65FE6208DCE8D009B7A64 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,20 +482,20 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WZRootNavigationController_Tests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-WZRootNavigationController_Example_SwiftTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		63C652DF8393489490BB018F /* [CP] Embed Pods Frameworks */ = {
+		2D6E9C06DFD2DEFF661301CD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example/Pods-WZRootNavigationController_Example-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjC/Pods-WZRootNavigationController_Example_ObjC-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/WZRootNavigationController/WZRootNavigationController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -301,16 +504,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example/Pods-WZRootNavigationController_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjC/Pods-WZRootNavigationController_Example_ObjC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AE272E1068901E9B495D0FAE /* [CP] Embed Pods Frameworks */ = {
+		63C652DF8393489490BB018F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Tests/Pods-WZRootNavigationController_Tests-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_Swift/Pods-WZRootNavigationController_Example_Swift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/WZRootNavigationController/WZRootNavigationController.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WZRootNavigationController.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_Swift/Pods-WZRootNavigationController_Example_Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F5C28F1E83D395E27243BB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjCTests/Pods-WZRootNavigationController_Example_ObjCTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
@@ -325,7 +546,67 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Tests/Pods-WZRootNavigationController_Tests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjCTests/Pods-WZRootNavigationController_Example_ObjCTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE272E1068901E9B495D0FAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_SwiftTests/Pods-WZRootNavigationController_Example_SwiftTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_SwiftTests/Pods-WZRootNavigationController_Example_SwiftTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB5D12BD63646C1EE6C36D4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WZRootNavigationController_Example_ObjCTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1E6EFA0E31C45F827BAA279 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WZRootNavigationController_Example_ObjC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E8A63CCE5DCE9702AC5CC05D /* [CP] Check Pods Manifest.lock */ = {
@@ -339,7 +620,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WZRootNavigationController_Example-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-WZRootNavigationController_Example_Swift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -349,14 +630,37 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		33AD448C208DA9CB0053F036 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33AD4497208DA9CC0053F036 /* ViewController.m in Sources */,
+				33AD44A2208DA9CD0053F036 /* main.m in Sources */,
+				33AD4494208DA9CC0053F036 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33AD44A3208DA9CD0053F036 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33AD44AC208DA9CD0053F036 /* WZRootNavigationController_Example_ObjCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33D87DA8208B00970057F3B2 /* SecondViewController.swift in Sources */,
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				33D87DAA208BB3FF0057F3B2 /* ThirdViewController.swift in Sources */,
+				33D52A19208DE68100EAF582 /* WZNormalViewController.swift in Sources */,
+				33D52A25208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift in Sources */,
+				33D52A29208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */,
+				33D52A1F208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift in Sources */,
+				33C65FEB208DD4BB009B7A64 /* WZInteractivePopDisabledViewController.swift in Sources */,
+				33D52A1C208DE95A00EAF582 /* WZUIWebViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				33C65FE2208DCE5E009B7A64 /* WZRootViewController.swift in Sources */,
+				33D52A22208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,40 +668,138 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				33D52A20208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift in Sources */,
+				33D52A1A208DE68100EAF582 /* WZNormalViewController.swift in Sources */,
+				33D52A26208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.swift in Sources */,
+				33D52A23208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift in Sources */,
+				33D52A1D208DE95A00EAF582 /* WZUIWebViewController.swift in Sources */,
+				33C65FE3208DCE5E009B7A64 /* WZRootViewController.swift in Sources */,
+				33D52A2A208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		33AD44A9208DA9CD0053F036 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33AD448F208DA9CB0053F036 /* WZRootNavigationController_Example_ObjC */;
+			targetProxy = 33AD44A8208DA9CD0053F036 /* PBXContainerItemProxy */;
+		};
 		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* WZRootNavigationController_Example */;
+			target = 607FACCF1AFB9204008FA782 /* WZRootNavigationController_Example_Swift */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+		33AD4498208DA9CC0053F036 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
+				33AD4499208DA9CC0053F036 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDF1AFB9204008FA782 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		33AD44B9208DA9CD0053F036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6C2D2C50A8C1889AFD1204E /* Pods-WZRootNavigationController_Example_ObjC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = WZRootNavigationController_Example_ObjC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "wu.zhe.WZRootNavigationController-Example-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33AD44BA208DA9CD0053F036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FC18A8368C90EC2B97BCD89 /* Pods-WZRootNavigationController_Example_ObjC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = WZRootNavigationController_Example_ObjC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "wu.zhe.WZRootNavigationController-Example-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		33AD44BB208DA9CD0053F036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AB306DD75D2FDF57BAC3F92 /* Pods-WZRootNavigationController_Example_ObjCTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = WZRootNavigationController_Example_ObjCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "wu.zhe.WZRootNavigationController-Example-ObjCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WZRootNavigationController_Example_ObjC.app/WZRootNavigationController_Example_ObjC";
+			};
+			name = Debug;
+		};
+		33AD44BC208DA9CD0053F036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02F74F75C7D6E695136CEE2E /* Pods-WZRootNavigationController_Example_ObjCTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = WZRootNavigationController_Example_ObjCTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "wu.zhe.WZRootNavigationController-Example-ObjCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WZRootNavigationController_Example_ObjC.app/WZRootNavigationController_Example_ObjC";
+			};
+			name = Release;
+		};
 		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -503,7 +905,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAC88D9DC51CA7E0E7DFD640 /* Pods-WZRootNavigationController_Example.debug.xcconfig */;
+			baseConfigurationReference = 6F9B4F4A881B337CDE3DED75 /* Pods-WZRootNavigationController_Example_Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WZRootNavigationController/Info.plist;
@@ -514,12 +916,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91B78680665E25256396635C /* Pods-WZRootNavigationController_Example.release.xcconfig */;
+			baseConfigurationReference = 6EB32E7D49CC347BC3726BF3 /* Pods-WZRootNavigationController_Example_Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WZRootNavigationController/Info.plist;
@@ -530,12 +933,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86E5DFEF9F966D8F4EF4C586 /* Pods-WZRootNavigationController_Tests.debug.xcconfig */;
+			baseConfigurationReference = 44C5ED792068B863552665E6 /* Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -545,7 +949,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = WZRootNavigationController_Example_SwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -556,13 +960,13 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE148C338BA4082DEC55D6AC /* Pods-WZRootNavigationController_Tests.release.xcconfig */;
+			baseConfigurationReference = 56A7DBC6E7BA5DD507A5948E /* Pods-WZRootNavigationController_Example_SwiftTests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = WZRootNavigationController_Example_SwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -574,6 +978,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		33AD44BF208DA9CD0053F036 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33AD44B9208DA9CD0053F036 /* Debug */,
+				33AD44BA208DA9CD0053F036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33AD44C0208DA9CD0053F036 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_ObjCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33AD44BB208DA9CD0053F036 /* Debug */,
+				33AD44BC208DA9CD0053F036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "WZRootNavigationController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -583,7 +1005,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_Swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
@@ -592,7 +1014,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Tests" */ = {
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_SwiftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,

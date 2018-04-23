@@ -7,25 +7,27 @@
 
 import UIKit
 
-internal func WZSafeUnwrapViewController(_ controller:UIViewController) ->UIViewController {
-    guard let _controller = controller as? WZContainerController else { return controller}
+public func WZSafeUnwrapViewController(_ controller:UIViewController) ->UIViewController {
+    guard let _controller = controller as? WZContainerController else { return controller }
     return _controller.contentViewController
 }
 
-internal func WZSafeWrapViewController(_ controller:UIViewController ,withPlaceholderController yesOrNo:Bool = false ,backBarButtonItem backItem:UIBarButtonItem? = nil ,backTitle:String? = nil) ->UIViewController{
-    if controller is WZContainerController { return controller }
+public func WZSafeWrapViewController(_ controller:UIViewController ,withPlaceholderController yesOrNo:Bool = false ,backBarButtonItem backItem:UIBarButtonItem? = nil ,backTitle:String? = nil) ->WZContainerController{
+    if controller is WZContainerController { return controller as! WZContainerController }
     return WZContainerController(controller: controller, withPlaceholderController: yesOrNo, backBarButtonItem: backItem, backTitle: backTitle)
 }
 
 public final class WZContainerController: UIViewController {
 
-    private(set) var interactiveTransition:UIPercentDrivenInteractiveTransition?
+    fileprivate(set) var interactiveTransition:UIPercentDrivenInteractiveTransition?
     
     public fileprivate(set) var contentViewController:UIViewController
     
     public let containerNavigationController:WZContainerNavigationController?
     
-    private var popRecognizerDelegate:UIGestureRecognizerDelegate?
+    @objc public fileprivate(set) var gestureDirection:WZGestureDirection = .none
+    
+    public fileprivate(set) var popRecognizerDelegate:UIGestureRecognizerDelegate?
     
     init(controller:UIViewController ,withPlaceholderController yesOrNo:Bool = false ,backBarButtonItem backItem:UIBarButtonItem? = nil ,backTitle:String? = nil) {
         self.contentViewController = controller
@@ -82,7 +84,7 @@ public final class WZContainerController: UIViewController {
         
         let popRecognizer = UIPanGestureRecognizer(target: self, action:#selector(handlePopRecognizer(_:)))
         view.addGestureRecognizer(popRecognizer)
-        popRecognizerDelegate = contentViewController.wz_gestureRecognizerDelegateClass.init(containerController: self, contentViewController: contentViewController)
+        popRecognizerDelegate = contentViewController.wz_gesturePluginClass.init(containerController: self)
         popRecognizer.delegate = popRecognizerDelegate
 
         if self.navigationController?.viewControllers.first == self {
@@ -92,11 +94,37 @@ public final class WZContainerController: UIViewController {
 }
 
 extension WZContainerController {
+    
+    /// WZContainerController 获取真实的控制器
+    @objc public  static func safeUnwrapViewController(_ controller:UIViewController) -> UIViewController{
+        return WZSafeUnwrapViewController(controller)
+    }
+    
+    /// 包装控制器为 WZContainerController
+    @objc public static func safeWrapViewController(_ controller:UIViewController ,withPlaceholderController yesOrNo:Bool = false ,backBarButtonItem backItem:UIBarButtonItem? = nil ,backTitle:String? = nil) -> WZContainerController{
+        return WZSafeWrapViewController(controller, withPlaceholderController:yesOrNo, backBarButtonItem:backItem, backTitle:backTitle)
+    }
+}
+
+extension WZContainerController {
     @objc func handlePopRecognizer(_ recognizer:UIPanGestureRecognizer){
-        var progress = recognizer.translation(in: self.view).x / self.view.frame.width
-        progress = min(1.0, max(0.0, progress))
         
+        var progress:CGFloat =  0.0
+        if self.gestureDirection.isHorizontal {
+            progress = recognizer.translation(in: self.view).x / self.view.frame.width
+        }else if self.gestureDirection.isVertical {
+            progress = recognizer.translation(in: self.view).y / self.view.frame.height
+        }else{
+            if let interactiveTransition = self.interactiveTransition {
+                interactiveTransition.cancel()
+                self.interactiveTransition?.cancel()
+                return
+            }
+        }
+        progress = min(1.0, max(0.0, progress))
         if .began == recognizer.state {
+            if self.interactiveTransition != nil && self.gestureDirection != .none { return }
+            self.gestureDirection = recognizer.translation(in: self.view).wz_direction()
             self.interactiveTransition = UIPercentDrivenInteractiveTransition()
             self.navigationController?.popViewController(animated: true)
         }
@@ -110,6 +138,10 @@ extension WZContainerController {
             }else{
                 interactiveTransition.cancel()
             }
+            self.gestureDirection = .none
+            self.interactiveTransition = nil
+        }else{
+            self.gestureDirection = .none
             self.interactiveTransition = nil
         }
     }

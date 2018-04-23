@@ -1,25 +1,20 @@
 //
-//  SecondViewController.swift
-//  WZRootNavigationController_Example
+//  WZInteractivePopDisabledViewController.swift
+//  WZRootNavigationController_Example_Swift
 //
-//  Created by wu.zhe on 2018/4/21.
+//  Created by 吴哲 on 2018/4/23.
 //  Copyright © 2018年 CocoaPods. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class WZInteractivePopDisabledViewController: UIViewController {
 
-    
-    deinit {
-        print(self.classForCoder, #line , #function)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Second"
+
+        
         // Do any additional setup after loading the view.
-        self.navigationController?.navigationBar.barTintColor = .white
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,10 +22,7 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func popToSecond(_ segue:UIStoryboardSegue){
-        print(self.classForCoder , #function ,":",segue.identifier ?? "")
-    }
-    
+
     /*
     // MARK: - Navigation
 
