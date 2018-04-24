@@ -74,8 +74,11 @@ extension WZRootNavigationController {
     }
     
     public func remove(viewController:UIViewController, animated:Bool = false){
-        let controllers = self.viewControllers.filter({WZSafeUnwrapViewController($0) != viewController})
-        super.setViewControllers(controllers, animated: animated)
+        guard let toRemoveController = self.viewControllers.first(where: {WZSafeUnwrapViewController($0) == viewController}) else {
+            return
+        }
+        let controllers = self.viewControllers.filter({$0 != toRemoveController})
+        self.setViewControllers(controllers, animated: animated)
     }
     
     public func pushViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping ((Bool) -> Void)){
@@ -162,11 +165,31 @@ extension WZRootNavigationController {
     }
     
     open override func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
-        super.setViewControllers(viewControllers.reduce([UIViewController](), {[weak self] in
+        super.setViewControllers(viewControllers.reduce([WZContainerController](), {[weak self] in
             guard let `self` = self else { return [] }
             if self.isUseSystemBackBarButtonItem && $0.count > 0 {
-               let currentLast = viewControllers[$0.count - 1]
-               return $0 + [WZSafeWrapViewController($1, withPlaceholderController: self.isUseSystemBackBarButtonItem, backBarButtonItem: currentLast.navigationItem.backBarButtonItem, backTitle: currentLast.title)]
+               let previous = WZSafeUnwrapViewController(viewControllers[$0.count - 1])
+               let backItem = previous.navigationItem.backBarButtonItem
+               let backTitle = previous.navigationItem.title ?? previous.title
+               if let container = $1 as? WZContainerController {
+                    if let placeholderController = container.containerNavigationController?.realViewControllers.first,
+                        placeholderController != container.contentViewController{
+                        let noChange = placeholderController.navigationItem.backBarButtonItem == backItem && placeholderController.navigationItem.title == backTitle && placeholderController.title == backTitle
+                        placeholderController.navigationItem.backBarButtonItem = backItem
+                        placeholderController.navigationItem.title = backTitle
+                        placeholderController.title = backTitle
+                        if !noChange {
+                            container.containerNavigationController!.realViewControllers = [placeholderController,container.contentViewController]
+                        }
+                    }
+               }
+               return $0 + [WZSafeWrapViewController($1, withPlaceholderController: self.isUseSystemBackBarButtonItem, backBarButtonItem: backItem, backTitle:backTitle)]
+            }
+            if let container = $1 as? WZContainerController {
+                container.containerNavigationController?.realViewControllers = [container.contentViewController]
+                if $0.count == 0 && container.navigationItem.leftBarButtonItem?.tag == self.hashValue {
+                    container.navigationItem.leftBarButtonItem = nil
+                }
             }
             return $0 + [WZSafeWrapViewController($1)]
         }), animated: animated)
@@ -247,6 +270,7 @@ extension WZRootNavigationController: UINavigationControllerDelegate {
                     contentViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Back", comment:""), style: .plain, target: self, action: #selector(wz_onBack))
                 }
             }
+            contentViewController.navigationItem.leftBarButtonItem?.tag = self.hashValue
         }
         self.wz_delegate?.navigationController?(navigationController, willShow: contentViewController, animated: animated)
     }

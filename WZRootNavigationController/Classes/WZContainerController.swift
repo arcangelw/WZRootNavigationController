@@ -38,6 +38,7 @@ public final class WZContainerController: UIViewController {
             let vc = UIViewController()
             vc.view.backgroundColor = .white
             vc.title = backTitle
+            vc.navigationItem.title = backTitle
             vc.navigationItem.backBarButtonItem = backItem
             containerNavigationController!.viewControllers = [vc,controller]
         }else{

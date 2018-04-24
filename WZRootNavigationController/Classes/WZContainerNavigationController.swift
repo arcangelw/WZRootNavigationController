@@ -73,6 +73,16 @@ extension WZContainerNavigationController {
         }
     }
     
+    public var realViewControllers: [UIViewController] {
+        set{
+            super.popToRootViewController(animated: false)
+            super.setViewControllers(newValue, animated: false)
+        }
+        get{
+            return super.viewControllers
+        }
+    }
+    
     public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if let navigationController = self.navigationController {
             navigationController.pushViewController(viewController, animated: animated)
