@@ -8,9 +8,9 @@
 import UIKit
 
 open class WZAnimatedTransitionPlugin: NSObject {
-    let operation:UINavigationControllerOperation
-    weak var fromViewController:WZContainerController!
-    weak var toViewController:WZContainerController!
+    public let operation:UINavigationControllerOperation
+    public fileprivate(set) weak var fromViewController:WZContainerController!
+    public fileprivate(set) weak var toViewController:WZContainerController!
     @objc public required init(operation:UINavigationControllerOperation ,from fromViewController:WZContainerController, to toViewController:WZContainerController) {
         self.operation = operation
         self.fromViewController = fromViewController

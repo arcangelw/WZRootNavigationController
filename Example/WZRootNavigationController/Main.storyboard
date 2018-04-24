@@ -5,13 +5,147 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--popAllowedEdge-->
+        <scene sceneID="dTX-xj-Kti">
+            <objects>
+                <collectionViewController storyboardIdentifier="WZPopAllowedEdgeCollectionViewController" id="8Uh-XS-122" customClass="WZPopAllowedEdgeCollectionViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9VM-oS-fFo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="k0O-uv-wWZ">
+                            <size key="itemSize" width="60" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="collectionView-Horizontal" id="GSc-pY-Jd4" customClass="WZCollectionViewHorizontalCell" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="60" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                                <connections>
+                                    <segue destination="W26-XF-5er" kind="show" id="ct7-7C-ayf"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="8Uh-XS-122" id="AQy-hd-P7r"/>
+                            <outlet property="delegate" destination="8Uh-XS-122" id="dBi-ZY-P6Z"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="popAllowedEdge" id="VSV-Zh-jrp"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8x5-Pr-Nn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1279" y="613"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="Ueu-76-QD1">
+            <objects>
+                <collectionViewController storyboardIdentifier="WZCustomAnimatedTransitionListCollectionViewController" id="olm-IY-BYr" customClass="WZCustomAnimatedTransitionListCollectionViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tTA-IB-Lqy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="l4s-6a-hUg">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="WZCustomAnimatedTransitionListCell" reuseIdentifier="customAnimatedTransitionListCell" id="mLH-Zh-8le" customClass="WZCustomAnimatedTransitionListCell" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TRu-Pm-Zfo">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="TRu-Pm-Zfo" firstAttribute="leading" secondItem="mLH-Zh-8le" secondAttribute="leading" id="8fA-dR-V2d"/>
+                                    <constraint firstItem="TRu-Pm-Zfo" firstAttribute="top" secondItem="mLH-Zh-8le" secondAttribute="top" id="e4l-vH-hcO"/>
+                                    <constraint firstAttribute="bottom" secondItem="TRu-Pm-Zfo" secondAttribute="bottom" id="kfT-SD-hdw"/>
+                                    <constraint firstAttribute="trailing" secondItem="TRu-Pm-Zfo" secondAttribute="trailing" id="zq6-ru-BlM"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="TRu-Pm-Zfo" id="ZVQ-Jl-3Zs"/>
+                                    <segue destination="I8o-DO-CYc" kind="show" id="fN5-L1-fG0"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="olm-IY-BYr" id="0e4-CD-Sxb"/>
+                            <outlet property="delegate" destination="olm-IY-BYr" id="Rcf-Yv-Vib"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="List" id="PxD-nS-CIA"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hkO-KW-6Qa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72" y="613"/>
+        </scene>
+        <!--Deatil-->
+        <scene sceneID="MXm-6H-JYL">
+            <objects>
+                <viewController storyboardIdentifier="WZCustomAnimatedTransitionDetailViewController" id="I8o-DO-CYc" customClass="WZCustomAnimatedTransitionDetailViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zp2-uy-FPk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ro7-pB-rua"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hdm-sm-Z20">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAK-G7-LS5">
+                                <rect key="frame" x="0.0" y="64" width="375" height="140"/>
+                                <color key="backgroundColor" red="0.2901960784" green="0.70588235290000001" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Dw-ar-ZaB">
+                                <rect key="frame" x="36" y="84" width="160" height="160"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="A0O-RI-v4y"/>
+                                    <constraint firstAttribute="width" constant="160" id="lHF-B6-VDM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gAK-G7-LS5" secondAttribute="trailing" id="1P1-fv-nF1"/>
+                            <constraint firstItem="1Dw-ar-ZaB" firstAttribute="top" secondItem="zp2-uy-FPk" secondAttribute="bottom" constant="20" id="9VQ-cb-eih"/>
+                            <constraint firstItem="gAK-G7-LS5" firstAttribute="leading" secondItem="hdm-sm-Z20" secondAttribute="leading" id="D4q-yV-JQC"/>
+                            <constraint firstItem="gAK-G7-LS5" firstAttribute="bottom" secondItem="1Dw-ar-ZaB" secondAttribute="bottom" constant="-40" id="Qdv-CO-b9f"/>
+                            <constraint firstItem="1Dw-ar-ZaB" firstAttribute="leading" secondItem="hdm-sm-Z20" secondAttribute="leadingMargin" constant="20" id="Qqf-Ix-wNE"/>
+                            <constraint firstItem="gAK-G7-LS5" firstAttribute="top" secondItem="zp2-uy-FPk" secondAttribute="bottom" id="Uy6-uD-bNQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Deatil" id="RMd-ml-N4r"/>
+                    <connections>
+                        <outlet property="imageView" destination="1Dw-ar-ZaB" id="aOY-qN-43t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y66-lc-HFR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069" y="619"/>
+        </scene>
         <!--Root-->
         <scene sceneID="VyH-iv-BPz">
             <objects>
-                <tableViewController storyboardIdentifier="Root" id="V5C-PI-UDa" customClass="WZRootViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="WZRootViewController" id="V5C-PI-UDa" customClass="WZRootViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="T8a-sW-DLg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,7 +300,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="interactivePopDisabled" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lDg-cr-34p">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="push and remove" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lDg-cr-34p">
                                                     <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -175,6 +309,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bCb-TE-jwW" kind="show" id="Zde-Uv-8tk"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="DQj-K2-bEj" style="IBUITableViewCellStyleDefault" id="Kk3-bU-fti">
                                         <rect key="frame" x="0.0" y="352" width="375" height="44"/>
@@ -183,7 +320,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="interactivePopDisabled" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DQj-K2-bEj">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="popAllowedEdge" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DQj-K2-bEj">
                                                     <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -192,6 +329,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8Uh-XS-122" kind="show" id="yVE-ck-3RN"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="abV-CV-1xn" style="IBUITableViewCellStyleDefault" id="lWZ-bm-AzF">
                                         <rect key="frame" x="0.0" y="396" width="375" height="44"/>
@@ -200,7 +340,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="interactivePopDisabled" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="abV-CV-1xn">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="customAnimatedTransition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="abV-CV-1xn">
                                                     <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -209,6 +349,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="olm-IY-BYr" kind="show" id="xjl-GW-48u"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -222,12 +365,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xd8-R7-1DN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="252" y="-16"/>
+            <point key="canvasLocation" x="-2476" y="143"/>
         </scene>
         <!--collectionView-Horizontal-->
         <scene sceneID="U9g-lj-kH0">
             <objects>
-                <collectionViewController id="7hN-we-RGp" customClass="WZCollectionViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="WZCollectionViewController" id="7hN-we-RGp" customClass="WZCollectionViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" contentMode="scaleToFill" delaysContentTouches="NO" canCancelContentTouches="NO" keyboardDismissMode="onDrag" dataMode="prototypes" id="wR6-zO-zM4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -238,7 +381,19 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
-                        <cells/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="collectionView-Horizontal" id="nEX-HC-kZY" customClass="WZCollectionViewHorizontalCell" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="60" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                                <connections>
+                                    <segue destination="8Uh-XS-122" kind="show" id="F7s-3t-zNM"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
                         <connections>
                             <outlet property="dataSource" destination="7hN-we-RGp" id="oNi-tU-rQA"/>
                             <outlet property="delegate" destination="7hN-we-RGp" id="bxC-NK-1d5"/>
@@ -248,12 +403,60 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JM3-1v-bz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-319.19999999999999" y="472.71364317841085"/>
+            <point key="canvasLocation" x="-74" y="-289"/>
+        </scene>
+        <!--push and remove-->
+        <scene sceneID="IMy-8V-L5x">
+            <objects>
+                <viewController storyboardIdentifier="WZPushAndRemoveViewController" id="bCb-TE-jwW" customClass="WZPushAndRemoveViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mT7-gn-NfQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="jvn-Bu-UZB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m0b-bo-Yw0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="myp-l4-Eyh">
+                                <rect key="frame" x="163" y="291" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="isAnimating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2T-Jk-3gN">
+                                <rect key="frame" x="143" y="250" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mhz-ad-KRn">
+                                <rect key="frame" x="128" y="342" width="118" height="30"/>
+                                <state key="normal" title="push and remove"/>
+                                <connections>
+                                    <action selector="pushAndRemove:" destination="bCb-TE-jwW" eventType="touchUpInside" id="dFR-9w-bPA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mhz-ad-KRn" firstAttribute="top" secondItem="myp-l4-Eyh" secondAttribute="bottom" constant="20" id="0fA-y3-R8s"/>
+                            <constraint firstItem="myp-l4-Eyh" firstAttribute="centerX" secondItem="r2T-Jk-3gN" secondAttribute="centerX" id="5O2-TV-nsO"/>
+                            <constraint firstItem="Mhz-ad-KRn" firstAttribute="centerX" secondItem="myp-l4-Eyh" secondAttribute="centerX" id="asf-Bt-OvA"/>
+                            <constraint firstItem="myp-l4-Eyh" firstAttribute="top" secondItem="r2T-Jk-3gN" secondAttribute="bottom" constant="20" id="gH2-be-sWd"/>
+                            <constraint firstItem="r2T-Jk-3gN" firstAttribute="centerX" secondItem="m0b-bo-Yw0" secondAttribute="centerX" id="vZb-2i-Nbr"/>
+                            <constraint firstItem="r2T-Jk-3gN" firstAttribute="top" secondItem="mT7-gn-NfQ" secondAttribute="bottom" constant="186" id="wq9-Mj-1wG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="push and remove" id="s02-IX-oKz"/>
+                    <connections>
+                        <outlet property="animatingSwitch" destination="myp-l4-Eyh" id="1FV-XJ-wNJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7g-mV-xTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="-289"/>
         </scene>
         <!--navigationBarHidden-->
         <scene sceneID="WyW-yr-BEy">
             <objects>
-                <viewController id="W26-XF-5er" customClass="WZNavigationBarHiddenViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WZNavigationBarHiddenViewController" id="W26-XF-5er" customClass="WZNavigationBarHiddenViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rO2-dC-THH"/>
                         <viewControllerLayoutGuide type="bottom" id="WSO-xB-jt8"/>
@@ -262,9 +465,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WU7-PG-9y3">
-                                <rect key="frame" x="95" y="113" width="154" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WU7-PG-9y3">
+                                <rect key="frame" x="110.5" y="113" width="154" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="push to normal">
                                     <color key="titleColor" red="0.93333333330000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -273,9 +475,8 @@
                                     <segue destination="hsD-BN-q0p" kind="show" id="cTJ-qs-2vU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IP-o3-bTc">
-                                <rect key="frame" x="152" y="176" width="41" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2IP-o3-bTc">
+                                <rect key="frame" x="167" y="246.5" width="41" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="pop">
                                     <color key="titleColor" red="0.93333333330000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -286,17 +487,23 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.70588235290000001" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WU7-PG-9y3" firstAttribute="centerY" secondItem="pIp-gy-hpz" secondAttribute="bottom" multiplier="1/5" id="0aO-Li-J78"/>
+                            <constraint firstItem="2IP-o3-bTc" firstAttribute="centerX" secondItem="pIp-gy-hpz" secondAttribute="centerX" id="WqS-N2-r1H"/>
+                            <constraint firstItem="WU7-PG-9y3" firstAttribute="centerX" secondItem="pIp-gy-hpz" secondAttribute="centerX" id="iuL-go-oMO"/>
+                            <constraint firstItem="2IP-o3-bTc" firstAttribute="centerY" secondItem="pIp-gy-hpz" secondAttribute="bottom" multiplier="2/5" id="zAW-lg-jpG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="navigationBarHidden" id="fMf-7e-cUp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="93u-lI-gh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145" y="-345"/>
+            <point key="canvasLocation" x="-1279" y="-1097"/>
         </scene>
         <!--tableView+customNavgationBar-->
         <scene sceneID="drQ-ns-fQF">
             <objects>
-                <tableViewController id="1gS-19-vOA" customClass="WZCustomNavigationBarTableViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="WZCustomNavigationBarTableViewController" id="1gS-19-vOA" customClass="WZCustomNavigationBarTableViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8ra-4Z-OKO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,12 +537,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPs-5Z-1GQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1111" y="800"/>
+            <point key="canvasLocation" x="-1279" y="-289"/>
         </scene>
         <!--statusBarHidden-->
         <scene sceneID="c2I-hq-YHp">
             <objects>
-                <viewController id="joM-em-1vh" customClass="WZStatusBarHiddenViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WZStatusBarHiddenViewController" id="joM-em-1vh" customClass="WZStatusBarHiddenViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZzA-MW-c2U"/>
                         <viewControllerLayoutGuide type="bottom" id="iJE-Ge-pHw"/>
@@ -349,12 +556,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6D-lk-UJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066" y="274"/>
+            <point key="canvasLocation" x="1158" y="-1097"/>
         </scene>
         <!--Normal-->
         <scene sceneID="zyC-T2-lCN">
             <objects>
-                <viewController id="hsD-BN-q0p" customClass="WZNormalViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WZNormalViewController" id="hsD-BN-q0p" customClass="WZNormalViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SdT-w7-dax"/>
                         <viewControllerLayoutGuide type="bottom" id="0oF-qN-0C4"/>
@@ -375,12 +582,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xYC-tb-iEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BNr-vM-ZrB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="-911"/>
+            <point key="canvasLocation" x="-3615" y="-1097"/>
         </scene>
         <!--interactivePopDisabled-->
         <scene sceneID="vRt-Gh-60D">
             <objects>
-                <viewController id="Pem-Ln-XdN" userLabel="interactivePopDisabled" customClass="WZInteractivePopDisabledViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WZInteractivePopDisabledViewController" id="Pem-Ln-XdN" userLabel="interactivePopDisabled" customClass="WZInteractivePopDisabledViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M9g-oE-6ar"/>
                         <viewControllerLayoutGuide type="bottom" id="E8X-k4-GGc"/>
@@ -403,12 +610,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDm-Ie-kDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1124" y="-17"/>
+            <point key="canvasLocation" x="-73" y="-1097"/>
         </scene>
         <!--uiWebView-->
         <scene sceneID="FQF-Sk-FYP">
             <objects>
-                <viewController id="slM-cH-JSF" customClass="WZUIWebViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WZUIWebViewController" id="slM-cH-JSF" customClass="WZUIWebViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KKf-VD-CPe"/>
                         <viewControllerLayoutGuide type="bottom" id="3FD-ZU-5BX"/>
@@ -422,12 +629,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95P-9M-7k2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1167" y="-592"/>
+            <point key="canvasLocation" x="-2476" y="-1097"/>
         </scene>
         <!--Root Navigation Controller-->
         <scene sceneID="xBw-JC-v4z">
             <objects>
-                <navigationController id="yJP-pl-xXo" customClass="WZRootNavigationController" customModule="WZRootNavigationController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="WZRootNavigationController" id="yJP-pl-xXo" customClass="WZRootNavigationController" customModule="WZRootNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5m3-1q-Pyy">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -452,10 +659,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZkS-jf-57v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-926" y="-5"/>
+            <point key="canvasLocation" x="-3615" y="143"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Mq9-hr-0Kf"/>
+        <segue reference="Lt6-ve-Iw6"/>
+        <segue reference="yVE-ck-3RN"/>
     </inferredMetricsTieBreakers>
 </document>

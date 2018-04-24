@@ -35,6 +35,15 @@
 		33D52A26208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A24208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift */; };
 		33D52A29208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */; };
 		33D52A2A208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */; };
+		33D52A2C208EC55D00EAF582 /* WZPushAndRemoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A2B208EC55D00EAF582 /* WZPushAndRemoveViewController.swift */; };
+		33D52A2E208EC91600EAF582 /* WZPopAllowedEdgeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A2D208EC91600EAF582 /* WZPopAllowedEdgeCollectionViewController.swift */; };
+		33D52A30208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A2F208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift */; };
+		33D52A31208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A2F208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift */; };
+		33D52A33208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A32208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift */; };
+		33D52A34208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A32208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift */; };
+		33D52A3A208EFD9E00EAF582 /* WZInteractivePopDisabledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C65FEA208DD4BB009B7A64 /* WZInteractivePopDisabledViewController.swift */; };
+		33D52A3B208EFD9E00EAF582 /* WZPushAndRemoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A2B208EC55D00EAF582 /* WZPushAndRemoveViewController.swift */; };
+		33D52A3C208EFD9E00EAF582 /* WZPopAllowedEdgeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A2D208EC91600EAF582 /* WZPopAllowedEdgeCollectionViewController.swift */; };
 		33D87DB1208E35730057F3B2 /* WZCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */; };
 		33D87DB2208E35730057F3B2 /* WZCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */; };
 		404CD3B42426ADC0E58522C6 /* Pods_WZRootNavigationController_Example_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E0688526A3E3E930CF7D9D /* Pods_WZRootNavigationController_Example_ObjC.framework */; };
@@ -90,6 +99,10 @@
 		33D52A21208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZStatusBarHiddenViewController.swift; sourceTree = "<group>"; };
 		33D52A24208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomNavigationBarTableViewController.swift; sourceTree = "<group>"; };
 		33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomNavigationBar.swift; sourceTree = "<group>"; };
+		33D52A2B208EC55D00EAF582 /* WZPushAndRemoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZPushAndRemoveViewController.swift; sourceTree = "<group>"; };
+		33D52A2D208EC91600EAF582 /* WZPopAllowedEdgeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZPopAllowedEdgeCollectionViewController.swift; sourceTree = "<group>"; };
+		33D52A2F208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomAnimatedTransitionListCollectionViewController.swift; sourceTree = "<group>"; };
+		33D52A32208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomAnimatedTransitionDetailViewController.swift; sourceTree = "<group>"; };
 		33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCollectionViewController.swift; sourceTree = "<group>"; };
 		374269E8DC2AD6F47B3E0CBC /* Pods_WZRootNavigationController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C5ED792068B863552665E6 /* Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_SwiftTests/Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +201,10 @@
 				33D52A21208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift */,
 				33D52A24208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift */,
 				33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */,
+				33D52A2B208EC55D00EAF582 /* WZPushAndRemoveViewController.swift */,
+				33D52A2D208EC91600EAF582 /* WZPopAllowedEdgeCollectionViewController.swift */,
+				33D52A2F208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift */,
+				33D52A32208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -661,11 +678,15 @@
 				33D52A25208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift in Sources */,
 				33D52A29208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */,
 				33D52A1F208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift in Sources */,
+				33D52A2E208EC91600EAF582 /* WZPopAllowedEdgeCollectionViewController.swift in Sources */,
 				33C65FEB208DD4BB009B7A64 /* WZInteractivePopDisabledViewController.swift in Sources */,
 				33D52A1C208DE95A00EAF582 /* WZUIWebViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				33D52A33208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift in Sources */,
+				33D52A30208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift in Sources */,
 				33C65FE2208DCE5E009B7A64 /* WZRootViewController.swift in Sources */,
 				33D52A22208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift in Sources */,
+				33D52A2C208EC55D00EAF582 /* WZPushAndRemoveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,12 +694,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D52A3A208EFD9E00EAF582 /* WZInteractivePopDisabledViewController.swift in Sources */,
+				33D52A3B208EFD9E00EAF582 /* WZPushAndRemoveViewController.swift in Sources */,
+				33D52A3C208EFD9E00EAF582 /* WZPopAllowedEdgeCollectionViewController.swift in Sources */,
 				33D52A20208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift in Sources */,
 				33D52A1A208DE68100EAF582 /* WZNormalViewController.swift in Sources */,
 				33D52A26208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift in Sources */,
+				33D52A34208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.swift in Sources */,
 				33D52A23208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift in Sources */,
 				33D52A1D208DE95A00EAF582 /* WZUIWebViewController.swift in Sources */,
+				33D52A31208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift in Sources */,
 				33C65FE3208DCE5E009B7A64 /* WZRootViewController.swift in Sources */,
 				33D87DB2208E35730057F3B2 /* WZCollectionViewController.swift in Sources */,
 				33D52A2A208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */,
