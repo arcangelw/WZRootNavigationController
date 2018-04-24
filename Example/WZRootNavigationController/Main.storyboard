@@ -146,7 +146,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="interactivePopDisabled" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xKw-nq-hLI">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="collectionView-Horizontal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xKw-nq-hLI">
                                                     <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -155,6 +155,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="7hN-we-RGp" kind="show" id="4dh-a2-ejH"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="lDg-cr-34p" style="IBUITableViewCellStyleDefault" id="um8-CK-9EU">
                                         <rect key="frame" x="0.0" y="308" width="375" height="44"/>
@@ -220,6 +223,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xd8-R7-1DN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="252" y="-16"/>
+        </scene>
+        <!--collectionView-Horizontal-->
+        <scene sceneID="U9g-lj-kH0">
+            <objects>
+                <collectionViewController id="7hN-we-RGp" customClass="WZCollectionViewController" customModule="WZRootNavigationController_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" contentMode="scaleToFill" delaysContentTouches="NO" canCancelContentTouches="NO" keyboardDismissMode="onDrag" dataMode="prototypes" id="wR6-zO-zM4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eGc-SI-Q1H">
+                            <size key="itemSize" width="60" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="7hN-we-RGp" id="oNi-tU-rQA"/>
+                            <outlet property="delegate" destination="7hN-we-RGp" id="bxC-NK-1d5"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="collectionView-Horizontal" id="ILN-mo-ZeD"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JM3-1v-bz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-319.19999999999999" y="472.71364317841085"/>
         </scene>
         <!--navigationBarHidden-->
         <scene sceneID="WyW-yr-BEy">

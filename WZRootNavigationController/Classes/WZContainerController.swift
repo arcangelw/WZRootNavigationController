@@ -83,6 +83,8 @@ public final class WZContainerController: UIViewController {
 //        let internalAction = NSSelectorFromString("handleNavigationTransition:")
         
         let popRecognizer = UIPanGestureRecognizer(target: self, action:#selector(handlePopRecognizer(_:)))
+        popRecognizer.maximumNumberOfTouches = 1
+        popRecognizer.delaysTouchesBegan = true
         view.addGestureRecognizer(popRecognizer)
         popRecognizerDelegate = contentViewController.wz_gesturePluginClass.init(containerController: self)
         popRecognizer.delegate = popRecognizerDelegate
@@ -124,7 +126,7 @@ extension WZContainerController {
         progress = min(1.0, max(0.0, progress))
         if .began == recognizer.state {
             if self.interactiveTransition != nil && self.gestureDirection != .none { return }
-            self.gestureDirection = recognizer.translation(in: self.view).wz_direction()
+            self.gestureDirection = recognizer.wz_direction(in: self.view)
             self.interactiveTransition = UIPercentDrivenInteractiveTransition()
             self.navigationController?.popViewController(animated: true)
         }

@@ -232,26 +232,32 @@ extension WZRootNavigationController: UINavigationControllerDelegate {
     }
     
     public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        let isRoot = viewController == navigationController.viewControllers.first
-        let controller = WZSafeUnwrapViewController(viewController)
-        controller.navigationController?.setNavigationBarHidden(controller.wz_prefersNavigationBarHidden, animated: false)
+        guard let containerController = viewController as? WZContainerController else {
+            return
+        }
+        let isRoot = containerController == navigationController.viewControllers.first
+        let contentViewController = WZSafeUnwrapViewController(viewController)
+        contentViewController.navigationController?.setNavigationBarHidden(contentViewController.wz_prefersNavigationBarHidden, animated: false)
         if isRoot == false {
-            let hasSetLeftItem = controller.navigationItem.leftBarButtonItem != nil
+            let hasSetLeftItem = contentViewController.navigationItem.leftBarButtonItem != nil
             if !self.isUseSystemBackBarButtonItem && !hasSetLeftItem {
-                if  let item = controller.wz_customBackItem(withTarget: self, action: #selector(wz_onBack)) {
-                    controller.navigationItem.leftBarButtonItem = item
+                if  let item = contentViewController.wz_customBackItem(withTarget: self, action: #selector(wz_onBack)) {
+                    contentViewController.navigationItem.leftBarButtonItem = item
                 }else{
-                    controller.navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Back", comment:""), style: .plain, target: self, action: #selector(wz_onBack))
+                    contentViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Back", comment:""), style: .plain, target: self, action: #selector(wz_onBack))
                 }
             }
         }
-        self.wz_delegate?.navigationController?(navigationController, willShow: controller, animated: animated)
+        self.wz_delegate?.navigationController?(navigationController, willShow: contentViewController, animated: animated)
     }
     
     public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        let controller = WZSafeUnwrapViewController(viewController)
+        guard let containerController = viewController as? WZContainerController else {
+            return
+        }
+        let contentViewController = WZSafeUnwrapViewController(containerController)
         WZRootNavigationController.attemptRotationToDeviceOrientation()
-        self.wz_delegate?.navigationController?(navigationController, didShow: controller, animated: animated)
+        self.wz_delegate?.navigationController?(navigationController, didShow: contentViewController, animated: animated)
         if let animationCompletion = self.animationCompletion {
             animationCompletion(true)
             self.animationCompletion = nil
@@ -271,10 +277,10 @@ extension WZRootNavigationController: UINavigationControllerDelegate {
     }
     
     public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        if let transition = self.wz_delegate?.navigationController?(navigationController, animationControllerFor: operation, from: fromVC, to: toVC) {
+        guard let from = fromVC as? WZContainerController ,let to = toVC as? WZContainerController else { return nil }
+        if let transition = self.wz_delegate?.navigationController?(navigationController, animationControllerFor: operation, from: from, to: to) {
             return transition
         }
-        guard let from = fromVC as? WZContainerController ,let to = toVC as? WZContainerController else { return nil }
         return WZSafeUnwrapViewController(from).wz_animatedTransitionPluginClass.init(operation: operation, from: from, to: to)
     }
 

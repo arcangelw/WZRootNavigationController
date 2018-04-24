@@ -35,6 +35,8 @@
 		33D52A26208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A24208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift */; };
 		33D52A29208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */; };
 		33D52A2A208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */; };
+		33D87DB1208E35730057F3B2 /* WZCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */; };
+		33D87DB2208E35730057F3B2 /* WZCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */; };
 		404CD3B42426ADC0E58522C6 /* Pods_WZRootNavigationController_Example_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E0688526A3E3E930CF7D9D /* Pods_WZRootNavigationController_Example_ObjC.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDD1AFB9204008FA782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Assets.xcassets */; };
@@ -88,6 +90,7 @@
 		33D52A21208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZStatusBarHiddenViewController.swift; sourceTree = "<group>"; };
 		33D52A24208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomNavigationBarTableViewController.swift; sourceTree = "<group>"; };
 		33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomNavigationBar.swift; sourceTree = "<group>"; };
+		33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCollectionViewController.swift; sourceTree = "<group>"; };
 		374269E8DC2AD6F47B3E0CBC /* Pods_WZRootNavigationController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C5ED792068B863552665E6 /* Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_SwiftTests/Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4AB306DD75D2FDF57BAC3F92 /* Pods-WZRootNavigationController_Example_ObjCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_ObjCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjCTests/Pods-WZRootNavigationController_Example_ObjCTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 				33D52A1E208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift */,
 				33D52A21208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift */,
 				33D52A24208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift */,
+				33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -652,6 +656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D87DB1208E35730057F3B2 /* WZCollectionViewController.swift in Sources */,
 				33D52A19208DE68100EAF582 /* WZNormalViewController.swift in Sources */,
 				33D52A25208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift in Sources */,
 				33D52A29208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */,
@@ -675,6 +680,7 @@
 				33D52A23208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift in Sources */,
 				33D52A1D208DE95A00EAF582 /* WZUIWebViewController.swift in Sources */,
 				33C65FE3208DCE5E009B7A64 /* WZRootViewController.swift in Sources */,
+				33D87DB2208E35730057F3B2 /* WZCollectionViewController.swift in Sources */,
 				33D52A2A208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,7 @@ class WZInteractivePopDisabledViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.wz_interactivePopDisabled = true
         
         // Do any additional setup after loading the view.
     }

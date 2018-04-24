@@ -14,41 +14,6 @@ private struct WZAssociatedKeys{
     static var interactivePopAllowedEdge: UInt8 = 0
 }
 
-extension CGPoint{
-    
-    public func wz_direction() -> WZGestureDirection{
-        if abs(self.x) >= abs(self.y){
-            return self.x < 0.0 ? .left : .right
-        }else{
-            return self.y < 0.0 ? .top : .bottom
-        }
-    }
-}
-
-extension UIView {
-    
-    public var wz_scrollView:UIScrollView? {
-        if let scrollView = self as? UIScrollView {
-            return scrollView
-        }
-        if let supeView = self.superview {
-            return superview?.wz_scrollView
-        }
-        return nil
-    }
-}
-
-extension UIScrollView {
-    /// 已经滑动到了边缘
-    @objc public var wz_isSlidingToEdge:Bool {
-        if self.isScrollEnabled == false { return true }
-        if self.contentOffset.x <= 0.0 || self.contentOffset.x >= self.contentSize.width || self.contentOffset.y <= 0.0 || self.contentOffset.y >= self.contentSize.height {
-            return self.superview?.wz_scrollView?.wz_isSlidingToEdge ?? true
-        }
-        return false
-    }
-}
-
 @IBDesignable
 extension UIViewController {
     
@@ -118,4 +83,74 @@ extension UIViewController {
     
     /// 自定义 leftBarButtonItem
     @objc open func wz_customBackItem(withTarget target: Any?, action aSelector: Selector) -> UIBarButtonItem? { return nil }
+}
+
+extension CGPoint{
+    
+    public func wz_direction() -> WZGestureDirection{
+        if abs(self.x) >= abs(self.y){
+            return self.x < 0.0 ? .left : .right
+        }else{
+            return self.y < 0.0 ? .top : .bottom
+        }
+    }
+}
+
+extension UIPanGestureRecognizer {
+    
+    @objc public var wz_direction:WZGestureDirection{
+        return self.translation(in: self.view).wz_direction()
+    }
+    
+    @objc public func wz_direction(in view:UIView?) -> WZGestureDirection{
+        return self.translation(in: view).wz_direction()
+    }
+}
+
+extension UIView {
+    
+    public var wz_scrollView:UIScrollView? {
+        if let scrollView = self as? UIScrollView {
+            return scrollView
+        }
+        if let supeView = self.superview {
+            return superview?.wz_scrollView
+        }
+        return nil
+    }
+}
+
+extension UIScrollView {
+    /// 滑动到最顶部
+    @objc public var wz_isSlidingToEdgeTop:Bool {
+        if isScrollEnabled == false { return true }
+        if contentOffset.y <= 0.0 {
+            return superview?.wz_scrollView?.wz_isSlidingToEdgeTop ?? true
+        }
+        return false
+    }
+    /// 滑动到最左侧
+    @objc public var wz_isSlidingToEdgeLeft:Bool {
+        if isScrollEnabled == false { return true }
+        if contentOffset.x <= 0.0 {
+            return superview?.wz_scrollView?.wz_isSlidingToEdgeLeft ?? true
+        }
+        return false
+    }
+    /// 滑动到最底部
+    @objc public var wz_isSlidingToEdgeBottom:Bool {
+        if isScrollEnabled == false { return true }
+        if contentOffset.x >= contentSize.width - frame.width {
+            return superview?.wz_scrollView?.wz_isSlidingToEdgeBottom ?? true
+        }
+        return false
+    }
+    /// 滑动到最右侧
+    @objc public var wz_isSlidingToEdgeRight:Bool {
+        if isScrollEnabled == false { return true }
+        if contentOffset.y >= contentSize.height - frame.height {
+            return superview?.wz_scrollView?.wz_isSlidingToEdgeRight ?? true
+        }
+        return false
+    }
 }

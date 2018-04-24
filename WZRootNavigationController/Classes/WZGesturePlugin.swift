@@ -24,11 +24,21 @@ extension WZGestureDirection {
     }
 }
 
-open class WZGesturePlugin:NSObject, UIGestureRecognizerDelegate{
+open class WZGesturePlugin:NSObject{
     public fileprivate(set) weak var containerController:WZContainerController!
     @objc public required init(containerController:WZContainerController) {
         self.containerController = containerController
         super.init()
+    }
+}
+
+extension WZGesturePlugin:UIGestureRecognizerDelegate {
+    
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if touch.view is UIControl {
+            return false
+        }
+        return true
     }
     
     public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -46,7 +56,7 @@ open class WZGesturePlugin:NSObject, UIGestureRecognizerDelegate{
         if allowedEdge != .zero ,UIEdgeInsetsInsetRect(containerController.view.bounds, allowedEdge).contains(beginLocation) {
             return false
         }
-        if let gan = gestureRecognizer as? UIPanGestureRecognizer,  gan.translation(in: gan.view).wz_direction() != .right {
+        if let gan = gestureRecognizer as? UIPanGestureRecognizer,  gan.wz_direction != .right {
             return false
         }
         return true
@@ -57,7 +67,7 @@ open class WZGesturePlugin:NSObject, UIGestureRecognizerDelegate{
         if gestureRecognizer.state == .began && gestureRecognizer.view != otherGestureRecognizer.view {
             if let scrollView = otherGestureRecognizer.view as? UIScrollView{
                 
-                if scrollView.panGestureRecognizer.translation(in: scrollView).wz_direction() != .right {
+                if scrollView.panGestureRecognizer.wz_direction(in: scrollView) != .right {
                     return false
                 }
                 if containerController.contentViewController.wz_interactivePopDisabled {
@@ -71,7 +81,8 @@ open class WZGesturePlugin:NSObject, UIGestureRecognizerDelegate{
                 if allowedEdge != .zero ,UIEdgeInsetsInsetRect(containerController.view.bounds, allowedEdge).contains(beginLocation) {
                     return false
                 }
-                if scrollView.wz_isSlidingToEdge {
+                if scrollView.wz_isSlidingToEdgeLeft {
+                    /// 处理滑动pop时候scrollView的bounces效果
                     scrollView.isScrollEnabled = false
                     scrollView.isScrollEnabled = true
                     return true
