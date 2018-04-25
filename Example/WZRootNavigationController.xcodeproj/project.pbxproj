@@ -9,8 +9,34 @@
 /* Begin PBXBuildFile section */
 		0792A3832F45BEB09A979CFE /* Pods_WZRootNavigationController_Example_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F37DFB5E670F4925A49AC5 /* Pods_WZRootNavigationController_Example_SwiftTests.framework */; };
 		0B17801F01BB2DBDEB933B8E /* Pods_WZRootNavigationController_Example_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3DE481CA05DB4574071390A /* Pods_WZRootNavigationController_Example_Swift.framework */; };
+		337082C820902BA300580DB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AD4498208DA9CC0053F036 /* Main.storyboard */; };
+		337082CB2090311A00580DB5 /* WZUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082CA2090311A00580DB5 /* WZUIWebViewController.m */; };
+		337082CC2090311A00580DB5 /* WZUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082CA2090311A00580DB5 /* WZUIWebViewController.m */; };
+		337082CF2090313500580DB5 /* WZNavigationBarHiddenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082CE2090313500580DB5 /* WZNavigationBarHiddenViewController.m */; };
+		337082D02090313500580DB5 /* WZNavigationBarHiddenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082CE2090313500580DB5 /* WZNavigationBarHiddenViewController.m */; };
+		337082D32090314700580DB5 /* WZStatusBarHiddenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082D22090314700580DB5 /* WZStatusBarHiddenViewController.m */; };
+		337082D42090314700580DB5 /* WZStatusBarHiddenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082D22090314700580DB5 /* WZStatusBarHiddenViewController.m */; };
+		337082D72090350500580DB5 /* WZCustomNavigationBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082D62090350500580DB5 /* WZCustomNavigationBarTableViewController.m */; };
+		337082D82090350500580DB5 /* WZCustomNavigationBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082D62090350500580DB5 /* WZCustomNavigationBarTableViewController.m */; };
+		337082DB2090351800580DB5 /* WZCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082DA2090351800580DB5 /* WZCollectionViewController.m */; };
+		337082DC2090351800580DB5 /* WZCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082DA2090351800580DB5 /* WZCollectionViewController.m */; };
+		337082DF2090352B00580DB5 /* WZPushAndRemoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082DE2090352B00580DB5 /* WZPushAndRemoveViewController.m */; };
+		337082E02090352B00580DB5 /* WZPushAndRemoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082DE2090352B00580DB5 /* WZPushAndRemoveViewController.m */; };
+		337082E32090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082E22090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.m */; };
+		337082E42090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082E22090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.m */; };
+		337082E72090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082E62090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.m */; };
+		337082E82090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082E62090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.m */; };
+		337082EB2090358000580DB5 /* WZCustomAnimatedTransitionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082EA2090358000580DB5 /* WZCustomAnimatedTransitionDetailViewController.m */; };
+		337082EC2090358000580DB5 /* WZCustomAnimatedTransitionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082EA2090358000580DB5 /* WZCustomAnimatedTransitionDetailViewController.m */; };
+		337082EF2090359200580DB5 /* WZCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082EE2090359200580DB5 /* WZCustomNavigationBar.m */; };
+		337082F02090359200580DB5 /* WZCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082EE2090359200580DB5 /* WZCustomNavigationBar.m */; };
+		337082F3209049BC00580DB5 /* WZCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082F2209049BC00580DB5 /* WZCollectionViewCell.m */; };
+		337082F4209049BC00580DB5 /* WZCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082F2209049BC00580DB5 /* WZCollectionViewCell.m */; };
+		337082F720904C5800580DB5 /* WZAnimatedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082F620904C5800580DB5 /* WZAnimatedCollectionViewCell.m */; };
+		337082F820904C5800580DB5 /* WZAnimatedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082F620904C5800580DB5 /* WZAnimatedCollectionViewCell.m */; };
+		337083012090652400580DB5 /* WZCustomAnimatedTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337083002090652400580DB5 /* WZCustomAnimatedTransition.swift */; };
+		337083022090652400580DB5 /* WZCustomAnimatedTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337083002090652400580DB5 /* WZCustomAnimatedTransition.swift */; };
 		33AD4494208DA9CC0053F036 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AD4493208DA9CC0053F036 /* AppDelegate.m */; };
-		33AD4497208DA9CC0053F036 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AD4496208DA9CC0053F036 /* ViewController.m */; };
 		33AD449A208DA9CC0053F036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AD4498208DA9CC0053F036 /* Main.storyboard */; };
 		33AD449C208DA9CD0053F036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33AD449B208DA9CD0053F036 /* Assets.xcassets */; };
 		33AD44A2208DA9CD0053F036 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AD44A1208DA9CD0053F036 /* main.m */; };
@@ -44,6 +70,12 @@
 		33D52A3A208EFD9E00EAF582 /* WZInteractivePopDisabledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C65FEA208DD4BB009B7A64 /* WZInteractivePopDisabledViewController.swift */; };
 		33D52A3B208EFD9E00EAF582 /* WZPushAndRemoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A2B208EC55D00EAF582 /* WZPushAndRemoveViewController.swift */; };
 		33D52A3C208EFD9E00EAF582 /* WZPopAllowedEdgeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A2D208EC91600EAF582 /* WZPopAllowedEdgeCollectionViewController.swift */; };
+		33D52A412090282A00EAF582 /* WZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A402090282A00EAF582 /* WZRootViewController.m */; };
+		33D52A422090282A00EAF582 /* WZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A402090282A00EAF582 /* WZRootViewController.m */; };
+		33D52A452090284600EAF582 /* WZNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A442090284600EAF582 /* WZNormalViewController.m */; };
+		33D52A462090284600EAF582 /* WZNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A442090284600EAF582 /* WZNormalViewController.m */; };
+		33D52A492090286100EAF582 /* WZInteractivePopDisabledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A482090286100EAF582 /* WZInteractivePopDisabledViewController.m */; };
+		33D52A4A2090286100EAF582 /* WZInteractivePopDisabledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A482090286100EAF582 /* WZInteractivePopDisabledViewController.m */; };
 		33D87DB1208E35730057F3B2 /* WZCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */; };
 		33D87DB2208E35730057F3B2 /* WZCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */; };
 		404CD3B42426ADC0E58522C6 /* Pods_WZRootNavigationController_Example_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E0688526A3E3E930CF7D9D /* Pods_WZRootNavigationController_Example_ObjC.framework */; };
@@ -76,11 +108,36 @@
 		02F74F75C7D6E695136CEE2E /* Pods-WZRootNavigationController_Example_ObjCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_ObjCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjCTests/Pods-WZRootNavigationController_Example_ObjCTests.release.xcconfig"; sourceTree = "<group>"; };
 		04F37DFB5E670F4925A49AC5 /* Pods_WZRootNavigationController_Example_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Example_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32D1074211CFB94A976B9E2C /* Pods_WZRootNavigationController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		337082C92090311A00580DB5 /* WZUIWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZUIWebViewController.h; sourceTree = "<group>"; };
+		337082CA2090311A00580DB5 /* WZUIWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZUIWebViewController.m; sourceTree = "<group>"; };
+		337082CD2090313500580DB5 /* WZNavigationBarHiddenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZNavigationBarHiddenViewController.h; sourceTree = "<group>"; };
+		337082CE2090313500580DB5 /* WZNavigationBarHiddenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZNavigationBarHiddenViewController.m; sourceTree = "<group>"; };
+		337082D12090314700580DB5 /* WZStatusBarHiddenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZStatusBarHiddenViewController.h; sourceTree = "<group>"; };
+		337082D22090314700580DB5 /* WZStatusBarHiddenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZStatusBarHiddenViewController.m; sourceTree = "<group>"; };
+		337082D52090350500580DB5 /* WZCustomNavigationBarTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCustomNavigationBarTableViewController.h; sourceTree = "<group>"; };
+		337082D62090350500580DB5 /* WZCustomNavigationBarTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCustomNavigationBarTableViewController.m; sourceTree = "<group>"; };
+		337082D92090351800580DB5 /* WZCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCollectionViewController.h; sourceTree = "<group>"; };
+		337082DA2090351800580DB5 /* WZCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCollectionViewController.m; sourceTree = "<group>"; };
+		337082DD2090352B00580DB5 /* WZPushAndRemoveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZPushAndRemoveViewController.h; sourceTree = "<group>"; };
+		337082DE2090352B00580DB5 /* WZPushAndRemoveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZPushAndRemoveViewController.m; sourceTree = "<group>"; };
+		337082E12090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZPopAllowedEdgeCollectionViewController.h; sourceTree = "<group>"; };
+		337082E22090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZPopAllowedEdgeCollectionViewController.m; sourceTree = "<group>"; };
+		337082E52090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCustomAnimatedTransitionListCollectionViewController.h; sourceTree = "<group>"; };
+		337082E62090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCustomAnimatedTransitionListCollectionViewController.m; sourceTree = "<group>"; };
+		337082E92090357F00580DB5 /* WZCustomAnimatedTransitionDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCustomAnimatedTransitionDetailViewController.h; sourceTree = "<group>"; };
+		337082EA2090358000580DB5 /* WZCustomAnimatedTransitionDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCustomAnimatedTransitionDetailViewController.m; sourceTree = "<group>"; };
+		337082ED2090359200580DB5 /* WZCustomNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCustomNavigationBar.h; sourceTree = "<group>"; };
+		337082EE2090359200580DB5 /* WZCustomNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCustomNavigationBar.m; sourceTree = "<group>"; };
+		337082F1209049BC00580DB5 /* WZCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCollectionViewCell.h; sourceTree = "<group>"; };
+		337082F2209049BC00580DB5 /* WZCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCollectionViewCell.m; sourceTree = "<group>"; };
+		337082F520904C5800580DB5 /* WZAnimatedCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZAnimatedCollectionViewCell.h; sourceTree = "<group>"; };
+		337082F620904C5800580DB5 /* WZAnimatedCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZAnimatedCollectionViewCell.m; sourceTree = "<group>"; };
+		337082FE2090652300580DB5 /* WZRootNavigationController_Example_ObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WZRootNavigationController_Example_ObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		337082FF2090652400580DB5 /* WZRootNavigationController_Example_ObjCTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WZRootNavigationController_Example_ObjCTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		337083002090652400580DB5 /* WZCustomAnimatedTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomAnimatedTransition.swift; sourceTree = "<group>"; };
 		33AD4490208DA9CB0053F036 /* WZRootNavigationController_Example_ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZRootNavigationController_Example_ObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AD4492208DA9CC0053F036 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33AD4493208DA9CC0053F036 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		33AD4495208DA9CC0053F036 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		33AD4496208DA9CC0053F036 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		33AD4499208DA9CC0053F036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33AD449B208DA9CD0053F036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33AD44A0208DA9CD0053F036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +160,13 @@
 		33D52A2D208EC91600EAF582 /* WZPopAllowedEdgeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZPopAllowedEdgeCollectionViewController.swift; sourceTree = "<group>"; };
 		33D52A2F208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomAnimatedTransitionListCollectionViewController.swift; sourceTree = "<group>"; };
 		33D52A32208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomAnimatedTransitionDetailViewController.swift; sourceTree = "<group>"; };
+		33D52A3F2090282A00EAF582 /* WZRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZRootViewController.h; sourceTree = "<group>"; };
+		33D52A402090282A00EAF582 /* WZRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZRootViewController.m; sourceTree = "<group>"; };
+		33D52A432090284600EAF582 /* WZNormalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZNormalViewController.h; sourceTree = "<group>"; };
+		33D52A442090284600EAF582 /* WZNormalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZNormalViewController.m; sourceTree = "<group>"; };
+		33D52A472090286100EAF582 /* WZInteractivePopDisabledViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZInteractivePopDisabledViewController.h; sourceTree = "<group>"; };
+		33D52A482090286100EAF582 /* WZInteractivePopDisabledViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZInteractivePopDisabledViewController.m; sourceTree = "<group>"; };
+		33D52A4B209028A700EAF582 /* WZRootNavigationController_Example_ObjC.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZRootNavigationController_Example_ObjC.pch; sourceTree = "<group>"; };
 		33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCollectionViewController.swift; sourceTree = "<group>"; };
 		374269E8DC2AD6F47B3E0CBC /* Pods_WZRootNavigationController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C5ED792068B863552665E6 /* Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_SwiftTests/Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +229,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		337082FD209064EC00580DB5 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				337083002090652400580DB5 /* WZCustomAnimatedTransition.swift */,
+				337082FE2090652300580DB5 /* WZRootNavigationController_Example_ObjC-Bridging-Header.h */,
+				337082FF2090652400580DB5 /* WZRootNavigationController_Example_ObjCTests-Bridging-Header.h */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		33AD4491208DA9CC0053F036 /* WZRootNavigationController_Example_ObjC */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,10 +247,12 @@
 				33AD44C4208DAF1D0053F036 /* LaunchScreen.xib */,
 				33AD4492208DA9CC0053F036 /* AppDelegate.h */,
 				33AD4493208DA9CC0053F036 /* AppDelegate.m */,
-				33AD4496208DA9CC0053F036 /* ViewController.m */,
-				33AD4495208DA9CC0053F036 /* ViewController.h */,
+				337082FD209064EC00580DB5 /* Swift */,
+				33D52A3E2090280700EAF582 /* Views */,
+				33D52A3D209027EE00EAF582 /* ViewControllers */,
 				33AD44A0208DA9CD0053F036 /* Info.plist */,
 				33AD44A1208DA9CD0053F036 /* main.m */,
+				33D52A4B209028A700EAF582 /* WZRootNavigationController_Example_ObjC.pch */,
 			);
 			path = WZRootNavigationController_Example_ObjC;
 			sourceTree = "<group>";
@@ -213,6 +289,50 @@
 			isa = PBXGroup;
 			children = (
 				33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		33D52A3D209027EE00EAF582 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				33D52A3F2090282A00EAF582 /* WZRootViewController.h */,
+				33D52A402090282A00EAF582 /* WZRootViewController.m */,
+				33D52A432090284600EAF582 /* WZNormalViewController.h */,
+				33D52A442090284600EAF582 /* WZNormalViewController.m */,
+				33D52A472090286100EAF582 /* WZInteractivePopDisabledViewController.h */,
+				33D52A482090286100EAF582 /* WZInteractivePopDisabledViewController.m */,
+				337082C92090311A00580DB5 /* WZUIWebViewController.h */,
+				337082CA2090311A00580DB5 /* WZUIWebViewController.m */,
+				337082CD2090313500580DB5 /* WZNavigationBarHiddenViewController.h */,
+				337082CE2090313500580DB5 /* WZNavigationBarHiddenViewController.m */,
+				337082D12090314700580DB5 /* WZStatusBarHiddenViewController.h */,
+				337082D22090314700580DB5 /* WZStatusBarHiddenViewController.m */,
+				337082D52090350500580DB5 /* WZCustomNavigationBarTableViewController.h */,
+				337082D62090350500580DB5 /* WZCustomNavigationBarTableViewController.m */,
+				337082D92090351800580DB5 /* WZCollectionViewController.h */,
+				337082DA2090351800580DB5 /* WZCollectionViewController.m */,
+				337082DD2090352B00580DB5 /* WZPushAndRemoveViewController.h */,
+				337082DE2090352B00580DB5 /* WZPushAndRemoveViewController.m */,
+				337082E12090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.h */,
+				337082E22090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.m */,
+				337082E52090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.h */,
+				337082E62090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.m */,
+				337082E92090357F00580DB5 /* WZCustomAnimatedTransitionDetailViewController.h */,
+				337082EA2090358000580DB5 /* WZCustomAnimatedTransitionDetailViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		33D52A3E2090280700EAF582 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				337082ED2090359200580DB5 /* WZCustomNavigationBar.h */,
+				337082EE2090359200580DB5 /* WZCustomNavigationBar.m */,
+				337082F1209049BC00580DB5 /* WZCollectionViewCell.h */,
+				337082F2209049BC00580DB5 /* WZCollectionViewCell.m */,
+				337082F520904C5800580DB5 /* WZAnimatedCollectionViewCell.h */,
+				337082F620904C5800580DB5 /* WZAnimatedCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -413,10 +533,12 @@
 				TargetAttributes = {
 					33AD448F208DA9CB0053F036 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 					33AD44A6208DA9CD0053F036 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 33AD448F208DA9CB0053F036;
 					};
@@ -467,6 +589,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				337082C820902BA300580DB5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,9 +778,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33AD4497208DA9CC0053F036 /* ViewController.m in Sources */,
+				337082CF2090313500580DB5 /* WZNavigationBarHiddenViewController.m in Sources */,
+				337082E32090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.m in Sources */,
+				33D52A452090284600EAF582 /* WZNormalViewController.m in Sources */,
 				33AD44A2208DA9CD0053F036 /* main.m in Sources */,
+				337082D32090314700580DB5 /* WZStatusBarHiddenViewController.m in Sources */,
+				337082F720904C5800580DB5 /* WZAnimatedCollectionViewCell.m in Sources */,
+				337082DF2090352B00580DB5 /* WZPushAndRemoveViewController.m in Sources */,
+				337082CB2090311A00580DB5 /* WZUIWebViewController.m in Sources */,
+				337082EB2090358000580DB5 /* WZCustomAnimatedTransitionDetailViewController.m in Sources */,
+				337082DB2090351800580DB5 /* WZCollectionViewController.m in Sources */,
+				337082F3209049BC00580DB5 /* WZCollectionViewCell.m in Sources */,
+				337082D72090350500580DB5 /* WZCustomNavigationBarTableViewController.m in Sources */,
 				33AD4494208DA9CC0053F036 /* AppDelegate.m in Sources */,
+				33D52A412090282A00EAF582 /* WZRootViewController.m in Sources */,
+				337083012090652400580DB5 /* WZCustomAnimatedTransition.swift in Sources */,
+				337082EF2090359200580DB5 /* WZCustomNavigationBar.m in Sources */,
+				33D52A492090286100EAF582 /* WZInteractivePopDisabledViewController.m in Sources */,
+				337082E72090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,7 +803,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				337082F4209049BC00580DB5 /* WZCollectionViewCell.m in Sources */,
+				337082CC2090311A00580DB5 /* WZUIWebViewController.m in Sources */,
+				33D52A4A2090286100EAF582 /* WZInteractivePopDisabledViewController.m in Sources */,
+				337082EC2090358000580DB5 /* WZCustomAnimatedTransitionDetailViewController.m in Sources */,
+				337082F820904C5800580DB5 /* WZAnimatedCollectionViewCell.m in Sources */,
+				33D52A462090284600EAF582 /* WZNormalViewController.m in Sources */,
+				337082E02090352B00580DB5 /* WZPushAndRemoveViewController.m in Sources */,
+				337083022090652400580DB5 /* WZCustomAnimatedTransition.swift in Sources */,
+				337082F02090359200580DB5 /* WZCustomNavigationBar.m in Sources */,
+				337082E82090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.m in Sources */,
 				33AD44AC208DA9CD0053F036 /* WZRootNavigationController_Example_ObjCTests.m in Sources */,
+				337082D42090314700580DB5 /* WZStatusBarHiddenViewController.m in Sources */,
+				337082E42090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.m in Sources */,
+				337082D82090350500580DB5 /* WZCustomNavigationBarTableViewController.m in Sources */,
+				337082DC2090351800580DB5 /* WZCollectionViewController.m in Sources */,
+				33D52A422090282A00EAF582 /* WZRootViewController.m in Sources */,
+				337082D02090313500580DB5 /* WZNavigationBarHiddenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,6 +900,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
@@ -753,11 +908,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WZRootNavigationController_Example_ObjC/WZRootNavigationController_Example_ObjC.pch;
 				INFOPLIST_FILE = WZRootNavigationController_Example_ObjC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wu.zhe.WZRootNavigationController-Example-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WZRootNavigationController_Example_ObjC/Swift/WZRootNavigationController_Example_ObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -770,17 +930,22 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = WZRootNavigationController_Example_ObjC/WZRootNavigationController_Example_ObjC.pch;
 				INFOPLIST_FILE = WZRootNavigationController_Example_ObjC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wu.zhe.WZRootNavigationController-Example-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WZRootNavigationController_Example_ObjC/Swift/WZRootNavigationController_Example_ObjC-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -789,10 +954,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AB306DD75D2FDF57BAC3F92 /* Pods-WZRootNavigationController_Example_ObjCTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
@@ -804,6 +971,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wu.zhe.WZRootNavigationController-Example-ObjCTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WZRootNavigationController_Example_ObjC/Swift/WZRootNavigationController_Example_ObjCTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WZRootNavigationController_Example_ObjC.app/WZRootNavigationController_Example_ObjC";
 			};
@@ -813,10 +983,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 02F74F75C7D6E695136CEE2E /* Pods-WZRootNavigationController_Example_ObjCTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
@@ -827,6 +999,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wu.zhe.WZRootNavigationController-Example-ObjCTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WZRootNavigationController_Example_ObjC/Swift/WZRootNavigationController_Example_ObjCTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WZRootNavigationController_Example_ObjC.app/WZRootNavigationController_Example_ObjC";
 			};

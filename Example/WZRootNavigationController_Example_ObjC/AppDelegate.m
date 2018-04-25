@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <WZRootNavigationController/WZRootNavigationController-Swift.h>
 
 @interface AppDelegate ()
 

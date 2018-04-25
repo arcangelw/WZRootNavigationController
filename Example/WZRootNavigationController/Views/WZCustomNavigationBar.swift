@@ -11,7 +11,9 @@ import UIKit
 class WZCustomNavigationBar: UINavigationBar {
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {
-        return super.sizeThatFits(CGSize(width: size.width, height: 100.0))
+        var s = super.sizeThatFits(size)
+        s.height += 50.0
+        return s
     }
  
     override func draw(_ rect: CGRect) {

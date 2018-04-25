@@ -1,0 +1,14 @@
+//
+//  WZRootNavigationController_Example_ObjC.pch
+//  WZRootNavigationController
+//
+//  Created by 吴哲 on 2018/4/25.
+//  Copyright © 2018年 CocoaPods. All rights reserved.
+//
+
+#ifndef WZRootNavigationController_Example_ObjC_h
+#define WZRootNavigationController_Example_ObjC_h
+
+@import WZRootNavigationController;
+
+#endif /* WZRootNavigationController_Example_ObjC_h */

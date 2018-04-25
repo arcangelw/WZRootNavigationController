@@ -1,6 +1,6 @@
 //
 //  WZAnimatedTransitionPlugin.swift
-//  FBSnapshotTestCase
+//  WZRootNavigationController
 //
 //  Created by 吴哲 on 2018/4/20.
 //
@@ -8,9 +8,9 @@
 import UIKit
 
 open class WZAnimatedTransitionPlugin: NSObject {
-    public let operation:UINavigationControllerOperation
-    public fileprivate(set) weak var fromViewController:WZContainerController!
-    public fileprivate(set) weak var toViewController:WZContainerController!
+    @objc public let operation:UINavigationControllerOperation
+    @objc public fileprivate(set) weak var fromViewController:WZContainerController!
+    @objc public fileprivate(set) weak var toViewController:WZContainerController!
     fileprivate lazy var maskView: UIView = {
         let maskView = UIView(frame: UIScreen.main.bounds)
         maskView.backgroundColor = UIColor.black

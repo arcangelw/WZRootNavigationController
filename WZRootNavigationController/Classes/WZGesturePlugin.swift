@@ -1,6 +1,6 @@
 //
 //  WZContainerController.swift
-//  FBSnapshotTestCase
+//  WZRootNavigationController
 //
 //  Created by 吴哲 on 2018/4/20.
 //
@@ -25,7 +25,7 @@ extension WZGestureDirection {
 }
 
 open class WZGesturePlugin:NSObject{
-    public fileprivate(set) weak var containerController:WZContainerController!
+    @objc public fileprivate(set) weak var containerController:WZContainerController!
     @objc public required init(containerController:WZContainerController) {
         self.containerController = containerController
         super.init()

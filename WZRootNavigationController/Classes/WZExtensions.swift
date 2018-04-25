@@ -1,6 +1,6 @@
 //
 //  WZUIViewControllerExtensions.swift
-//  FBSnapshotTestCase
+//  WZRootNavigationController
 //
 //  Created by 吴哲 on 2018/4/20.
 //
@@ -33,7 +33,7 @@ extension UIViewController {
     }
     
     /// 获取navigationController WZRootNavigationController
-    public var wz_navigationController:WZRootNavigationController? {
+    @objc public var wz_navigationController:WZRootNavigationController? {
         var vc:UIViewController? = self
         while vc != nil && ( vc is WZRootNavigationController ) == false {
             vc = vc?.navigationController
@@ -109,7 +109,7 @@ extension UIPanGestureRecognizer {
 
 extension UIView {
     
-    public var wz_scrollView:UIScrollView? {
+    @objc public var wz_scrollView:UIScrollView? {
         if let scrollView = self as? UIScrollView {
             return scrollView
         }

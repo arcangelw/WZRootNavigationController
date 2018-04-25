@@ -1,6 +1,6 @@
 //
 //  WZRootNavigationController.swift
-//  FBSnapshotTestCase
+//  WZRootNavigationController
 //
 //  Created by 吴哲 on 2018/4/20.
 //
@@ -59,21 +59,21 @@ open class WZRootNavigationController: UINavigationController {
 
 extension WZRootNavigationController {
     
-    public var wz_visibleViewController:UIViewController? {
+    @objc public var wz_visibleViewController:UIViewController? {
         guard let controller = super.visibleViewController else { return nil }
         return WZSafeUnwrapViewController(controller)
     }
     
-    public var wz_topViewController:UIViewController? {
+    @objc public var wz_topViewController:UIViewController? {
         guard let controller = super.topViewController else { return nil }
         return WZSafeUnwrapViewController(controller)
     }
     
-    public var wz_viewControllers:[UIViewController] {
+    @objc public var wz_viewControllers:[UIViewController] {
         return super.viewControllers.map({WZSafeUnwrapViewController($0)})
     }
     
-    public func remove(viewController:UIViewController, animated:Bool = false){
+    @objc public func remove(viewController:UIViewController, animated:Bool = false){
         guard let toRemoveController = self.viewControllers.first(where: {WZSafeUnwrapViewController($0) == viewController}) else {
             return
         }
@@ -81,7 +81,7 @@ extension WZRootNavigationController {
         self.setViewControllers(controllers, animated: animated)
     }
     
-    public func pushViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping ((Bool) -> Void)){
+    @objc public func pushViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping ((Bool) -> Void)){
         if let animationCompletion = self.animationCompletion {
            animationCompletion(false)
         }
@@ -104,7 +104,7 @@ extension WZRootNavigationController {
         return nil
     }
     
-    public func popToRootViewController(animated: Bool, completion: @escaping ((Bool) -> Void)) -> [UIViewController]? {
+    @objc public func popToRootViewController(animated: Bool, completion: @escaping ((Bool) -> Void)) -> [UIViewController]? {
         if let animationCompletion = self.animationCompletion {
             animationCompletion(false)
         }
@@ -119,7 +119,7 @@ extension WZRootNavigationController {
         return nil
     }
     
-    public func popToViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping ((Bool) -> Void)) -> [UIViewController]? {
+    @objc public func popToViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping ((Bool) -> Void)) -> [UIViewController]? {
         if let animationCompletion = self.animationCompletion {
             animationCompletion(false)
         }

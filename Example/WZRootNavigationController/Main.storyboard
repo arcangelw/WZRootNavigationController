@@ -525,6 +525,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="W26-XF-5er" kind="show" id="knb-0c-9zC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -664,7 +667,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Mq9-hr-0Kf"/>
-        <segue reference="Lt6-ve-Iw6"/>
+        <segue reference="knb-0c-9zC"/>
         <segue reference="yVE-ck-3RN"/>
     </inferredMetricsTieBreakers>
 </document>
