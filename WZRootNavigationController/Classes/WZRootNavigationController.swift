@@ -82,55 +82,41 @@ extension WZRootNavigationController {
     }
     
     @objc public func pushViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping ((Bool) -> Void)){
-        if let animationCompletion = self.animationCompletion {
-           animationCompletion(false)
-        }
+        self.animationCompletion?(false)
         self.animationCompletion = completion
         self.pushViewController(viewController, animated: animated)
     }
     
     public func popViewController(animated: Bool, completion: @escaping ((Bool) -> Void)) -> UIViewController? {
-        if let animationCompletion = self.animationCompletion {
-            animationCompletion(false)
-        }
+        self.animationCompletion?(false)
         self.animationCompletion = completion
         if let vc = self.popViewController(animated: animated) {
-            if let animationCompletion = self.animationCompletion {
-                animationCompletion(true)
-                self.animationCompletion = nil
-            }
             return vc
         }
+        self.animationCompletion?(true)
+        self.animationCompletion = nil
         return nil
     }
     
     @objc public func popToRootViewController(animated: Bool, completion: @escaping ((Bool) -> Void)) -> [UIViewController]? {
-        if let animationCompletion = self.animationCompletion {
-            animationCompletion(false)
-        }
+        self.animationCompletion?(false)
         self.animationCompletion = completion
-        if let array = self.popToRootViewController(animated: animated) {
-            if let animationCompletion = self.animationCompletion , array.count == 0 {
-                animationCompletion(true)
-                self.animationCompletion = nil
-            }
+        if let array = self.popToRootViewController(animated: animated) , array.count > 0 {
            return array
         }
+        self.animationCompletion?(true)
+        self.animationCompletion = nil
         return nil
     }
     
     @objc public func popToViewController(_ viewController: UIViewController, animated: Bool, completion: @escaping ((Bool) -> Void)) -> [UIViewController]? {
-        if let animationCompletion = self.animationCompletion {
-            animationCompletion(false)
-        }
+        self.animationCompletion?(false)
         self.animationCompletion = completion
-        if let array = self.popToViewController(viewController, animated: animated) {
-            if let animationCompletion = self.animationCompletion , array.count == 0 {
-                animationCompletion(true)
-                self.animationCompletion = nil
-            }
+        if let array = self.popToViewController(viewController, animated: animated) , array.count > 0 {
             return array
         }
+        self.animationCompletion?(true)
+        self.animationCompletion = nil
         return nil
     }
 
@@ -281,11 +267,9 @@ extension WZRootNavigationController: UINavigationControllerDelegate {
         }
         let contentViewController = WZSafeUnwrapViewController(containerController)
         WZRootNavigationController.attemptRotationToDeviceOrientation()
+        self.animationCompletion?(true)
+        self.animationCompletion = nil
         self.wz_delegate?.navigationController?(navigationController, didShow: contentViewController, animated: animated)
-        if let animationCompletion = self.animationCompletion {
-            animationCompletion(true)
-            self.animationCompletion = nil
-        }
     }
     
     public func navigationControllerSupportedInterfaceOrientations(_ navigationController: UINavigationController) -> UIInterfaceOrientationMask {
