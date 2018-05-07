@@ -26,7 +26,7 @@ open class WZAnimatedTransitionPlugin: NSObject {
 
 extension WZAnimatedTransitionPlugin:UIViewControllerAnimatedTransitioning{
     open func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.6
+        return 0.3
     }
     
     open func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
