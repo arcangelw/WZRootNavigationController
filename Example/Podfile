@@ -2,28 +2,24 @@ platform :ios, '8.0'
 inhibit_all_warnings!
 use_frameworks!
 
-target 'WZRootNavigationController_Example_Swift' do
+target 'SwiftDemo' do
   pod 'WZRootNavigationController', :path => '../'
-
-  target 'WZRootNavigationController_Example_SwiftTests' do
-    inherit! :search_paths
-
-    pod 'Quick', '~> 1.2.0'
-    pod 'Nimble', '~> 7.0.2'
-    pod 'FBSnapshotTestCase' , '~> 2.1.4'
-    pod 'Nimble-Snapshots' , '~> 6.3.0'
-  end
 end
 
-target 'WZRootNavigationController_Example_ObjC' do
+target 'ObjCDemo' do
     pod 'WZRootNavigationController', :path => '../'
-    
-    target 'WZRootNavigationController_Example_ObjCTests' do
-        inherit! :search_paths
+end
 
-        pod 'Quick', '~> 1.2.0'
-        pod 'Nimble', '~> 7.0.2'
-        pod 'FBSnapshotTestCase' , '~> 2.1.4'
-        pod 'Nimble-Snapshots' , '~> 6.3.0'
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        if target.name == 'WZRootNavigationController'
+            target.build_configurations.each do |config|
+                if config.name == 'Debug'
+                   config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] = 'WZDEBUG=1'
+                   config.build_settings['OTHER_SWIFT_FLAGS'] = '$(inherited) "-D" "WZDEBUG"'
+                end
+            end
+        end
     end
 end

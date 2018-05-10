@@ -7,330 +7,242 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0792A3832F45BEB09A979CFE /* Pods_WZRootNavigationController_Example_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F37DFB5E670F4925A49AC5 /* Pods_WZRootNavigationController_Example_SwiftTests.framework */; };
-		0B17801F01BB2DBDEB933B8E /* Pods_WZRootNavigationController_Example_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3DE481CA05DB4574071390A /* Pods_WZRootNavigationController_Example_Swift.framework */; };
-		337082CB2090311A00580DB5 /* WZUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082CA2090311A00580DB5 /* WZUIWebViewController.m */; };
-		337082CF2090313500580DB5 /* WZNavigationBarHiddenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082CE2090313500580DB5 /* WZNavigationBarHiddenViewController.m */; };
-		337082D32090314700580DB5 /* WZStatusBarHiddenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082D22090314700580DB5 /* WZStatusBarHiddenViewController.m */; };
-		337082D72090350500580DB5 /* WZCustomNavigationBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082D62090350500580DB5 /* WZCustomNavigationBarTableViewController.m */; };
-		337082DB2090351800580DB5 /* WZCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082DA2090351800580DB5 /* WZCollectionViewController.m */; };
-		337082DF2090352B00580DB5 /* WZPushAndRemoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082DE2090352B00580DB5 /* WZPushAndRemoveViewController.m */; };
-		337082E32090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082E22090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.m */; };
-		337082E72090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082E62090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.m */; };
-		337082EB2090358000580DB5 /* WZCustomAnimatedTransitionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082EA2090358000580DB5 /* WZCustomAnimatedTransitionDetailViewController.m */; };
-		337082EF2090359200580DB5 /* WZCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082EE2090359200580DB5 /* WZCustomNavigationBar.m */; };
-		337082F3209049BC00580DB5 /* WZCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082F2209049BC00580DB5 /* WZCollectionViewCell.m */; };
-		337082F720904C5800580DB5 /* WZAnimatedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 337082F620904C5800580DB5 /* WZAnimatedCollectionViewCell.m */; };
-		337083012090652400580DB5 /* WZCustomAnimatedTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337083002090652400580DB5 /* WZCustomAnimatedTransition.swift */; };
-		33AD4494208DA9CC0053F036 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AD4493208DA9CC0053F036 /* AppDelegate.m */; };
-		33AD449A208DA9CC0053F036 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AD4498208DA9CC0053F036 /* Main.storyboard */; };
-		33AD449C208DA9CD0053F036 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33AD449B208DA9CD0053F036 /* Assets.xcassets */; };
-		33AD44A2208DA9CD0053F036 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AD44A1208DA9CD0053F036 /* main.m */; };
-		33AD44C5208DAF1D0053F036 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33AD44C4208DAF1D0053F036 /* LaunchScreen.xib */; };
-		33C65FE2208DCE5E009B7A64 /* WZRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C65FE1208DCE5E009B7A64 /* WZRootViewController.swift */; };
-		33C65FE3208DCE5E009B7A64 /* WZRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C65FE1208DCE5E009B7A64 /* WZRootViewController.swift */; };
-		33C65FE5208DCE8D009B7A64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C65FE4208DCE8D009B7A64 /* Main.storyboard */; };
-		33C65FE6208DCE8D009B7A64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C65FE4208DCE8D009B7A64 /* Main.storyboard */; };
-		33C65FE8208DCEB3009B7A64 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C65FE7208DCEB3009B7A64 /* LaunchScreen.xib */; };
-		33C65FE9208DCEB3009B7A64 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C65FE7208DCEB3009B7A64 /* LaunchScreen.xib */; };
-		33C65FEB208DD4BB009B7A64 /* WZInteractivePopDisabledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C65FEA208DD4BB009B7A64 /* WZInteractivePopDisabledViewController.swift */; };
-		33D52A19208DE68100EAF582 /* WZNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A18208DE68100EAF582 /* WZNormalViewController.swift */; };
-		33D52A1A208DE68100EAF582 /* WZNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A18208DE68100EAF582 /* WZNormalViewController.swift */; };
-		33D52A1C208DE95A00EAF582 /* WZUIWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A1B208DE95A00EAF582 /* WZUIWebViewController.swift */; };
-		33D52A1D208DE95A00EAF582 /* WZUIWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A1B208DE95A00EAF582 /* WZUIWebViewController.swift */; };
-		33D52A1F208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A1E208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift */; };
-		33D52A20208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A1E208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift */; };
-		33D52A22208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A21208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift */; };
-		33D52A23208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A21208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift */; };
-		33D52A25208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A24208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift */; };
-		33D52A26208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A24208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift */; };
-		33D52A29208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */; };
-		33D52A2A208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */; };
-		33D52A2C208EC55D00EAF582 /* WZPushAndRemoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A2B208EC55D00EAF582 /* WZPushAndRemoveViewController.swift */; };
-		33D52A2E208EC91600EAF582 /* WZPopAllowedEdgeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A2D208EC91600EAF582 /* WZPopAllowedEdgeCollectionViewController.swift */; };
-		33D52A30208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A2F208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift */; };
-		33D52A31208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A2F208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift */; };
-		33D52A33208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A32208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift */; };
-		33D52A34208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A32208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift */; };
-		33D52A3A208EFD9E00EAF582 /* WZInteractivePopDisabledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C65FEA208DD4BB009B7A64 /* WZInteractivePopDisabledViewController.swift */; };
-		33D52A3B208EFD9E00EAF582 /* WZPushAndRemoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A2B208EC55D00EAF582 /* WZPushAndRemoveViewController.swift */; };
-		33D52A3C208EFD9E00EAF582 /* WZPopAllowedEdgeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A2D208EC91600EAF582 /* WZPopAllowedEdgeCollectionViewController.swift */; };
-		33D52A412090282A00EAF582 /* WZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A402090282A00EAF582 /* WZRootViewController.m */; };
-		33D52A452090284600EAF582 /* WZNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A442090284600EAF582 /* WZNormalViewController.m */; };
-		33D52A492090286100EAF582 /* WZInteractivePopDisabledViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D52A482090286100EAF582 /* WZInteractivePopDisabledViewController.m */; };
-		33D87DB1208E35730057F3B2 /* WZCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */; };
-		33D87DB2208E35730057F3B2 /* WZCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */; };
-		33EF42A920A04714002FFB72 /* WZRootNavigationController_Example_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EF42A820A04714002FFB72 /* WZRootNavigationController_Example_ObjCTests.m */; };
-		404CD3B42426ADC0E58522C6 /* Pods_WZRootNavigationController_Example_ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75E0688526A3E3E930CF7D9D /* Pods_WZRootNavigationController_Example_ObjC.framework */; };
-		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACDD1AFB9204008FA782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Assets.xcassets */; };
-		607FACEC1AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.swift */; };
-		9E898307A86A007C2936FBD2 /* Pods_WZRootNavigationController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374269E8DC2AD6F47B3E0CBC /* Pods_WZRootNavigationController_Tests.framework */; };
-		E930D7D269192B694DF6968C /* Pods_WZRootNavigationController_Example_ObjCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BB157FFD34A5EB632ACFE16 /* Pods_WZRootNavigationController_Example_ObjCTests.framework */; };
-		F97F4C0965870C4A0B55289B /* Pods_WZRootNavigationController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D1074211CFB94A976B9E2C /* Pods_WZRootNavigationController_Example.framework */; };
+		33483FE720A53A4F00257E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33483FE620A53A4F00257E38 /* AppDelegate.swift */; };
+		33483FEC20A53A4F00257E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33483FEA20A53A4F00257E38 /* Main.storyboard */; };
+		33483FEE20A53A5000257E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33483FED20A53A5000257E38 /* Assets.xcassets */; };
+		33483FFE20A53A5B00257E38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33483FFD20A53A5B00257E38 /* AppDelegate.m */; };
+		3348400420A53A5B00257E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3348400220A53A5B00257E38 /* Main.storyboard */; };
+		3348400620A53A5C00257E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3348400520A53A5C00257E38 /* Assets.xcassets */; };
+		3348400C20A53A5C00257E38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348400B20A53A5C00257E38 /* main.m */; };
+		3348401D20A5404900257E38 /* WZCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348401C20A5404900257E38 /* WZCustomAnimation.swift */; };
+		3348402120A5422E00257E38 /* WZCustomAnimationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348402020A5422E00257E38 /* WZCustomAnimationListViewController.swift */; };
+		3348402320A5424500257E38 /* WZCustomAnimationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348402220A5424500257E38 /* WZCustomAnimationDetailViewController.swift */; };
+		3348402620A5427600257E38 /* WZCustomAnimationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348402520A5427600257E38 /* WZCustomAnimationListViewController.m */; };
+		3348402920A5428F00257E38 /* WZCustomAnimationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348402820A5428F00257E38 /* WZCustomAnimationDetailViewController.m */; };
+		3348402C20A542B900257E38 /* WZCustomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348402B20A542B900257E38 /* WZCustomAnimation.m */; };
+		3348402F20A5443900257E38 /* WZCustomAnimatedListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348402E20A5443900257E38 /* WZCustomAnimatedListCell.swift */; };
+		3348403020A5443900257E38 /* WZCustomAnimatedListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348402E20A5443900257E38 /* WZCustomAnimatedListCell.swift */; };
+		3348403220A575DE00257E38 /* WZRootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348403120A575DE00257E38 /* WZRootTableViewController.swift */; };
+		3348403720A5763100257E38 /* WZRootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348403620A5763100257E38 /* WZRootTableViewController.m */; };
+		3348403920A57EF400257E38 /* WZNormal&UnwindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348403820A57EF400257E38 /* WZNormal&UnwindViewController.swift */; };
+		3348403C20A57F0100257E38 /* WZNormal&UnwindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348403B20A57F0100257E38 /* WZNormal&UnwindViewController.m */; };
+		3348403F20A5817700257E38 /* WZDisableInteractivePop&StatusHiddenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348403E20A5817700257E38 /* WZDisableInteractivePop&StatusHiddenViewController.m */; };
+		3348404120A5819100257E38 /* WZDisableInteractivePop&StatusHiddenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348404020A5819100257E38 /* WZDisableInteractivePop&StatusHiddenViewController.swift */; };
+		3348404620A58AE900257E38 /* WZHorizontalScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348404520A58AE900257E38 /* WZHorizontalScrollViewController.m */; };
+		3348404820A58B0500257E38 /* WZHorizontalScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348404720A58B0500257E38 /* WZHorizontalScrollViewController.swift */; };
+		3348404A20A58B4000257E38 /* WZPopAllowedEdgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348404920A58B4000257E38 /* WZPopAllowedEdgeViewController.swift */; };
+		3348404D20A58B4E00257E38 /* WZPopAllowedEdgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348404C20A58B4E00257E38 /* WZPopAllowedEdgeViewController.m */; };
+		3348405020A5910200257E38 /* WZPushAndRemoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348404F20A5910200257E38 /* WZPushAndRemoveViewController.m */; };
+		3348405220A5911500257E38 /* WZPushAndRemoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348405120A5911500257E38 /* WZPushAndRemoveViewController.swift */; };
+		3348405420A5A2FB00257E38 /* WZCustomNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348405320A5A2FB00257E38 /* WZCustomNavigationBarViewController.swift */; };
+		3348405720A5A31F00257E38 /* WZCustomNavigationBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348405620A5A31F00257E38 /* WZCustomNavigationBarViewController.m */; };
+		3348405920A5A5B600257E38 /* WZCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348405820A5A5B600257E38 /* WZCustomNavigationBar.swift */; };
+		3348405A20A5A5B600257E38 /* WZCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348405820A5A5B600257E38 /* WZCustomNavigationBar.swift */; };
+		33E29A1720A930740068C2A6 /* WZWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E29A1620A930740068C2A6 /* WZWebViewController.swift */; };
+		33E29A1820A930740068C2A6 /* WZWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E29A1620A930740068C2A6 /* WZWebViewController.swift */; };
+		33E29A1D20A999E90068C2A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E29A1C20A999E90068C2A6 /* LaunchScreen.xib */; };
+		33E29A1E20A999E90068C2A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E29A1C20A999E90068C2A6 /* LaunchScreen.xib */; };
+		3E0B2A8F90DC8E4C998B1C05 /* Pods_SwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 380E7CFF420FBA0053F29B22 /* Pods_SwiftDemo.framework */; };
+		83E8A30A1F14003FD4F912DC /* Pods_ObjCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33048DBD2ECBA83F25FFE346 /* Pods_ObjCDemo.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		33EF42AB20A04714002FFB72 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 33AD448F208DA9CB0053F036;
-			remoteInfo = WZRootNavigationController_Example_ObjC;
-		};
-		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
-			remoteInfo = WZRootNavigationController;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		02F74F75C7D6E695136CEE2E /* Pods-WZRootNavigationController_Example_ObjCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_ObjCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjCTests/Pods-WZRootNavigationController_Example_ObjCTests.release.xcconfig"; sourceTree = "<group>"; };
-		04F37DFB5E670F4925A49AC5 /* Pods_WZRootNavigationController_Example_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Example_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		32D1074211CFB94A976B9E2C /* Pods_WZRootNavigationController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		337082C92090311A00580DB5 /* WZUIWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZUIWebViewController.h; sourceTree = "<group>"; };
-		337082CA2090311A00580DB5 /* WZUIWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZUIWebViewController.m; sourceTree = "<group>"; };
-		337082CD2090313500580DB5 /* WZNavigationBarHiddenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZNavigationBarHiddenViewController.h; sourceTree = "<group>"; };
-		337082CE2090313500580DB5 /* WZNavigationBarHiddenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZNavigationBarHiddenViewController.m; sourceTree = "<group>"; };
-		337082D12090314700580DB5 /* WZStatusBarHiddenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZStatusBarHiddenViewController.h; sourceTree = "<group>"; };
-		337082D22090314700580DB5 /* WZStatusBarHiddenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZStatusBarHiddenViewController.m; sourceTree = "<group>"; };
-		337082D52090350500580DB5 /* WZCustomNavigationBarTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCustomNavigationBarTableViewController.h; sourceTree = "<group>"; };
-		337082D62090350500580DB5 /* WZCustomNavigationBarTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCustomNavigationBarTableViewController.m; sourceTree = "<group>"; };
-		337082D92090351800580DB5 /* WZCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCollectionViewController.h; sourceTree = "<group>"; };
-		337082DA2090351800580DB5 /* WZCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCollectionViewController.m; sourceTree = "<group>"; };
-		337082DD2090352B00580DB5 /* WZPushAndRemoveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZPushAndRemoveViewController.h; sourceTree = "<group>"; };
-		337082DE2090352B00580DB5 /* WZPushAndRemoveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZPushAndRemoveViewController.m; sourceTree = "<group>"; };
-		337082E12090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZPopAllowedEdgeCollectionViewController.h; sourceTree = "<group>"; };
-		337082E22090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZPopAllowedEdgeCollectionViewController.m; sourceTree = "<group>"; };
-		337082E52090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCustomAnimatedTransitionListCollectionViewController.h; sourceTree = "<group>"; };
-		337082E62090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCustomAnimatedTransitionListCollectionViewController.m; sourceTree = "<group>"; };
-		337082E92090357F00580DB5 /* WZCustomAnimatedTransitionDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCustomAnimatedTransitionDetailViewController.h; sourceTree = "<group>"; };
-		337082EA2090358000580DB5 /* WZCustomAnimatedTransitionDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCustomAnimatedTransitionDetailViewController.m; sourceTree = "<group>"; };
-		337082ED2090359200580DB5 /* WZCustomNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCustomNavigationBar.h; sourceTree = "<group>"; };
-		337082EE2090359200580DB5 /* WZCustomNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCustomNavigationBar.m; sourceTree = "<group>"; };
-		337082F1209049BC00580DB5 /* WZCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCollectionViewCell.h; sourceTree = "<group>"; };
-		337082F2209049BC00580DB5 /* WZCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCollectionViewCell.m; sourceTree = "<group>"; };
-		337082F520904C5800580DB5 /* WZAnimatedCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZAnimatedCollectionViewCell.h; sourceTree = "<group>"; };
-		337082F620904C5800580DB5 /* WZAnimatedCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZAnimatedCollectionViewCell.m; sourceTree = "<group>"; };
-		337082FE2090652300580DB5 /* WZRootNavigationController_Example_ObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WZRootNavigationController_Example_ObjC-Bridging-Header.h"; sourceTree = "<group>"; };
-		337082FF2090652400580DB5 /* WZRootNavigationController_Example_ObjCTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WZRootNavigationController_Example_ObjCTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		337083002090652400580DB5 /* WZCustomAnimatedTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomAnimatedTransition.swift; sourceTree = "<group>"; };
-		33AD4490208DA9CB0053F036 /* WZRootNavigationController_Example_ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZRootNavigationController_Example_ObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		33AD4492208DA9CC0053F036 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		33AD4493208DA9CC0053F036 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		33AD4499208DA9CC0053F036 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		33AD449B208DA9CD0053F036 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		33AD44A0208DA9CD0053F036 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		33AD44A1208DA9CD0053F036 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		33AD44C4208DAF1D0053F036 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		33C65FE1208DCE5E009B7A64 /* WZRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZRootViewController.swift; sourceTree = "<group>"; };
-		33C65FE4208DCE8D009B7A64 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		33C65FE7208DCEB3009B7A64 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		33C65FEA208DD4BB009B7A64 /* WZInteractivePopDisabledViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZInteractivePopDisabledViewController.swift; sourceTree = "<group>"; };
-		33D52A18208DE68100EAF582 /* WZNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZNormalViewController.swift; sourceTree = "<group>"; };
-		33D52A1B208DE95A00EAF582 /* WZUIWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZUIWebViewController.swift; sourceTree = "<group>"; };
-		33D52A1E208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZNavigationBarHiddenViewController.swift; sourceTree = "<group>"; };
-		33D52A21208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZStatusBarHiddenViewController.swift; sourceTree = "<group>"; };
-		33D52A24208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomNavigationBarTableViewController.swift; sourceTree = "<group>"; };
-		33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomNavigationBar.swift; sourceTree = "<group>"; };
-		33D52A2B208EC55D00EAF582 /* WZPushAndRemoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZPushAndRemoveViewController.swift; sourceTree = "<group>"; };
-		33D52A2D208EC91600EAF582 /* WZPopAllowedEdgeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZPopAllowedEdgeCollectionViewController.swift; sourceTree = "<group>"; };
-		33D52A2F208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomAnimatedTransitionListCollectionViewController.swift; sourceTree = "<group>"; };
-		33D52A32208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomAnimatedTransitionDetailViewController.swift; sourceTree = "<group>"; };
-		33D52A3F2090282A00EAF582 /* WZRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZRootViewController.h; sourceTree = "<group>"; };
-		33D52A402090282A00EAF582 /* WZRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZRootViewController.m; sourceTree = "<group>"; };
-		33D52A432090284600EAF582 /* WZNormalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZNormalViewController.h; sourceTree = "<group>"; };
-		33D52A442090284600EAF582 /* WZNormalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZNormalViewController.m; sourceTree = "<group>"; };
-		33D52A472090286100EAF582 /* WZInteractivePopDisabledViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZInteractivePopDisabledViewController.h; sourceTree = "<group>"; };
-		33D52A482090286100EAF582 /* WZInteractivePopDisabledViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZInteractivePopDisabledViewController.m; sourceTree = "<group>"; };
-		33D52A4B209028A700EAF582 /* WZRootNavigationController_Example_ObjC.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZRootNavigationController_Example_ObjC.pch; sourceTree = "<group>"; };
-		33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCollectionViewController.swift; sourceTree = "<group>"; };
-		33EF42A620A04713002FFB72 /* WZRootNavigationController_Example_ObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZRootNavigationController_Example_ObjCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		33EF42A820A04714002FFB72 /* WZRootNavigationController_Example_ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZRootNavigationController_Example_ObjCTests.m; sourceTree = "<group>"; };
-		33EF42AA20A04714002FFB72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33048DBD2ECBA83F25FFE346 /* Pods_ObjCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33483FE420A53A4F00257E38 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33483FE620A53A4F00257E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		33483FEB20A53A4F00257E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		33483FED20A53A5000257E38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33483FF220A53A5000257E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33483FFA20A53A5B00257E38 /* ObjCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33483FFC20A53A5B00257E38 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		33483FFD20A53A5B00257E38 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3348400320A53A5B00257E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3348400520A53A5C00257E38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3348400A20A53A5C00257E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3348400B20A53A5C00257E38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3348401020A53AD500257E38 /* ObjCDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjCDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		3348401C20A5404900257E38 /* WZCustomAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WZCustomAnimation.swift; sourceTree = "<group>"; };
+		3348401E20A5416400257E38 /* WZRootNavigationController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WZRootNavigationController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3348402020A5422E00257E38 /* WZCustomAnimationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomAnimationListViewController.swift; sourceTree = "<group>"; };
+		3348402220A5424500257E38 /* WZCustomAnimationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomAnimationDetailViewController.swift; sourceTree = "<group>"; };
+		3348402420A5427600257E38 /* WZCustomAnimationListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCustomAnimationListViewController.h; sourceTree = "<group>"; };
+		3348402520A5427600257E38 /* WZCustomAnimationListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCustomAnimationListViewController.m; sourceTree = "<group>"; };
+		3348402720A5428F00257E38 /* WZCustomAnimationDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCustomAnimationDetailViewController.h; sourceTree = "<group>"; };
+		3348402820A5428F00257E38 /* WZCustomAnimationDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCustomAnimationDetailViewController.m; sourceTree = "<group>"; };
+		3348402A20A542B900257E38 /* WZCustomAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCustomAnimation.h; sourceTree = "<group>"; };
+		3348402B20A542B900257E38 /* WZCustomAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCustomAnimation.m; sourceTree = "<group>"; };
+		3348402D20A542E100257E38 /* ObjCDemoPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCDemoPrefixHeader.pch; sourceTree = "<group>"; };
+		3348402E20A5443900257E38 /* WZCustomAnimatedListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomAnimatedListCell.swift; sourceTree = "<group>"; };
+		3348403120A575DE00257E38 /* WZRootTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZRootTableViewController.swift; sourceTree = "<group>"; };
+		3348403520A5763100257E38 /* WZRootTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZRootTableViewController.h; sourceTree = "<group>"; };
+		3348403620A5763100257E38 /* WZRootTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZRootTableViewController.m; sourceTree = "<group>"; };
+		3348403820A57EF400257E38 /* WZNormal&UnwindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WZNormal&UnwindViewController.swift"; sourceTree = "<group>"; };
+		3348403A20A57F0100257E38 /* WZNormal&UnwindViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WZNormal&UnwindViewController.h"; sourceTree = "<group>"; };
+		3348403B20A57F0100257E38 /* WZNormal&UnwindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WZNormal&UnwindViewController.m"; sourceTree = "<group>"; };
+		3348403D20A5817700257E38 /* WZDisableInteractivePop&StatusHiddenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WZDisableInteractivePop&StatusHiddenViewController.h"; sourceTree = "<group>"; };
+		3348403E20A5817700257E38 /* WZDisableInteractivePop&StatusHiddenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WZDisableInteractivePop&StatusHiddenViewController.m"; sourceTree = "<group>"; };
+		3348404020A5819100257E38 /* WZDisableInteractivePop&StatusHiddenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WZDisableInteractivePop&StatusHiddenViewController.swift"; sourceTree = "<group>"; };
+		3348404420A58AE900257E38 /* WZHorizontalScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZHorizontalScrollViewController.h; sourceTree = "<group>"; };
+		3348404520A58AE900257E38 /* WZHorizontalScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZHorizontalScrollViewController.m; sourceTree = "<group>"; };
+		3348404720A58B0500257E38 /* WZHorizontalScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZHorizontalScrollViewController.swift; sourceTree = "<group>"; };
+		3348404920A58B4000257E38 /* WZPopAllowedEdgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZPopAllowedEdgeViewController.swift; sourceTree = "<group>"; };
+		3348404B20A58B4E00257E38 /* WZPopAllowedEdgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZPopAllowedEdgeViewController.h; sourceTree = "<group>"; };
+		3348404C20A58B4E00257E38 /* WZPopAllowedEdgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZPopAllowedEdgeViewController.m; sourceTree = "<group>"; };
+		3348404E20A5910100257E38 /* WZPushAndRemoveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZPushAndRemoveViewController.h; sourceTree = "<group>"; };
+		3348404F20A5910200257E38 /* WZPushAndRemoveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZPushAndRemoveViewController.m; sourceTree = "<group>"; };
+		3348405120A5911500257E38 /* WZPushAndRemoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZPushAndRemoveViewController.swift; sourceTree = "<group>"; };
+		3348405320A5A2FB00257E38 /* WZCustomNavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomNavigationBarViewController.swift; sourceTree = "<group>"; };
+		3348405520A5A31F00257E38 /* WZCustomNavigationBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCustomNavigationBarViewController.h; sourceTree = "<group>"; };
+		3348405620A5A31F00257E38 /* WZCustomNavigationBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCustomNavigationBarViewController.m; sourceTree = "<group>"; };
+		3348405820A5A5B600257E38 /* WZCustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomNavigationBar.swift; sourceTree = "<group>"; };
+		33E29A1620A930740068C2A6 /* WZWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZWebViewController.swift; sourceTree = "<group>"; };
+		33E29A1C20A999E90068C2A6 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		374269E8DC2AD6F47B3E0CBC /* Pods_WZRootNavigationController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		44C5ED792068B863552665E6 /* Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_SwiftTests/Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4AB306DD75D2FDF57BAC3F92 /* Pods-WZRootNavigationController_Example_ObjCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_ObjCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjCTests/Pods-WZRootNavigationController_Example_ObjCTests.debug.xcconfig"; sourceTree = "<group>"; };
-		56A7DBC6E7BA5DD507A5948E /* Pods-WZRootNavigationController_Example_SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_SwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_SwiftTests/Pods-WZRootNavigationController_Example_SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
-		607FACD01AFB9204008FA782 /* WZRootNavigationController_Example_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZRootNavigationController_Example_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACDC1AFB9204008FA782 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZRootNavigationController_Example_SwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZRootNavigationController_Example_SwiftTests.swift; sourceTree = "<group>"; };
-		6BB157FFD34A5EB632ACFE16 /* Pods_WZRootNavigationController_Example_ObjCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Example_ObjCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EB32E7D49CC347BC3726BF3 /* Pods-WZRootNavigationController_Example_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_Swift/Pods-WZRootNavigationController_Example_Swift.release.xcconfig"; sourceTree = "<group>"; };
-		6F9B4F4A881B337CDE3DED75 /* Pods-WZRootNavigationController_Example_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_Swift/Pods-WZRootNavigationController_Example_Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		75E0688526A3E3E930CF7D9D /* Pods_WZRootNavigationController_Example_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Example_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E040FEC4A78631791C126B4 /* WZRootNavigationController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WZRootNavigationController.podspec; path = ../WZRootNavigationController.podspec; sourceTree = "<group>"; };
-		9FC18A8368C90EC2B97BCD89 /* Pods-WZRootNavigationController_Example_ObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_ObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjC/Pods-WZRootNavigationController_Example_ObjC.release.xcconfig"; sourceTree = "<group>"; };
-		B3DE481CA05DB4574071390A /* Pods_WZRootNavigationController_Example_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Example_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		380E7CFF420FBA0053F29B22 /* Pods_SwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41A3B13D1065745073293CEE /* Pods-SwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7E040FEC4A78631791C126B4 /* WZRootNavigationController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WZRootNavigationController.podspec; path = ../WZRootNavigationController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A9A87A8BB69BA75EB05FF86D /* Pods-ObjCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjCDemo/Pods-ObjCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BBD62FEC7D413D8B424BE4BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		C6C2D2C50A8C1889AFD1204E /* Pods-WZRootNavigationController_Example_ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WZRootNavigationController_Example_ObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjC/Pods-WZRootNavigationController_Example_ObjC.debug.xcconfig"; sourceTree = "<group>"; };
+		C06B84285E9D135E370AB4B8 /* Pods-ObjCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjCDemo/Pods-ObjCDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D7C653A9D38CEB351A8F2605 /* Pods-SwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E03311C9EE743E0C1056AAF3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		33AD448D208DA9CB0053F036 /* Frameworks */ = {
+		33483FE120A53A4F00257E38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				404CD3B42426ADC0E58522C6 /* Pods_WZRootNavigationController_Example_ObjC.framework in Frameworks */,
+				3E0B2A8F90DC8E4C998B1C05 /* Pods_SwiftDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		33EF42A320A04713002FFB72 /* Frameworks */ = {
+		33483FF720A53A5B00257E38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E930D7D269192B694DF6968C /* Pods_WZRootNavigationController_Example_ObjCTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACCD1AFB9204008FA782 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F97F4C0965870C4A0B55289B /* Pods_WZRootNavigationController_Example.framework in Frameworks */,
-				0B17801F01BB2DBDEB933B8E /* Pods_WZRootNavigationController_Example_Swift.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACE21AFB9204008FA782 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9E898307A86A007C2936FBD2 /* Pods_WZRootNavigationController_Tests.framework in Frameworks */,
-				0792A3832F45BEB09A979CFE /* Pods_WZRootNavigationController_Example_SwiftTests.framework in Frameworks */,
+				83E8A30A1F14003FD4F912DC /* Pods_ObjCDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		337082FD209064EC00580DB5 /* Swift */ = {
+		33483FE520A53A4F00257E38 /* SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
-				337083002090652400580DB5 /* WZCustomAnimatedTransition.swift */,
-				337082FE2090652300580DB5 /* WZRootNavigationController_Example_ObjC-Bridging-Header.h */,
-				337082FF2090652400580DB5 /* WZRootNavigationController_Example_ObjCTests-Bridging-Header.h */,
+				33483FE620A53A4F00257E38 /* AppDelegate.swift */,
+				3348401420A53DC900257E38 /* Animations */,
+				3348401520A53DC900257E38 /* ViewControllers */,
+				3348401320A53DC900257E38 /* Views */,
+				33483FEA20A53A4F00257E38 /* Main.storyboard */,
+				33E29A1C20A999E90068C2A6 /* LaunchScreen.xib */,
+				33483FED20A53A5000257E38 /* Assets.xcassets */,
+				33483FF220A53A5000257E38 /* Info.plist */,
 			);
-			path = Swift;
+			path = SwiftDemo;
 			sourceTree = "<group>";
 		};
-		33AD4491208DA9CC0053F036 /* WZRootNavigationController_Example_ObjC */ = {
+		33483FFB20A53A5B00257E38 /* ObjCDemo */ = {
 			isa = PBXGroup;
 			children = (
-				33AD449B208DA9CD0053F036 /* Assets.xcassets */,
-				33AD4498208DA9CC0053F036 /* Main.storyboard */,
-				33AD44C4208DAF1D0053F036 /* LaunchScreen.xib */,
-				33AD4492208DA9CC0053F036 /* AppDelegate.h */,
-				33AD4493208DA9CC0053F036 /* AppDelegate.m */,
-				337082FD209064EC00580DB5 /* Swift */,
-				33D52A3E2090280700EAF582 /* Views */,
-				33D52A3D209027EE00EAF582 /* ViewControllers */,
-				33AD44A0208DA9CD0053F036 /* Info.plist */,
-				33AD44A1208DA9CD0053F036 /* main.m */,
-				33D52A4B209028A700EAF582 /* WZRootNavigationController_Example_ObjC.pch */,
+				33483FFC20A53A5B00257E38 /* AppDelegate.h */,
+				33483FFD20A53A5B00257E38 /* AppDelegate.m */,
+				3348401620A53DE500257E38 /* Animations */,
+				3348401720A53DE500257E38 /* ViewControllers */,
+				3348401820A53DE500257E38 /* Views */,
+				3348400220A53A5B00257E38 /* Main.storyboard */,
+				3348400520A53A5C00257E38 /* Assets.xcassets */,
+				3348400A20A53A5C00257E38 /* Info.plist */,
+				3348400B20A53A5C00257E38 /* main.m */,
+				3348401020A53AD500257E38 /* ObjCDemo-Bridging-Header.h */,
+				3348402D20A542E100257E38 /* ObjCDemoPrefixHeader.pch */,
 			);
-			path = WZRootNavigationController_Example_ObjC;
+			path = ObjCDemo;
 			sourceTree = "<group>";
 		};
-		33C65FE0208DCE28009B7A64 /* ViewControllers */ = {
+		3348401320A53DC900257E38 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				33C65FE1208DCE5E009B7A64 /* WZRootViewController.swift */,
-				33D52A18208DE68100EAF582 /* WZNormalViewController.swift */,
-				33C65FEA208DD4BB009B7A64 /* WZInteractivePopDisabledViewController.swift */,
-				33D52A1B208DE95A00EAF582 /* WZUIWebViewController.swift */,
-				33D52A1E208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift */,
-				33D52A21208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift */,
-				33D52A24208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift */,
-				33D87DB0208E35730057F3B2 /* WZCollectionViewController.swift */,
-				33D52A2B208EC55D00EAF582 /* WZPushAndRemoveViewController.swift */,
-				33D52A2D208EC91600EAF582 /* WZPopAllowedEdgeCollectionViewController.swift */,
-				33D52A2F208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift */,
-				33D52A32208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		33D52A27208DF07000EAF582 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				33D52A28208DF08A00EAF582 /* WZCustomNavigationBar.swift */,
+				3348402E20A5443900257E38 /* WZCustomAnimatedListCell.swift */,
+				3348405820A5A5B600257E38 /* WZCustomNavigationBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		33D52A3D209027EE00EAF582 /* ViewControllers */ = {
+		3348401420A53DC900257E38 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				33D52A3F2090282A00EAF582 /* WZRootViewController.h */,
-				33D52A402090282A00EAF582 /* WZRootViewController.m */,
-				33D52A432090284600EAF582 /* WZNormalViewController.h */,
-				33D52A442090284600EAF582 /* WZNormalViewController.m */,
-				33D52A472090286100EAF582 /* WZInteractivePopDisabledViewController.h */,
-				33D52A482090286100EAF582 /* WZInteractivePopDisabledViewController.m */,
-				337082C92090311A00580DB5 /* WZUIWebViewController.h */,
-				337082CA2090311A00580DB5 /* WZUIWebViewController.m */,
-				337082CD2090313500580DB5 /* WZNavigationBarHiddenViewController.h */,
-				337082CE2090313500580DB5 /* WZNavigationBarHiddenViewController.m */,
-				337082D12090314700580DB5 /* WZStatusBarHiddenViewController.h */,
-				337082D22090314700580DB5 /* WZStatusBarHiddenViewController.m */,
-				337082D52090350500580DB5 /* WZCustomNavigationBarTableViewController.h */,
-				337082D62090350500580DB5 /* WZCustomNavigationBarTableViewController.m */,
-				337082D92090351800580DB5 /* WZCollectionViewController.h */,
-				337082DA2090351800580DB5 /* WZCollectionViewController.m */,
-				337082DD2090352B00580DB5 /* WZPushAndRemoveViewController.h */,
-				337082DE2090352B00580DB5 /* WZPushAndRemoveViewController.m */,
-				337082E12090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.h */,
-				337082E22090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.m */,
-				337082E52090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.h */,
-				337082E62090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.m */,
-				337082E92090357F00580DB5 /* WZCustomAnimatedTransitionDetailViewController.h */,
-				337082EA2090358000580DB5 /* WZCustomAnimatedTransitionDetailViewController.m */,
+				3348401C20A5404900257E38 /* WZCustomAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		3348401520A53DC900257E38 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3348403120A575DE00257E38 /* WZRootTableViewController.swift */,
+				3348402020A5422E00257E38 /* WZCustomAnimationListViewController.swift */,
+				3348402220A5424500257E38 /* WZCustomAnimationDetailViewController.swift */,
+				3348403820A57EF400257E38 /* WZNormal&UnwindViewController.swift */,
+				3348404020A5819100257E38 /* WZDisableInteractivePop&StatusHiddenViewController.swift */,
+				3348404720A58B0500257E38 /* WZHorizontalScrollViewController.swift */,
+				3348404920A58B4000257E38 /* WZPopAllowedEdgeViewController.swift */,
+				3348405120A5911500257E38 /* WZPushAndRemoveViewController.swift */,
+				3348405320A5A2FB00257E38 /* WZCustomNavigationBarViewController.swift */,
+				33E29A1620A930740068C2A6 /* WZWebViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		33D52A3E2090280700EAF582 /* Views */ = {
+		3348401620A53DE500257E38 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				337082ED2090359200580DB5 /* WZCustomNavigationBar.h */,
-				337082EE2090359200580DB5 /* WZCustomNavigationBar.m */,
-				337082F1209049BC00580DB5 /* WZCollectionViewCell.h */,
-				337082F2209049BC00580DB5 /* WZCollectionViewCell.m */,
-				337082F520904C5800580DB5 /* WZAnimatedCollectionViewCell.h */,
-				337082F620904C5800580DB5 /* WZAnimatedCollectionViewCell.m */,
+				3348402A20A542B900257E38 /* WZCustomAnimation.h */,
+				3348402B20A542B900257E38 /* WZCustomAnimation.m */,
 			);
-			path = Views;
+			path = Animations;
 			sourceTree = "<group>";
 		};
-		33EF42A720A04714002FFB72 /* WZRootNavigationController_Example_ObjCTests */ = {
+		3348401720A53DE500257E38 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				33EF42A820A04714002FFB72 /* WZRootNavigationController_Example_ObjCTests.m */,
-				33EF42AA20A04714002FFB72 /* Info.plist */,
+				3348403520A5763100257E38 /* WZRootTableViewController.h */,
+				3348403620A5763100257E38 /* WZRootTableViewController.m */,
+				3348402420A5427600257E38 /* WZCustomAnimationListViewController.h */,
+				3348402520A5427600257E38 /* WZCustomAnimationListViewController.m */,
+				3348402720A5428F00257E38 /* WZCustomAnimationDetailViewController.h */,
+				3348402820A5428F00257E38 /* WZCustomAnimationDetailViewController.m */,
+				3348403A20A57F0100257E38 /* WZNormal&UnwindViewController.h */,
+				3348403B20A57F0100257E38 /* WZNormal&UnwindViewController.m */,
+				3348403D20A5817700257E38 /* WZDisableInteractivePop&StatusHiddenViewController.h */,
+				3348403E20A5817700257E38 /* WZDisableInteractivePop&StatusHiddenViewController.m */,
+				3348404420A58AE900257E38 /* WZHorizontalScrollViewController.h */,
+				3348404520A58AE900257E38 /* WZHorizontalScrollViewController.m */,
+				3348404B20A58B4E00257E38 /* WZPopAllowedEdgeViewController.h */,
+				3348404C20A58B4E00257E38 /* WZPopAllowedEdgeViewController.m */,
+				3348404E20A5910100257E38 /* WZPushAndRemoveViewController.h */,
+				3348404F20A5910200257E38 /* WZPushAndRemoveViewController.m */,
+				3348405520A5A31F00257E38 /* WZCustomNavigationBarViewController.h */,
+				3348405620A5A31F00257E38 /* WZCustomNavigationBarViewController.m */,
 			);
-			path = WZRootNavigationController_Example_ObjCTests;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3348401820A53DE500257E38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		48C80213EC5301E915345F94 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6F9B4F4A881B337CDE3DED75 /* Pods-WZRootNavigationController_Example_Swift.debug.xcconfig */,
-				6EB32E7D49CC347BC3726BF3 /* Pods-WZRootNavigationController_Example_Swift.release.xcconfig */,
-				C6C2D2C50A8C1889AFD1204E /* Pods-WZRootNavigationController_Example_ObjC.debug.xcconfig */,
-				9FC18A8368C90EC2B97BCD89 /* Pods-WZRootNavigationController_Example_ObjC.release.xcconfig */,
-				4AB306DD75D2FDF57BAC3F92 /* Pods-WZRootNavigationController_Example_ObjCTests.debug.xcconfig */,
-				02F74F75C7D6E695136CEE2E /* Pods-WZRootNavigationController_Example_ObjCTests.release.xcconfig */,
-				44C5ED792068B863552665E6 /* Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig */,
-				56A7DBC6E7BA5DD507A5948E /* Pods-WZRootNavigationController_Example_SwiftTests.release.xcconfig */,
+				A9A87A8BB69BA75EB05FF86D /* Pods-ObjCDemo.debug.xcconfig */,
+				C06B84285E9D135E370AB4B8 /* Pods-ObjCDemo.release.xcconfig */,
+				41A3B13D1065745073293CEE /* Pods-SwiftDemo.debug.xcconfig */,
+				D7C653A9D38CEB351A8F2605 /* Pods-SwiftDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -339,10 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* WZRootNavigationController_Example_Swift */,
-				607FACE81AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests */,
-				33AD4491208DA9CC0053F036 /* WZRootNavigationController_Example_ObjC */,
-				33EF42A720A04714002FFB72 /* WZRootNavigationController_Example_ObjCTests */,
+				33483FE520A53A4F00257E38 /* SwiftDemo */,
+				33483FFB20A53A5B00257E38 /* ObjCDemo */,
 				607FACD11AFB9204008FA782 /* Products */,
 				48C80213EC5301E915345F94 /* Pods */,
 				DAEC312F6954347F349F2B00 /* Frameworks */,
@@ -352,52 +262,10 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* WZRootNavigationController_Example_Swift.app */,
-				607FACE51AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.xctest */,
-				33AD4490208DA9CB0053F036 /* WZRootNavigationController_Example_ObjC.app */,
-				33EF42A620A04713002FFB72 /* WZRootNavigationController_Example_ObjCTests.xctest */,
+				33483FE420A53A4F00257E38 /* SwiftDemo.app */,
+				33483FFA20A53A5B00257E38 /* ObjCDemo.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		607FACD21AFB9204008FA782 /* WZRootNavigationController_Example_Swift */ = {
-			isa = PBXGroup;
-			children = (
-				607FACDC1AFB9204008FA782 /* Assets.xcassets */,
-				33C65FE4208DCE8D009B7A64 /* Main.storyboard */,
-				33C65FE7208DCEB3009B7A64 /* LaunchScreen.xib */,
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				33D52A27208DF07000EAF582 /* Views */,
-				33C65FE0208DCE28009B7A64 /* ViewControllers */,
-				607FACD31AFB9204008FA782 /* Supporting Files */,
-			);
-			name = WZRootNavigationController_Example_Swift;
-			path = WZRootNavigationController;
-			sourceTree = "<group>";
-		};
-		607FACD31AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACD41AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		607FACE81AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEB1AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
-			);
-			path = WZRootNavigationController_Example_SwiftTests;
-			sourceTree = "<group>";
-		};
-		607FACE91AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEA1AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
@@ -413,12 +281,10 @@
 		DAEC312F6954347F349F2B00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				32D1074211CFB94A976B9E2C /* Pods_WZRootNavigationController_Example.framework */,
+				3348401E20A5416400257E38 /* WZRootNavigationController.framework */,
 				374269E8DC2AD6F47B3E0CBC /* Pods_WZRootNavigationController_Tests.framework */,
-				B3DE481CA05DB4574071390A /* Pods_WZRootNavigationController_Example_Swift.framework */,
-				75E0688526A3E3E930CF7D9D /* Pods_WZRootNavigationController_Example_ObjC.framework */,
-				6BB157FFD34A5EB632ACFE16 /* Pods_WZRootNavigationController_Example_ObjCTests.framework */,
-				04F37DFB5E670F4925A49AC5 /* Pods_WZRootNavigationController_Example_SwiftTests.framework */,
+				33048DBD2ECBA83F25FFE346 /* Pods_ObjCDemo.framework */,
+				380E7CFF420FBA0053F29B22 /* Pods_SwiftDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -426,83 +292,43 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		33AD448F208DA9CB0053F036 /* WZRootNavigationController_Example_ObjC */ = {
+		33483FE320A53A4F00257E38 /* SwiftDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33AD44BF208DA9CD0053F036 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_ObjC" */;
+			buildConfigurationList = 33483FF520A53A5000257E38 /* Build configuration list for PBXNativeTarget "SwiftDemo" */;
 			buildPhases = (
-				C1E6EFA0E31C45F827BAA279 /* [CP] Check Pods Manifest.lock */,
-				33AD448C208DA9CB0053F036 /* Sources */,
-				33AD448D208DA9CB0053F036 /* Frameworks */,
-				33AD448E208DA9CB0053F036 /* Resources */,
-				2D6E9C06DFD2DEFF661301CD /* [CP] Embed Pods Frameworks */,
+				CC2F409D68ABA4FFC79CB159 /* [CP] Check Pods Manifest.lock */,
+				33483FE020A53A4F00257E38 /* Sources */,
+				33483FE120A53A4F00257E38 /* Frameworks */,
+				33483FE220A53A4F00257E38 /* Resources */,
+				759A5DCF9E12BE1431A83AE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WZRootNavigationController_Example_ObjC;
-			productName = WZRootNavigationController_Example_ObjC;
-			productReference = 33AD4490208DA9CB0053F036 /* WZRootNavigationController_Example_ObjC.app */;
+			name = SwiftDemo;
+			productName = SwiftDemo;
+			productReference = 33483FE420A53A4F00257E38 /* SwiftDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		33EF42A520A04713002FFB72 /* WZRootNavigationController_Example_ObjCTests */ = {
+		33483FF920A53A5B00257E38 /* ObjCDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33EF42AF20A04714002FFB72 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_ObjCTests" */;
+			buildConfigurationList = 3348400D20A53A5C00257E38 /* Build configuration list for PBXNativeTarget "ObjCDemo" */;
 			buildPhases = (
-				F3C292D12F5F78F49085500D /* [CP] Check Pods Manifest.lock */,
-				33EF42A220A04713002FFB72 /* Sources */,
-				33EF42A320A04713002FFB72 /* Frameworks */,
-				33EF42A420A04713002FFB72 /* Resources */,
-				7F896A920DA8680FB3EA93BA /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				33EF42AC20A04714002FFB72 /* PBXTargetDependency */,
-			);
-			name = WZRootNavigationController_Example_ObjCTests;
-			productName = WZRootNavigationController_Example_ObjCTests;
-			productReference = 33EF42A620A04713002FFB72 /* WZRootNavigationController_Example_ObjCTests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		607FACCF1AFB9204008FA782 /* WZRootNavigationController_Example_Swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_Swift" */;
-			buildPhases = (
-				E8A63CCE5DCE9702AC5CC05D /* [CP] Check Pods Manifest.lock */,
-				607FACCC1AFB9204008FA782 /* Sources */,
-				607FACCD1AFB9204008FA782 /* Frameworks */,
-				607FACCE1AFB9204008FA782 /* Resources */,
-				63C652DF8393489490BB018F /* [CP] Embed Pods Frameworks */,
+				D5C80306769D6E53CE1B77DD /* [CP] Check Pods Manifest.lock */,
+				33483FF620A53A5B00257E38 /* Sources */,
+				33483FF720A53A5B00257E38 /* Frameworks */,
+				33483FF820A53A5B00257E38 /* Resources */,
+				9A15270488A67DC90D658CE0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WZRootNavigationController_Example_Swift;
-			productName = WZRootNavigationController;
-			productReference = 607FACD01AFB9204008FA782 /* WZRootNavigationController_Example_Swift.app */;
+			name = ObjCDemo;
+			productName = ObjCDemo;
+			productReference = 33483FFA20A53A5B00257E38 /* ObjCDemo.app */;
 			productType = "com.apple.product-type.application";
-		};
-		607FACE41AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_SwiftTests" */;
-			buildPhases = (
-				03140CADDC9222BCDD8E2AA9 /* [CP] Check Pods Manifest.lock */,
-				607FACE11AFB9204008FA782 /* Sources */,
-				607FACE21AFB9204008FA782 /* Frameworks */,
-				607FACE31AFB9204008FA782 /* Resources */,
-				AE272E1068901E9B495D0FAE /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
-			);
-			name = WZRootNavigationController_Example_SwiftTests;
-			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -510,28 +336,18 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					33AD448F208DA9CB0053F036 = {
+					33483FE320A53A4F00257E38 = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+					};
+					33483FF920A53A5B00257E38 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
-					};
-					33EF42A520A04713002FFB72 = {
-						CreatedOnToolsVersion = 9.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 33AD448F208DA9CB0053F036;
-					};
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
-					607FACE41AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
@@ -548,79 +364,43 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* WZRootNavigationController_Example_Swift */,
-				607FACE41AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests */,
-				33AD448F208DA9CB0053F036 /* WZRootNavigationController_Example_ObjC */,
-				33EF42A520A04713002FFB72 /* WZRootNavigationController_Example_ObjCTests */,
+				33483FE320A53A4F00257E38 /* SwiftDemo */,
+				33483FF920A53A5B00257E38 /* ObjCDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		33AD448E208DA9CB0053F036 /* Resources */ = {
+		33483FE220A53A4F00257E38 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33AD449C208DA9CD0053F036 /* Assets.xcassets in Resources */,
-				33AD44C5208DAF1D0053F036 /* LaunchScreen.xib in Resources */,
-				33AD449A208DA9CC0053F036 /* Main.storyboard in Resources */,
+				33483FEE20A53A5000257E38 /* Assets.xcassets in Resources */,
+				33483FEC20A53A4F00257E38 /* Main.storyboard in Resources */,
+				33E29A1D20A999E90068C2A6 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		33EF42A420A04713002FFB72 /* Resources */ = {
+		33483FF820A53A5B00257E38 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACCE1AFB9204008FA782 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				607FACDD1AFB9204008FA782 /* Assets.xcassets in Resources */,
-				33C65FE8208DCEB3009B7A64 /* LaunchScreen.xib in Resources */,
-				33C65FE5208DCE8D009B7A64 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACE31AFB9204008FA782 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				33C65FE9208DCEB3009B7A64 /* LaunchScreen.xib in Resources */,
-				33C65FE6208DCE8D009B7A64 /* Main.storyboard in Resources */,
+				3348400620A53A5C00257E38 /* Assets.xcassets in Resources */,
+				3348400420A53A5B00257E38 /* Main.storyboard in Resources */,
+				33E29A1E20A999E90068C2A6 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03140CADDC9222BCDD8E2AA9 /* [CP] Check Pods Manifest.lock */ = {
+		759A5DCF9E12BE1431A83AE8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WZRootNavigationController_Example_SwiftTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2D6E9C06DFD2DEFF661301CD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjC/Pods-WZRootNavigationController_Example_ObjC-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/WZRootNavigationController/WZRootNavigationController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -629,16 +409,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjC/Pods-WZRootNavigationController_Example_ObjC-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDemo/Pods-SwiftDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		63C652DF8393489490BB018F /* [CP] Embed Pods Frameworks */ = {
+		9A15270488A67DC90D658CE0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_Swift/Pods-WZRootNavigationController_Example_Swift-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-ObjCDemo/Pods-ObjCDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/WZRootNavigationController/WZRootNavigationController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -647,58 +427,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_Swift/Pods-WZRootNavigationController_Example_Swift-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjCDemo/Pods-ObjCDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7F896A920DA8680FB3EA93BA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjCTests/Pods-WZRootNavigationController_Example_ObjCTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_ObjCTests/Pods-WZRootNavigationController_Example_ObjCTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AE272E1068901E9B495D0FAE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_SwiftTests/Pods-WZRootNavigationController_Example_SwiftTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WZRootNavigationController_Example_SwiftTests/Pods-WZRootNavigationController_Example_SwiftTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C1E6EFA0E31C45F827BAA279 /* [CP] Check Pods Manifest.lock */ = {
+		CC2F409D68ABA4FFC79CB159 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -709,14 +441,14 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WZRootNavigationController_Example_ObjC-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SwiftDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E8A63CCE5DCE9702AC5CC05D /* [CP] Check Pods Manifest.lock */ = {
+		D5C80306769D6E53CE1B77DD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -727,25 +459,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WZRootNavigationController_Example_Swift-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F3C292D12F5F78F49085500D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WZRootNavigationController_Example_ObjCTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ObjCDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -755,101 +469,64 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		33AD448C208DA9CB0053F036 /* Sources */ = {
+		33483FE020A53A4F00257E38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				337082CF2090313500580DB5 /* WZNavigationBarHiddenViewController.m in Sources */,
-				337082E32090354100580DB5 /* WZPopAllowedEdgeCollectionViewController.m in Sources */,
-				33D52A452090284600EAF582 /* WZNormalViewController.m in Sources */,
-				33AD44A2208DA9CD0053F036 /* main.m in Sources */,
-				337082D32090314700580DB5 /* WZStatusBarHiddenViewController.m in Sources */,
-				337082F720904C5800580DB5 /* WZAnimatedCollectionViewCell.m in Sources */,
-				337082DF2090352B00580DB5 /* WZPushAndRemoveViewController.m in Sources */,
-				337082CB2090311A00580DB5 /* WZUIWebViewController.m in Sources */,
-				337082EB2090358000580DB5 /* WZCustomAnimatedTransitionDetailViewController.m in Sources */,
-				337082DB2090351800580DB5 /* WZCollectionViewController.m in Sources */,
-				337082F3209049BC00580DB5 /* WZCollectionViewCell.m in Sources */,
-				337082D72090350500580DB5 /* WZCustomNavigationBarTableViewController.m in Sources */,
-				33AD4494208DA9CC0053F036 /* AppDelegate.m in Sources */,
-				33D52A412090282A00EAF582 /* WZRootViewController.m in Sources */,
-				337083012090652400580DB5 /* WZCustomAnimatedTransition.swift in Sources */,
-				337082EF2090359200580DB5 /* WZCustomNavigationBar.m in Sources */,
-				33D52A492090286100EAF582 /* WZInteractivePopDisabledViewController.m in Sources */,
-				337082E72090355500580DB5 /* WZCustomAnimatedTransitionListCollectionViewController.m in Sources */,
+				3348402320A5424500257E38 /* WZCustomAnimationDetailViewController.swift in Sources */,
+				3348401D20A5404900257E38 /* WZCustomAnimation.swift in Sources */,
+				33E29A1720A930740068C2A6 /* WZWebViewController.swift in Sources */,
+				3348405920A5A5B600257E38 /* WZCustomNavigationBar.swift in Sources */,
+				3348404820A58B0500257E38 /* WZHorizontalScrollViewController.swift in Sources */,
+				3348404120A5819100257E38 /* WZDisableInteractivePop&StatusHiddenViewController.swift in Sources */,
+				3348405420A5A2FB00257E38 /* WZCustomNavigationBarViewController.swift in Sources */,
+				3348403920A57EF400257E38 /* WZNormal&UnwindViewController.swift in Sources */,
+				3348403220A575DE00257E38 /* WZRootTableViewController.swift in Sources */,
+				33483FE720A53A4F00257E38 /* AppDelegate.swift in Sources */,
+				3348404A20A58B4000257E38 /* WZPopAllowedEdgeViewController.swift in Sources */,
+				3348402120A5422E00257E38 /* WZCustomAnimationListViewController.swift in Sources */,
+				3348402F20A5443900257E38 /* WZCustomAnimatedListCell.swift in Sources */,
+				3348405220A5911500257E38 /* WZPushAndRemoveViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		33EF42A220A04713002FFB72 /* Sources */ = {
+		33483FF620A53A5B00257E38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33EF42A920A04714002FFB72 /* WZRootNavigationController_Example_ObjCTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACCC1AFB9204008FA782 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				33D87DB1208E35730057F3B2 /* WZCollectionViewController.swift in Sources */,
-				33D52A19208DE68100EAF582 /* WZNormalViewController.swift in Sources */,
-				33D52A25208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift in Sources */,
-				33D52A29208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */,
-				33D52A1F208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift in Sources */,
-				33D52A2E208EC91600EAF582 /* WZPopAllowedEdgeCollectionViewController.swift in Sources */,
-				33C65FEB208DD4BB009B7A64 /* WZInteractivePopDisabledViewController.swift in Sources */,
-				33D52A1C208DE95A00EAF582 /* WZUIWebViewController.swift in Sources */,
-				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				33D52A33208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift in Sources */,
-				33D52A30208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift in Sources */,
-				33C65FE2208DCE5E009B7A64 /* WZRootViewController.swift in Sources */,
-				33D52A22208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift in Sources */,
-				33D52A2C208EC55D00EAF582 /* WZPushAndRemoveViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		607FACE11AFB9204008FA782 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				33D52A3A208EFD9E00EAF582 /* WZInteractivePopDisabledViewController.swift in Sources */,
-				33D52A3B208EFD9E00EAF582 /* WZPushAndRemoveViewController.swift in Sources */,
-				33D52A3C208EFD9E00EAF582 /* WZPopAllowedEdgeCollectionViewController.swift in Sources */,
-				33D52A20208DEBD200EAF582 /* WZNavigationBarHiddenViewController.swift in Sources */,
-				33D52A1A208DE68100EAF582 /* WZNormalViewController.swift in Sources */,
-				33D52A26208DF05600EAF582 /* WZCustomNavigationBarTableViewController.swift in Sources */,
-				33D52A34208ECCDF00EAF582 /* WZCustomAnimatedTransitionDetailViewController.swift in Sources */,
-				607FACEC1AFB9204008FA782 /* WZRootNavigationController_Example_SwiftTests.swift in Sources */,
-				33D52A23208DEE4200EAF582 /* WZStatusBarHiddenViewController.swift in Sources */,
-				33D52A1D208DE95A00EAF582 /* WZUIWebViewController.swift in Sources */,
-				33D52A31208ECCBF00EAF582 /* WZCustomAnimatedTransitionListCollectionViewController.swift in Sources */,
-				33C65FE3208DCE5E009B7A64 /* WZRootViewController.swift in Sources */,
-				33D87DB2208E35730057F3B2 /* WZCollectionViewController.swift in Sources */,
-				33D52A2A208DF08A00EAF582 /* WZCustomNavigationBar.swift in Sources */,
+				3348403720A5763100257E38 /* WZRootTableViewController.m in Sources */,
+				3348402920A5428F00257E38 /* WZCustomAnimationDetailViewController.m in Sources */,
+				3348402620A5427600257E38 /* WZCustomAnimationListViewController.m in Sources */,
+				3348405020A5910200257E38 /* WZPushAndRemoveViewController.m in Sources */,
+				3348403020A5443900257E38 /* WZCustomAnimatedListCell.swift in Sources */,
+				3348403F20A5817700257E38 /* WZDisableInteractivePop&StatusHiddenViewController.m in Sources */,
+				3348400C20A53A5C00257E38 /* main.m in Sources */,
+				3348404D20A58B4E00257E38 /* WZPopAllowedEdgeViewController.m in Sources */,
+				3348405720A5A31F00257E38 /* WZCustomNavigationBarViewController.m in Sources */,
+				33E29A1820A930740068C2A6 /* WZWebViewController.swift in Sources */,
+				33483FFE20A53A5B00257E38 /* AppDelegate.m in Sources */,
+				3348403C20A57F0100257E38 /* WZNormal&UnwindViewController.m in Sources */,
+				3348405A20A5A5B600257E38 /* WZCustomNavigationBar.swift in Sources */,
+				3348404620A58AE900257E38 /* WZHorizontalScrollViewController.m in Sources */,
+				3348402C20A542B900257E38 /* WZCustomAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		33EF42AC20A04714002FFB72 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 33AD448F208DA9CB0053F036 /* WZRootNavigationController_Example_ObjC */;
-			targetProxy = 33EF42AB20A04714002FFB72 /* PBXContainerItemProxy */;
-		};
-		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* WZRootNavigationController_Example_Swift */;
-			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		33AD4498208DA9CC0053F036 /* Main.storyboard */ = {
+		33483FEA20A53A4F00257E38 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				33AD4499208DA9CC0053F036 /* Base */,
+				33483FEB20A53A4F00257E38 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3348400220A53A5B00257E38 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3348400320A53A5B00257E38 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -857,9 +534,59 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		33AD44B9208DA9CD0053F036 /* Debug */ = {
+		33483FF320A53A5000257E38 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6C2D2C50A8C1889AFD1204E /* Pods-WZRootNavigationController_Example_ObjC.debug.xcconfig */;
+			baseConfigurationReference = 41A3B13D1065745073293CEE /* Pods-SwiftDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = arcangelw.WZRootNavigationController.SwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33483FF420A53A5000257E38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7C653A9D38CEB351A8F2605 /* Pods-SwiftDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = arcangelw.WZRootNavigationController.SwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3348400E20A53A5C00257E38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9A87A8BB69BA75EB05FF86D /* Pods-ObjCDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -874,22 +601,22 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = WZRootNavigationController_Example_ObjC/WZRootNavigationController_Example_ObjC.pch;
-				INFOPLIST_FILE = WZRootNavigationController_Example_ObjC/Info.plist;
+				GCC_PREFIX_HEADER = ObjCDemo/ObjCDemoPrefixHeader.pch;
+				INFOPLIST_FILE = ObjCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "wu.zhe.WZRootNavigationController-Example-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = arcangelw.WZRootNavigationController.ObjCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "WZRootNavigationController_Example_ObjC/Swift/WZRootNavigationController_Example_ObjC-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjCDemo/ObjCDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		33AD44BA208DA9CD0053F036 /* Release */ = {
+		3348400F20A53A5C00257E38 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FC18A8368C90EC2B97BCD89 /* Pods-WZRootNavigationController_Example_ObjC.release.xcconfig */;
+			baseConfigurationReference = C06B84285E9D135E370AB4B8 /* Pods-ObjCDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -903,62 +630,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = WZRootNavigationController_Example_ObjC/WZRootNavigationController_Example_ObjC.pch;
-				INFOPLIST_FILE = WZRootNavigationController_Example_ObjC/Info.plist;
+				GCC_PREFIX_HEADER = ObjCDemo/ObjCDemoPrefixHeader.pch;
+				INFOPLIST_FILE = ObjCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "wu.zhe.WZRootNavigationController-Example-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = arcangelw.WZRootNavigationController.ObjCDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "WZRootNavigationController_Example_ObjC/Swift/WZRootNavigationController_Example_ObjC-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjCDemo/ObjCDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		33EF42AD20A04714002FFB72 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AB306DD75D2FDF57BAC3F92 /* Pods-WZRootNavigationController_Example_ObjCTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = WZRootNavigationController_Example_ObjCTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "wu.zhe.WZRootNavigationController-Example-ObjCTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WZRootNavigationController_Example_ObjC;
-			};
-			name = Debug;
-		};
-		33EF42AE20A04714002FFB72 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02F74F75C7D6E695136CEE2E /* Pods-WZRootNavigationController_Example_ObjCTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = WZRootNavigationController_Example_ObjCTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "wu.zhe.WZRootNavigationController-Example-ObjCTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WZRootNavigationController_Example_ObjC;
 			};
 			name = Release;
 		};
@@ -1065,95 +745,23 @@
 			};
 			name = Release;
 		};
-		607FACF01AFB9204008FA782 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F9B4F4A881B337CDE3DED75 /* Pods-WZRootNavigationController_Example_Swift.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = WZRootNavigationController/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		607FACF11AFB9204008FA782 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EB32E7D49CC347BC3726BF3 /* Pods-WZRootNavigationController_Example_Swift.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = WZRootNavigationController/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		607FACF31AFB9204008FA782 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44C5ED792068B863552665E6 /* Pods-WZRootNavigationController_Example_SwiftTests.debug.xcconfig */;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = WZRootNavigationController_Example_SwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		607FACF41AFB9204008FA782 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56A7DBC6E7BA5DD507A5948E /* Pods-WZRootNavigationController_Example_SwiftTests.release.xcconfig */;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = WZRootNavigationController_Example_SwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		33AD44BF208DA9CD0053F036 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_ObjC" */ = {
+		33483FF520A53A5000257E38 /* Build configuration list for PBXNativeTarget "SwiftDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33AD44B9208DA9CD0053F036 /* Debug */,
-				33AD44BA208DA9CD0053F036 /* Release */,
+				33483FF320A53A5000257E38 /* Debug */,
+				33483FF420A53A5000257E38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33EF42AF20A04714002FFB72 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_ObjCTests" */ = {
+		3348400D20A53A5C00257E38 /* Build configuration list for PBXNativeTarget "ObjCDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33EF42AD20A04714002FFB72 /* Debug */,
-				33EF42AE20A04714002FFB72 /* Release */,
+				3348400E20A53A5C00257E38 /* Debug */,
+				3348400F20A53A5C00257E38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1163,24 +771,6 @@
 			buildConfigurations = (
 				607FACED1AFB9204008FA782 /* Debug */,
 				607FACEE1AFB9204008FA782 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_Swift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				607FACF01AFB9204008FA782 /* Debug */,
-				607FACF11AFB9204008FA782 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "WZRootNavigationController_Example_SwiftTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				607FACF31AFB9204008FA782 /* Debug */,
-				607FACF41AFB9204008FA782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

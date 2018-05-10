@@ -1,43 +1,16 @@
 PODS:
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
-  - Nimble (7.0.3)
-  - Nimble-Snapshots (6.3.0):
-    - Nimble-Snapshots/Core (= 6.3.0)
-  - Nimble-Snapshots/Core (6.3.0):
-    - FBSnapshotTestCase (~> 2.0)
-    - Nimble (~> 7.0)
-  - Quick (1.2.0)
   - WZRootNavigationController (0.1.0)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase (~> 2.1.4)
-  - Nimble (~> 7.0.2)
-  - Nimble-Snapshots (~> 6.3.0)
-  - Quick (~> 1.2.0)
   - WZRootNavigationController (from `../`)
-
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - FBSnapshotTestCase
-    - Nimble
-    - Nimble-Snapshots
-    - Quick
 
 EXTERNAL SOURCES:
   WZRootNavigationController:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
-  Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  WZRootNavigationController: 55ab758a3ccc8ca78af0a5a6e088af80b8fa46f2
+  WZRootNavigationController: 8b75e9fcefa862a5b5380bc37ea7b6d41ec9147b
 
-PODFILE CHECKSUM: fe8bd336652cc6b1bc7af60096d4ddd0d5afb248
+PODFILE CHECKSUM: 5ca4f0e3a035723a68f78a472a0b9c35cdae1282
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.2
