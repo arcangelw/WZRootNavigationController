@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'WZRootNavigationController'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = '独立导航栏，自定义转场动画，自定义Pop手势处理'
   s.homepage         = 'https://github.com/arcangelw/WZRootNavigationController'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

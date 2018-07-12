@@ -9,9 +9,31 @@
 import UIKit
 
 fileprivate var WZConfigKey:UInt8 = 0
+fileprivate var WZSnapshotkey:UInt8 = 0
 
 @IBDesignable
 extension UIViewController:WZRootNavigationItemCustomProtocol {
+    
+    /// 转场动画保存tabbar截图
+    public var wz_tabbarSnapshot:UIView?{
+        get{
+            return objc_getAssociatedObject(self, &WZSnapshotkey) as? UIView
+        }
+        set{
+            objc_setAssociatedObject(self, &WZSnapshotkey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+    /// 针对 UITabbarController 主导层级tabbar截图功能
+    internal func wz_getTabbarSnapshot()->UIView?{
+        guard let fromTabbarController = self.navigationController?.tabBarController  else {
+            return nil
+        }
+        let tabbarFrame = UIEdgeInsetsInsetRect(fromTabbarController.tabBar.frame, UIEdgeInsets(top: -0.5, left: 0.0, bottom: 0.0, right: 0.0))
+        let fromTabbarSnapshot = fromTabbarController.view.resizableSnapshotView(from: tabbarFrame, afterScreenUpdates: false, withCapInsets: .zero)
+        fromTabbarSnapshot?.frame = tabbarFrame
+        return fromTabbarSnapshot
+    }
     
     @IBInspectable @objc public var wz_rootContentConfig:WZRootContentConfigProtocol {
         get {

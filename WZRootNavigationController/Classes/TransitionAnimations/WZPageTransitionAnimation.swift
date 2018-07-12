@@ -13,12 +13,7 @@ open class WZPageTransitionAnimation: NSObject,WZViewControllerAnimatedTransitio
     open var interactiveTransition: UIPercentDrivenInteractiveTransition?
     open var operation: UINavigationControllerOperation
     open weak var transitionContext: UIViewControllerContextTransitioning?
-    
-    fileprivate var transformBackup: CATransform3D?
-    fileprivate var shadowOpacityBackup: Float?
-    fileprivate var shadowOffsetBackup: CGSize?
-    fileprivate var shadowRadiusBackup: CGFloat?
-    fileprivate var shadowPathBackup: CGPath?
+    public var isHidesBottomBar = true
     
     fileprivate lazy var maskView: UIView = {
         let maskView = UIView(frame: UIScreen.main.bounds)
@@ -63,51 +58,70 @@ open class WZPageTransitionAnimation: NSObject,WZViewControllerAnimatedTransitio
         var startOpacity: Float = 0
         var endOpacity: Float = 0.3
         
-        transformBackup = transformBackup ?? from.view.layer.transform
+        var transformBackup = from.view.layer.transform
         
-        var transform3D: CATransform3D = CATransform3DIdentity
-        transform3D.m34 = -1.0/500.0
+        var startTransform3D: CATransform3D = CATransform3DIdentity
+        startTransform3D.m34 = -1.0/500.0
+        var endTransform3D: CATransform3D = CATransform3DTranslate(startTransform3D, 0, 0, -35)
         
         if operation == .pop {
             swap(&from, &to)
             swap(&startPositionX, &endPositionX)
             swap(&startOpacity, &endOpacity)
+            swap(&startTransform3D, &endTransform3D)
         } else {
-            transform3D = CATransform3DTranslate(transform3D, 0, 0, -35)
+            from.wz_tabbarSnapshot = from.wz_getTabbarSnapshot()
         }
         
+        if let tabbarSnapshot = from.wz_tabbarSnapshot {
+            from.view.addSubview(tabbarSnapshot)
+        }
         containerView.addSubview(from.view)
         containerView.addSubview(to.view)
         from.view.addSubview(maskView)
         
+        from.view.layer.transform = startTransform3D
         maskView.layer.opacity = startOpacity
         to.view.layer.position.x = startPositionX + to.view.layer.bounds.width / 2
-        shadowOpacityBackup = to.view.layer.shadowOpacity
-        shadowOffsetBackup = to.view.layer.shadowOffset
-        shadowRadiusBackup = to.view.layer.shadowRadius
-        shadowPathBackup = to.view.layer.shadowPath
+        var shadowOpacityBackup = to.view.layer.shadowOpacity
+        var shadowOffsetBackup = to.view.layer.shadowOffset
+        var shadowRadiusBackup = to.view.layer.shadowRadius
+        var shadowPathBackup = to.view.layer.shadowPath
+        let tabbarhiddenBackup = from.navigationController?.tabBarController?.tabBar.isHidden
         to.view.layer.shadowOpacity = 0.5
         to.view.layer.shadowOffset = CGSize(width: -3, height: 0)
         to.view.layer.shadowRadius = 5
         to.view.layer.shadowPath = CGPath(rect: to.view.layer.bounds, transform: nil)
-        
+        if operation == .push {
+            from.navigationController?.tabBarController?.tabBar.isHidden = to.hidesBottomBarWhenPushed
+        }
+        else if operation == .pop {
+            from.navigationController?.tabBarController?.tabBar.isHidden = self.isHidesBottomBar
+        }
         UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, options: .curveEaseInOut, animations: {
             self.maskView.layer.opacity = endOpacity
-            from.view.layer.transform = transform3D
+            from.view.layer.transform = endTransform3D
             to.view.layer.position.x = endPositionX + to.view.layer.bounds.width / 2
         }) { finished in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            if let `tabbarhiddenBackup` = tabbarhiddenBackup {
+                from.navigationController?.tabBarController?.tabBar.isHidden = tabbarhiddenBackup
+            }
+            if let tabbarSnapshot = from.wz_tabbarSnapshot {
+                tabbarSnapshot.removeFromSuperview()
+            }
+            self.maskView.removeFromSuperview()
+            from.view.layer.transform = transformBackup
             if !transitionContext.transitionWasCancelled {
                 to.view.layer.shadowOpacity = 0
-                if self.operation == .pop && finished{
-                    self.maskView.removeFromSuperview()
-                    from.view.layer.transform = self.transformBackup ?? CATransform3DIdentity
-                }
                 if finished {
-                    to.view.layer.shadowOpacity = self.shadowOpacityBackup ?? 0
-                    to.view.layer.shadowOffset = self.shadowOffsetBackup ?? CGSize(width: 0, height: 0)
-                    to.view.layer.shadowRadius = self.shadowRadiusBackup ?? 0
-                    to.view.layer.shadowPath = self.shadowPathBackup ?? CGPath(rect: CGRect.zero, transform: nil)
+                    to.view.layer.shadowOpacity = shadowOpacityBackup
+                    to.view.layer.shadowOffset = shadowOffsetBackup
+                    to.view.layer.shadowRadius = shadowRadiusBackup
+                    to.view.layer.shadowPath = shadowPathBackup
+                    if let tabBarController = to.navigationController?.tabBarController {
+                        self.isHidesBottomBar = !tabBarController.tabBar.wz_isContains(inView:tabBarController.view)
+                    }
                 }
             }
         }

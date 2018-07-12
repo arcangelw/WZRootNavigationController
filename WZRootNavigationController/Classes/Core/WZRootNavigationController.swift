@@ -13,10 +13,10 @@ import UIKit
 open class WZRootNavigationController: UINavigationController {
     
     /// 是否使用系统返回按钮 默认 false 不使用
-    @IBInspectable open var isUseSystemBackBarButtonItem:Bool = false
+    @IBInspectable open var isUseSystemBackBarButtonItem:Bool = true
     
-    /// 是否转移导航栏属性 默认 ture 使用
-    @IBInspectable open var isTransferNavigationBarAttributes:Bool = true
+    /// 是否转移导航栏属性 默认 false 不使用
+    @IBInspectable open var isTransferNavigationBarAttributes:Bool = false
     
     fileprivate weak var wz_delegate:UINavigationControllerDelegate?
     
@@ -27,7 +27,7 @@ open class WZRootNavigationController: UINavigationController {
         commonInit()
     }
     
-    public init(rootViewControllerNoWrapping rootViewController: UIViewController!){
+    @objc public init(rootViewControllerNoWrapping rootViewController: UIViewController!){
         super.init(rootViewController: WZContainerController(contentController: rootViewController))
         commonInit()
     }
@@ -45,6 +45,10 @@ open class WZRootNavigationController: UINavigationController {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
+    }
+    
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
     open func commonInit(){}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sGC-or-xUN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sGC-or-xUN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,7 +14,7 @@
         <!--Root-->
         <scene sceneID="wHc-0B-Qb7">
             <objects>
-                <tableViewController id="9Bo-ZR-N3O" customClass="WZRootTableViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="WZRootTableViewController" title="Root" id="9Bo-ZR-N3O" customClass="WZRootTableViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="faL-va-F1Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,20 +275,20 @@
         <!--List-->
         <scene sceneID="F9B-CS-aOr">
             <objects>
-                <collectionViewController storyboardIdentifier="WZCustomAnimationListViewController" id="YDg-jb-bZL" customClass="WZCustomAnimationListViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="WZCustomAnimationListViewController" title="List" hidesBottomBarWhenPushed="YES" id="YDg-jb-bZL" customClass="WZCustomAnimationListViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ufY-uB-ZCO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B8D-b4-mAm">
                             <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="cell" id="qB7-Me-fZR" customClass="WZCustomAnimatedListCell" customModule="SwiftDemo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="50" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -300,6 +300,10 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="kmV-ec-A9D" customClass="WZCustomAnimatedListHeadView" customModule="SwiftDemo" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="YDg-jb-bZL" id="VrR-Zx-O8i"/>
                             <outlet property="delegate" destination="YDg-jb-bZL" id="i37-3W-cHk"/>
@@ -314,7 +318,7 @@
         <!--Detail-->
         <scene sceneID="oyh-rg-OAd">
             <objects>
-                <viewController storyboardIdentifier="WZCustomAnimationDetailViewController" id="Ea0-eB-jDa" customClass="WZCustomAnimationDetailViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WZCustomAnimationDetailViewController" title="Detail" id="Ea0-eB-jDa" customClass="WZCustomAnimationDetailViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wqi-WV-b1K"/>
                         <viewControllerLayoutGuide type="bottom" id="tog-RN-55r"/>
@@ -391,7 +395,7 @@
         <!--Normal&Unwind-->
         <scene sceneID="CQ6-I7-v7t">
             <objects>
-                <viewController storyboardIdentifier="WZNormalUnwindViewController" id="5Ev-PA-Qkg" customClass="WZNormalUnwindViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WZNormalUnwindViewController" title="Normal&amp;Unwind" id="5Ev-PA-Qkg" customClass="WZNormalUnwindViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kZX-Ue-QgK"/>
                         <viewControllerLayoutGuide type="bottom" id="aFQ-b5-uku"/>
@@ -417,7 +421,7 @@
         <!--horizontal-->
         <scene sceneID="kaG-mY-1nx">
             <objects>
-                <collectionViewController storyboardIdentifier="WZHorizontalScrollViewController" id="bQe-B6-UEq" customClass="WZHorizontalScrollViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="WZHorizontalScrollViewController" title="horizontal" id="bQe-B6-UEq" customClass="WZHorizontalScrollViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4aA-bl-wmc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -455,7 +459,7 @@
         <!--custom bar class-->
         <scene sceneID="6Yp-Ij-UlL">
             <objects>
-                <tableViewController storyboardIdentifier="WZCustomNavigationBarViewController" id="jX8-ZB-Qxq" customClass="WZCustomNavigationBarViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="WZCustomNavigationBarViewController" title="custom bar class" id="jX8-ZB-Qxq" customClass="WZCustomNavigationBarViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eBi-Jx-iko">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -485,10 +489,10 @@
             </objects>
             <point key="canvasLocation" x="-2129" y="2309"/>
         </scene>
-        <!--Web View Controller-->
+        <!--Web-->
         <scene sceneID="ipg-zR-X9k">
             <objects>
-                <viewController storyboardIdentifier="WZWebViewController" id="mAF-gF-2oj" customClass="WZWebViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WZWebViewController" title="Web" id="mAF-gF-2oj" customClass="WZWebViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h2v-Cz-yaG"/>
                         <viewControllerLayoutGuide type="bottom" id="EFi-Qu-nka"/>
@@ -506,7 +510,7 @@
         <!--PopAllowedEdge-->
         <scene sceneID="Vfz-ND-dGd">
             <objects>
-                <collectionViewController storyboardIdentifier="WZPopAllowedEdgeViewController" id="ZAA-bY-oMW" customClass="WZPopAllowedEdgeViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="WZPopAllowedEdgeViewController" title="PopAllowedEdge" id="ZAA-bY-oMW" customClass="WZPopAllowedEdgeViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="5Fc-su-14w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -541,10 +545,10 @@
             </objects>
             <point key="canvasLocation" x="-1164" y="1582"/>
         </scene>
-        <!--pusb&remove-->
+        <!--push&remove-->
         <scene sceneID="3ep-wS-9kF">
             <objects>
-                <viewController storyboardIdentifier="WZPushAndRemoveViewController" id="bfO-fd-juI" customClass="WZPushAndRemoveViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WZPushAndRemoveViewController" title="push&amp;remove" id="bfO-fd-juI" customClass="WZPushAndRemoveViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QjE-Vb-kQK"/>
                         <viewControllerLayoutGuide type="bottom" id="XXA-DZ-FnU"/>
@@ -595,7 +599,7 @@
         <!--pop off-->
         <scene sceneID="aHK-0J-UaG">
             <objects>
-                <viewController storyboardIdentifier="WZDisableInteractivePop_StatusHiddenViewController" id="BcQ-Fb-Iv4" customClass="WZDisableInteractivePop_StatusHiddenViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WZDisableInteractivePop_StatusHiddenViewController" title="pop off" id="BcQ-Fb-Iv4" customClass="WZDisableInteractivePop_StatusHiddenViewController" customModule="SwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qKh-vD-KZN"/>
                         <viewControllerLayoutGuide type="bottom" id="0Ur-VD-hlK"/>
@@ -670,10 +674,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JHa-vw-ZWD"/>
-        <segue reference="LrE-OU-7aj"/>
+        <segue reference="iSC-ZF-Zww"/>
+        <segue reference="VoI-Nc-Pcj"/>
         <segue reference="ZxV-Ps-9kW"/>
-        <segue reference="vbh-xh-TK2"/>
-        <segue reference="4Cy-45-6BV"/>
+        <segue reference="ref-hg-Q9S"/>
+        <segue reference="1w5-1C-H6c"/>
     </inferredMetricsTieBreakers>
 </document>

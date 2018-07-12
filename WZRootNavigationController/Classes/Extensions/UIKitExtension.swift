@@ -38,6 +38,18 @@ extension UIView {
         }
         return superview?.wz_scrollView ?? nil
     }
+    
+    /// 是否在 view 范围内
+    @objc public func wz_isContains(inView view:UIView) -> Bool{
+        if isHidden {
+           return false
+        }
+        guard let _ = superview else {
+            return false
+        }
+        let rect = convert(bounds, to: view)
+        return view.bounds.contains(rect)
+    }
 }
 
 extension UIScrollView {

@@ -25,7 +25,9 @@ public final class WZContainerNavigationController: UINavigationController {
         super.viewDidLoad()
         interactivePopGestureRecognizer?.delegate = nil
         interactivePopGestureRecognizer?.isEnabled = false
-        if let navigationController = wz_navigationController , navigationController.isTransferNavigationBarAttributes == true {
+        /// self.topViewController?.wz_navigationBarClass == nil
+        /// 当前自定义navigationBar的时候 不转移导航栏属性
+        if let navigationController = wz_navigationController , navigationController.isTransferNavigationBarAttributes == true , self.topViewController?.wz_navigationBarClass == nil {
             navigationBar.backgroundColor = navigationController.navigationBar.backgroundColor
             navigationBar.barStyle = navigationController.navigationBar.barStyle
             navigationBar.isTranslucent = navigationController.navigationBar.isTranslucent

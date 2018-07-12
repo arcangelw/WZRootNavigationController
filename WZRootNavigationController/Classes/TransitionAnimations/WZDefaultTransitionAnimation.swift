@@ -12,6 +12,7 @@ open class WZDefaultTransitionAnimation:NSObject,WZViewControllerAnimatedTransit
     open var interactiveTransition:UIPercentDrivenInteractiveTransition?
     open var operation: UINavigationControllerOperation
     open weak var transitionContext: UIViewControllerContextTransitioning?
+    public var isHidesBottomBar = true
     
     fileprivate lazy var maskView: UIView = {
         let maskView = UIView(frame: UIScreen.main.bounds)
@@ -63,7 +64,13 @@ open class WZDefaultTransitionAnimation:NSObject,WZViewControllerAnimatedTransit
             swap(&toStartPx, &toEndPx)
             swap(&startOpacity, &endOpacity)
         }
+        else if operation == .push {
+            from.wz_tabbarSnapshot = from.wz_getTabbarSnapshot()
+        }
         
+        if let tabbarSnapshot = from.wz_tabbarSnapshot {
+            from.view.addSubview(tabbarSnapshot)
+        }
         containerView.addSubview(from.view)
         containerView.addSubview(to.view)
         from.view.addSubview(maskView)
@@ -75,17 +82,29 @@ open class WZDefaultTransitionAnimation:NSObject,WZViewControllerAnimatedTransit
         let shadowOffsetBackup = to.view.layer.shadowOffset
         let shadowRadiusBackup = to.view.layer.shadowRadius
         let shadowPathBackup = to.view.layer.shadowPath
+        let tabbarhiddenBackup = from.navigationController?.tabBarController?.tabBar.isHidden
         to.view.layer.shadowOpacity = 0.5
         to.view.layer.shadowOffset = CGSize(width: -3.0, height: 0.0)
         to.view.layer.shadowRadius = 5.0
         to.view.layer.shadowPath = CGPath(rect: to.view.layer.bounds, transform: nil)
-        
+        if operation == .push {
+            from.navigationController?.tabBarController?.tabBar.isHidden = to.hidesBottomBarWhenPushed
+        }
+        else if operation == .pop {
+            from.navigationController?.tabBarController?.tabBar.isHidden = self.isHidesBottomBar
+        }
         UIView.animate(withDuration: duration, delay: 0.0, options: .curveEaseInOut, animations: {
             self.maskView.layer.opacity = endOpacity
             from.view.layer.position.x = fromEndPx + from.view.layer.bounds.width / 2.0
             to.view.layer.position.x = toEndPx + to.view.layer.bounds.width / 2.0
         }) { finished in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            if let `tabbarhiddenBackup` = tabbarhiddenBackup {
+                from.navigationController?.tabBarController?.tabBar.isHidden = tabbarhiddenBackup
+            }
+            if let tabbarSnapshot = from.wz_tabbarSnapshot {
+                tabbarSnapshot.removeFromSuperview()
+            }
             self.maskView.removeFromSuperview()
             if !transitionContext.transitionWasCancelled {
                 to.view.layer.shadowOpacity = 0.0
@@ -94,6 +113,9 @@ open class WZDefaultTransitionAnimation:NSObject,WZViewControllerAnimatedTransit
                     to.view.layer.shadowOffset = shadowOffsetBackup
                     to.view.layer.shadowRadius = shadowRadiusBackup
                     to.view.layer.shadowPath = shadowPathBackup
+                    if let tabBarController = to.navigationController?.tabBarController {
+                        self.isHidesBottomBar = !tabBarController.tabBar.wz_isContains(inView:tabBarController.view)
+                    }
                 }
             }
         }

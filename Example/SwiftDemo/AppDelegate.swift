@@ -14,8 +14,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        /**
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let story = UIStoryboard(name: "Main", bundle: nil)
+        let tabBarController = WZTabBarController()
+        tabBarController.tabBar.isTranslucent = false
+        if false {
+            tabBarController.viewControllers = [
+            WZContainerNavigationController(rootViewController: story.instantiateViewController(withIdentifier: "WZRootTableViewController")),
+            WZContainerNavigationController(rootViewController: story.instantiateViewController(withIdentifier: "WZCustomNavigationBarViewController")),
+            WZContainerNavigationController(rootViewController: story.instantiateViewController(withIdentifier: "WZHorizontalScrollViewController")),
+            WZContainerNavigationController(rootViewController: story.instantiateViewController(withIdentifier: "WZPushAndRemoveViewController"))
+            ]
+            window.rootViewController = WZRootNavigationController(rootViewControllerNoWrapping: tabBarController)
+        }else{
+            tabBarController.viewControllers = [
+                WZRootNavigationController(rootViewController: story.instantiateViewController(withIdentifier: "WZRootTableViewController")),
+                WZRootNavigationController(rootViewController: story.instantiateViewController(withIdentifier: "WZCustomNavigationBarViewController")),
+                WZRootNavigationController(rootViewController: story.instantiateViewController(withIdentifier: "WZHorizontalScrollViewController")),
+                WZRootNavigationController(rootViewController: story.instantiateViewController(withIdentifier: "WZPushAndRemoveViewController"))
+            ]
+            window.rootViewController = tabBarController
+        }
+        window.makeKeyAndVisible()
+        self.window = window
+        */
         return true
     }
 

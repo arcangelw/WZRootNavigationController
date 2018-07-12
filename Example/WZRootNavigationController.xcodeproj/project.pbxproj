@@ -38,6 +38,10 @@
 		3348405720A5A31F00257E38 /* WZCustomNavigationBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348405620A5A31F00257E38 /* WZCustomNavigationBarViewController.m */; };
 		3348405920A5A5B600257E38 /* WZCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348405820A5A5B600257E38 /* WZCustomNavigationBar.swift */; };
 		3348405A20A5A5B600257E38 /* WZCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348405820A5A5B600257E38 /* WZCustomNavigationBar.swift */; };
+		3351C18520F845FA00EF0E2F /* WZTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351C18420F845FA00EF0E2F /* WZTabBarController.swift */; };
+		3351C18620F845FA00EF0E2F /* WZTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351C18420F845FA00EF0E2F /* WZTabBarController.swift */; };
+		33BDEE8F20CE595900825F94 /* WZCustomAnimatedListHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BDEE8E20CE595900825F94 /* WZCustomAnimatedListHeadView.swift */; };
+		33BDEE9020CE595900825F94 /* WZCustomAnimatedListHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BDEE8E20CE595900825F94 /* WZCustomAnimatedListHeadView.swift */; };
 		33E29A1720A930740068C2A6 /* WZWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E29A1620A930740068C2A6 /* WZWebViewController.swift */; };
 		33E29A1820A930740068C2A6 /* WZWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E29A1620A930740068C2A6 /* WZWebViewController.swift */; };
 		33E29A1D20A999E90068C2A6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E29A1C20A999E90068C2A6 /* LaunchScreen.xib */; };
@@ -95,6 +99,8 @@
 		3348405520A5A31F00257E38 /* WZCustomNavigationBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZCustomNavigationBarViewController.h; sourceTree = "<group>"; };
 		3348405620A5A31F00257E38 /* WZCustomNavigationBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZCustomNavigationBarViewController.m; sourceTree = "<group>"; };
 		3348405820A5A5B600257E38 /* WZCustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomNavigationBar.swift; sourceTree = "<group>"; };
+		3351C18420F845FA00EF0E2F /* WZTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZTabBarController.swift; sourceTree = "<group>"; };
+		33BDEE8E20CE595900825F94 /* WZCustomAnimatedListHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZCustomAnimatedListHeadView.swift; sourceTree = "<group>"; };
 		33E29A1620A930740068C2A6 /* WZWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WZWebViewController.swift; sourceTree = "<group>"; };
 		33E29A1C20A999E90068C2A6 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		374269E8DC2AD6F47B3E0CBC /* Pods_WZRootNavigationController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WZRootNavigationController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				3348402E20A5443900257E38 /* WZCustomAnimatedListCell.swift */,
+				33BDEE8E20CE595900825F94 /* WZCustomAnimatedListHeadView.swift */,
 				3348405820A5A5B600257E38 /* WZCustomNavigationBar.swift */,
 			);
 			path = Views;
@@ -191,6 +198,7 @@
 				3348405120A5911500257E38 /* WZPushAndRemoveViewController.swift */,
 				3348405320A5A2FB00257E38 /* WZCustomNavigationBarViewController.swift */,
 				33E29A1620A930740068C2A6 /* WZWebViewController.swift */,
+				3351C18420F845FA00EF0E2F /* WZTabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -477,10 +485,12 @@
 				3348401D20A5404900257E38 /* WZCustomAnimation.swift in Sources */,
 				33E29A1720A930740068C2A6 /* WZWebViewController.swift in Sources */,
 				3348405920A5A5B600257E38 /* WZCustomNavigationBar.swift in Sources */,
+				3351C18520F845FA00EF0E2F /* WZTabBarController.swift in Sources */,
 				3348404820A58B0500257E38 /* WZHorizontalScrollViewController.swift in Sources */,
 				3348404120A5819100257E38 /* WZDisableInteractivePop&StatusHiddenViewController.swift in Sources */,
 				3348405420A5A2FB00257E38 /* WZCustomNavigationBarViewController.swift in Sources */,
 				3348403920A57EF400257E38 /* WZNormal&UnwindViewController.swift in Sources */,
+				33BDEE8F20CE595900825F94 /* WZCustomAnimatedListHeadView.swift in Sources */,
 				3348403220A575DE00257E38 /* WZRootTableViewController.swift in Sources */,
 				33483FE720A53A4F00257E38 /* AppDelegate.swift in Sources */,
 				3348404A20A58B4000257E38 /* WZPopAllowedEdgeViewController.swift in Sources */,
@@ -503,7 +513,9 @@
 				3348400C20A53A5C00257E38 /* main.m in Sources */,
 				3348404D20A58B4E00257E38 /* WZPopAllowedEdgeViewController.m in Sources */,
 				3348405720A5A31F00257E38 /* WZCustomNavigationBarViewController.m in Sources */,
+				33BDEE9020CE595900825F94 /* WZCustomAnimatedListHeadView.swift in Sources */,
 				33E29A1820A930740068C2A6 /* WZWebViewController.swift in Sources */,
+				3351C18620F845FA00EF0E2F /* WZTabBarController.swift in Sources */,
 				33483FFE20A53A5B00257E38 /* AppDelegate.m in Sources */,
 				3348403C20A57F0100257E38 /* WZNormal&UnwindViewController.m in Sources */,
 				3348405A20A5A5B600257E38 /* WZCustomNavigationBar.swift in Sources */,

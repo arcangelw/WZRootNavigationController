@@ -12,13 +12,9 @@ class WZCustomNavigationBar: UINavigationBar {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.barTintColor = UIColor(red:CGFloat(arc4random_uniform(255))/CGFloat(255.0), green:CGFloat(arc4random_uniform(255))/CGFloat(255.0), blue:CGFloat(arc4random_uniform(255))/CGFloat(255.0) , alpha: 1)
     }
     
-    override var barTintColor: UIColor?{
-        get { return super.barTintColor }
-        set { super.barTintColor = UIColor(red:CGFloat(arc4random_uniform(255))/CGFloat(255.0), green:CGFloat(arc4random_uniform(255))/CGFloat(255.0), blue:CGFloat(arc4random_uniform(255))/CGFloat(255.0) , alpha: 1)
-        }
-    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

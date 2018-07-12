@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc public class WZCustomAnimatedListCell: UICollectionViewCell {
+@objc public final class WZCustomAnimatedListCell: UICollectionViewCell {
     @objc public let imageView = UIImageView()
     
     public override init(frame: CGRect) {
